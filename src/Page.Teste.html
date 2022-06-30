@@ -1,0 +1,3392 @@
+<head>
+    <meta charset="UTF-8">
+    <title>2bTrust | Investment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="icon" type="image/png" href="../assets/materialBootstrapWizard/assets/img/favicon.ico">
+
+    <link rel="stylesheet" href="../assets_v5/font/iconsmind-s/css/iconsminds.css">
+    <link rel="stylesheet" href="../assets_v5/font/simple-line-icons/css/simple-line-icons.css">
+
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/vendor/bootstrap.rtl.only.min.css">
+    <link rel="stylesheet" href="css/vendor/fullcalendar.min.css">
+    <link rel="stylesheet" href="css/vendor/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="css/vendor/datatables.responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="css/vendor/select2.min.css">
+    <link rel="stylesheet" href="css/vendor/perfect-scrollbar.css">
+    <link rel="stylesheet" href="css/vendor/glide.core.min.css">
+    <link rel="stylesheet" href="css/vendor/bootstrap-stars.css">
+    <link rel="stylesheet" href="css/vendor/nouislider.min.css">
+    <link rel="stylesheet" href="css/vendor/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="css/vendor/component-custom-switch.min.css">
+    <link rel="stylesheet" type="text/css" href="css/dore.light.bluenavy.min.css"><link rel="stylesheet" type="text/css" href="../assets_v5/css/dore.light.bluenavy.min.css"><link rel="stylesheet" href="../assets_v5/css/main.css">
+
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <link href="loading.js/loadingJs.css" rel="stylesheet">
+
+    <script src="js/vendor/jquery-3.3.1.min.js"></script>
+    
+<style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style><style>@-webkit-keyframes swal2-show {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7); }
+  45% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05); }
+  80% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes swal2-show {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7); }
+  45% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05); }
+  80% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@-webkit-keyframes swal2-hide {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0; } }
+
+@keyframes swal2-hide {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0; } }
+
+@-webkit-keyframes swal2-animate-success-line-tip {
+  0% {
+    top: 1.1875em;
+    left: .0625em;
+    width: 0; }
+  54% {
+    top: 1.0625em;
+    left: .125em;
+    width: 0; }
+  70% {
+    top: 2.1875em;
+    left: -.375em;
+    width: 3.125em; }
+  84% {
+    top: 3em;
+    left: 1.3125em;
+    width: 1.0625em; }
+  100% {
+    top: 2.8125em;
+    left: .875em;
+    width: 1.5625em; } }
+
+@keyframes swal2-animate-success-line-tip {
+  0% {
+    top: 1.1875em;
+    left: .0625em;
+    width: 0; }
+  54% {
+    top: 1.0625em;
+    left: .125em;
+    width: 0; }
+  70% {
+    top: 2.1875em;
+    left: -.375em;
+    width: 3.125em; }
+  84% {
+    top: 3em;
+    left: 1.3125em;
+    width: 1.0625em; }
+  100% {
+    top: 2.8125em;
+    left: .875em;
+    width: 1.5625em; } }
+
+@-webkit-keyframes swal2-animate-success-line-long {
+  0% {
+    top: 3.375em;
+    right: 2.875em;
+    width: 0; }
+  65% {
+    top: 3.375em;
+    right: 2.875em;
+    width: 0; }
+  84% {
+    top: 2.1875em;
+    right: 0;
+    width: 3.4375em; }
+  100% {
+    top: 2.375em;
+    right: .5em;
+    width: 2.9375em; } }
+
+@keyframes swal2-animate-success-line-long {
+  0% {
+    top: 3.375em;
+    right: 2.875em;
+    width: 0; }
+  65% {
+    top: 3.375em;
+    right: 2.875em;
+    width: 0; }
+  84% {
+    top: 2.1875em;
+    right: 0;
+    width: 3.4375em; }
+  100% {
+    top: 2.375em;
+    right: .5em;
+    width: 2.9375em; } }
+
+@-webkit-keyframes swal2-rotate-success-circular-line {
+  0% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+  5% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+  12% {
+    -webkit-transform: rotate(-405deg);
+            transform: rotate(-405deg); }
+  100% {
+    -webkit-transform: rotate(-405deg);
+            transform: rotate(-405deg); } }
+
+@keyframes swal2-rotate-success-circular-line {
+  0% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+  5% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+  12% {
+    -webkit-transform: rotate(-405deg);
+            transform: rotate(-405deg); }
+  100% {
+    -webkit-transform: rotate(-405deg);
+            transform: rotate(-405deg); } }
+
+@-webkit-keyframes swal2-animate-error-x-mark {
+  0% {
+    margin-top: 1.625em;
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+    opacity: 0; }
+  50% {
+    margin-top: 1.625em;
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+    opacity: 0; }
+  80% {
+    margin-top: -.375em;
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15); }
+  100% {
+    margin-top: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; } }
+
+@keyframes swal2-animate-error-x-mark {
+  0% {
+    margin-top: 1.625em;
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+    opacity: 0; }
+  50% {
+    margin-top: 1.625em;
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+    opacity: 0; }
+  80% {
+    margin-top: -.375em;
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15); }
+  100% {
+    margin-top: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; } }
+
+@-webkit-keyframes swal2-animate-error-icon {
+  0% {
+    -webkit-transform: rotateX(100deg);
+            transform: rotateX(100deg);
+    opacity: 0; }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    opacity: 1; } }
+
+@keyframes swal2-animate-error-icon {
+  0% {
+    -webkit-transform: rotateX(100deg);
+            transform: rotateX(100deg);
+    opacity: 0; }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    opacity: 1; } }
+
+body.swal2-toast-shown.swal2-has-input > .swal2-container > .swal2-toast {
+  flex-direction: column;
+  align-items: stretch; }       
+  body.swal2-toast-shown.swal2-has-input > .swal2-container > .swal2-toast .swal2-actions {
+    align-self: stretch;
+    justify-content: flex-end;
+    height: 2.2em; }
+  body.swal2-toast-shown.swal2-has-input > .swal2-container > .swal2-toast .swal2-loading {
+    justify-content: center; }
+  body.swal2-toast-shown.swal2-has-input > .swal2-container > .swal2-toast .swal2-input {
+    height: 2em;
+    margin: .3125em auto;
+    font-size: 1em; }
+  body.swal2-toast-shown.swal2-has-input > .swal2-container > .swal2-toast .swal2-validationerror {
+    font-size: 1em; }
+
+body.swal2-toast-shown > .swal2-container {
+  position: fixed;
+  background-color: transparent; }
+  body.swal2-toast-shown > .swal2-container.swal2-shown {
+    background-color: transparent; }
+  body.swal2-toast-shown > .swal2-container.swal2-top {
+    top: 0;
+    right: auto;
+    bottom: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+  body.swal2-toast-shown > .swal2-container.swal2-top-end, body.swal2-toast-shown > .swal2-container.swal2-top-right {
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: auto; }
+  body.swal2-toast-shown > .swal2-container.swal2-top-start, body.swal2-toast-shown > .swal2-container.swal2-top-left {
+    top: 0;
+    right: auto;
+    bottom: auto;
+    left: 0; }
+  body.swal2-toast-shown > .swal2-container.swal2-center-start, body.swal2-toast-shown > .swal2-container.swal2-center-left {
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  body.swal2-toast-shown > .swal2-container.swal2-center {
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+  body.swal2-toast-shown > .swal2-container.swal2-center-end, body.swal2-toast-shown > .swal2-container.swal2-center-right {
+    top: 50%;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  body.swal2-toast-shown > .swal2-container.swal2-bottom-start, body.swal2-toast-shown > .swal2-container.swal2-bottom-left {
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: 0; }
+  body.swal2-toast-shown > .swal2-container.swal2-bottom {
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+  body.swal2-toast-shown > .swal2-container.swal2-bottom-end, body.swal2-toast-shown > .swal2-container.swal2-bottom-right {
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: auto; }
+
+.swal2-popup.swal2-toast {
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  padding: 0.625em;
+  box-shadow: 0 0 0.625em #d9d9d9;
+  overflow-y: hidden; }
+  .swal2-popup.swal2-toast .swal2-header {
+    flex-direction: row; }
+  .swal2-popup.swal2-toast .swal2-title {
+    justify-content: flex-start;
+    margin: 0 .6em;
+    font-size: 1em; }
+  .swal2-popup.swal2-toast .swal2-close {
+    position: initial; }
+  .swal2-popup.swal2-toast .swal2-content {
+    justify-content: flex-start;
+    font-size: 1em; }
+  .swal2-popup.swal2-toast .swal2-icon {
+    width: 2em;
+    min-width: 2em;
+    height: 2em;
+    margin: 0; }
+    .swal2-popup.swal2-toast .swal2-icon-text {
+      font-size: 2em;
+      font-weight: bold;
+      line-height: 1em; }
+    .swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring {
+      width: 2em;
+      height: 2em; }
+    .swal2-popup.swal2-toast .swal2-icon.swal2-error [class^='swal2-x-mark-line'] {
+      top: .875em;
+      width: 1.375em; }
+      .swal2-popup.swal2-toast .swal2-icon.swal2-error [class^='swal2-x-mark-line'][class$='left'] {
+        left: .3125em; }
+      .swal2-popup.swal2-toast .swal2-icon.swal2-error [class^='swal2-x-mark-line'][class$='right'] {
+        right: .3125em; }
+  .swal2-popup.swal2-toast .swal2-actions {
+    height: auto;
+    margin: 0 .3125em; }
+  .swal2-popup.swal2-toast .swal2-styled {
+    margin: 0 .3125em;
+    padding: .3125em .625em;
+    font-size: 1em; }
+    .swal2-popup.swal2-toast .swal2-styled:focus {
+      box-shadow: 0 0 0 0.0625em #fff, 0 0 0 0.125em rgba(50, 100, 150, 0.4); }
+  .swal2-popup.swal2-toast .swal2-success {
+    border-color: #a5dc86; }
+    .swal2-popup.swal2-toast .swal2-success [class^='swal2-success-circular-line'] {
+      position: absolute;
+      width: 2em;
+      height: 2.8125em;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+      border-radius: 50%; }
+      .swal2-popup.swal2-toast .swal2-success [class^='swal2-success-circular-line'][class$='left'] {
+        top: -.25em;
+        left: -.9375em;
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+        -webkit-transform-origin: 2em 2em;
+                transform-origin: 2em 2em;
+        border-radius: 4em 0 0 4em; }
+      .swal2-popup.swal2-toast .swal2-success [class^='swal2-success-circular-line'][class$='right'] {
+        top: -.25em;
+        left: .9375em;
+        -webkit-transform-origin: 0 2em;
+                transform-origin: 0 2em;
+        border-radius: 0 4em 4em 0; }
+    .swal2-popup.swal2-toast .swal2-success .swal2-success-ring {
+      width: 2em;
+      height: 2em; }
+    .swal2-popup.swal2-toast .swal2-success .swal2-success-fix {
+      top: 0;
+      left: .4375em;
+      width: .4375em;
+      height: 2.6875em; }
+    .swal2-popup.swal2-toast .swal2-success [class^='swal2-success-line'] {
+      height: .3125em; }
+      .swal2-popup.swal2-toast .swal2-success [class^='swal2-success-line'][class$='tip'] {
+        top: 1.125em;
+        left: .1875em;
+        width: .75em; }
+      .swal2-popup.swal2-toast .swal2-success [class^='swal2-success-line'][class$='long'] {
+        top: .9375em;
+        right: .1875em;
+        width: 1.375em; }
+  .swal2-popup.swal2-toast.swal2-show {
+    -webkit-animation: showSweetToast .5s;
+            animation: showSweetToast .5s; }
+  .swal2-popup.swal2-toast.swal2-hide {
+    -webkit-animation: hideSweetToast .2s forwards;
+            animation: hideSweetToast .2s forwards; }
+  .swal2-popup.swal2-toast .swal2-animate-success-icon .swal2-success-line-tip {
+    -webkit-animation: animate-toast-success-tip .75s;
+            animation: animate-toast-success-tip .75s; }
+  .swal2-popup.swal2-toast .swal2-animate-success-icon .swal2-success-line-long {
+    -webkit-animation: animate-toast-success-long .75s;
+            animation: animate-toast-success-long .75s; }
+
+@-webkit-keyframes showSweetToast {
+  0% {
+    -webkit-transform: translateY(-0.625em) rotateZ(2deg);
+            transform: translateY(-0.625em) rotateZ(2deg);
+    opacity: 0; }
+  33% {
+    -webkit-transform: translateY(0) rotateZ(-2deg);
+            transform: translateY(0) rotateZ(-2deg);
+    opacity: .5; }
+  66% {
+    -webkit-transform: translateY(0.3125em) rotateZ(2deg);
+            transform: translateY(0.3125em) rotateZ(2deg);
+    opacity: .7; }
+  100% {
+    -webkit-transform: translateY(0) rotateZ(0);
+            transform: translateY(0) rotateZ(0);
+    opacity: 1; } }
+
+@keyframes showSweetToast {
+  0% {
+    -webkit-transform: translateY(-0.625em) rotateZ(2deg);
+            transform: translateY(-0.625em) rotateZ(2deg);
+    opacity: 0; }
+  33% {
+    -webkit-transform: translateY(0) rotateZ(-2deg);
+            transform: translateY(0) rotateZ(-2deg);
+    opacity: .5; }
+  66% {
+    -webkit-transform: translateY(0.3125em) rotateZ(2deg);
+            transform: translateY(0.3125em) rotateZ(2deg);
+    opacity: .7; }
+  100% {
+    -webkit-transform: translateY(0) rotateZ(0);
+            transform: translateY(0) rotateZ(0);
+    opacity: 1; } }
+
+@-webkit-keyframes hideSweetToast {
+  0% {
+    opacity: 1; }
+  33% {
+    opacity: .5; }
+  100% {
+    -webkit-transform: rotateZ(1deg);
+            transform: rotateZ(1deg);
+    opacity: 0; } }
+
+@keyframes hideSweetToast {
+  0% {
+    opacity: 1; }
+  33% {
+    opacity: .5; }
+  100% {
+    -webkit-transform: rotateZ(1deg);
+            transform: rotateZ(1deg);
+    opacity: 0; } }
+
+@-webkit-keyframes animate-toast-success-tip {
+  0% {
+    top: .5625em;
+    left: .0625em;
+    width: 0; }
+  54% {
+    top: .125em;
+    left: .125em;
+    width: 0; }
+  70% {
+    top: .625em;
+    left: -.25em;
+    width: 1.625em; }
+  84% {
+    top: 1.0625em;
+    left: .75em;
+    width: .5em; }
+  100% {
+    top: 1.125em;
+    left: .1875em;
+    width: .75em; } }
+
+@keyframes animate-toast-success-tip {
+  0% {
+    top: .5625em;
+    left: .0625em;
+    width: 0; }
+  54% {
+    top: .125em;
+    left: .125em;
+    width: 0; }
+  70% {
+    top: .625em;
+    left: -.25em;
+    width: 1.625em; }
+  84% {
+    top: 1.0625em;
+    left: .75em;
+    width: .5em; }
+  100% {
+    top: 1.125em;
+    left: .1875em;
+    width: .75em; } }
+
+@-webkit-keyframes animate-toast-success-long {
+  0% {
+    top: 1.625em;
+    right: 1.375em;
+    width: 0; }
+  65% {
+    top: 1.25em;
+    right: .9375em;
+    width: 0; }
+  84% {
+    top: .9375em;
+    right: 0;
+    width: 1.125em; }
+  100% {
+    top: .9375em;
+    right: .1875em;
+    width: 1.375em; } }
+
+@keyframes animate-toast-success-long {
+  0% {
+    top: 1.625em;
+    right: 1.375em;
+    width: 0; }
+  65% {
+    top: 1.25em;
+    right: .9375em;
+    width: 0; }
+  84% {
+    top: .9375em;
+    right: 0;
+    width: 1.125em; }
+  100% {
+    top: .9375em;
+    right: .1875em;
+    width: 1.375em; } }
+
+html.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown),
+body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
+  height: auto;
+  overflow-y: hidden; }
+
+body.swal2-no-backdrop .swal2-shown {
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  background-color: transparent; }
+  body.swal2-no-backdrop .swal2-shown > .swal2-modal {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
+  body.swal2-no-backdrop .swal2-shown.swal2-top {
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+  body.swal2-no-backdrop .swal2-shown.swal2-top-start, body.swal2-no-backdrop .swal2-shown.swal2-top-left {
+    top: 0;
+    left: 0; }
+  body.swal2-no-backdrop .swal2-shown.swal2-top-end, body.swal2-no-backdrop .swal2-shown.swal2-top-right {
+    top: 0;
+    right: 0; }
+  body.swal2-no-backdrop .swal2-shown.swal2-center {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+  body.swal2-no-backdrop .swal2-shown.swal2-center-start, body.swal2-no-backdrop .swal2-shown.swal2-center-left {
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  body.swal2-no-backdrop .swal2-shown.swal2-center-end, body.swal2-no-backdrop .swal2-shown.swal2-center-right {
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  body.swal2-no-backdrop .swal2-shown.swal2-bottom {
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+  body.swal2-no-backdrop .swal2-shown.swal2-bottom-start, body.swal2-no-backdrop .swal2-shown.swal2-bottom-left {
+    bottom: 0;
+    left: 0; }
+  body.swal2-no-backdrop .swal2-shown.swal2-bottom-end, body.swal2-no-backdrop .swal2-shown.swal2-bottom-right {
+    right: 0;
+    bottom: 0; }
+
+.swal2-container {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: transparent;
+  z-index: 1060;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch; }
+  .swal2-container.swal2-top {
+    align-items: flex-start; }
+  .swal2-container.swal2-top-start, .swal2-container.swal2-top-left {
+    align-items: flex-start;
+    justify-content: flex-start; }
+  .swal2-container.swal2-top-end, .swal2-container.swal2-top-right {
+    align-items: flex-start;
+    justify-content: flex-end; }
+  .swal2-container.swal2-center {
+    align-items: center; }
+  .swal2-container.swal2-center-start, .swal2-container.swal2-center-left {
+    align-items: center;
+    justify-content: flex-start; }
+  .swal2-container.swal2-center-end, .swal2-container.swal2-center-right {
+    align-items: center;
+    justify-content: flex-end; }
+  .swal2-container.swal2-bottom {
+    align-items: flex-end; }
+  .swal2-container.swal2-bottom-start, .swal2-container.swal2-bottom-left {
+    align-items: flex-end;
+    justify-content: flex-start; }
+  .swal2-container.swal2-bottom-end, .swal2-container.swal2-bottom-right {
+    align-items: flex-end;
+    justify-content: flex-end; }
+  .swal2-container.swal2-grow-fullscreen > .swal2-modal {
+    display: flex !important;
+    flex: 1;
+    align-self: stretch;
+    justify-content: center; }
+  .swal2-container.swal2-grow-row > .swal2-modal {
+    display: flex !important;
+    flex: 1;
+    align-content: center;
+    justify-content: center; }
+  .swal2-container.swal2-grow-column {
+    flex: 1;
+    flex-direction: column; }
+    .swal2-container.swal2-grow-column.swal2-top, .swal2-container.swal2-grow-column.swal2-center, .swal2-container.swal2-grow-column.swal2-bottom {
+      align-items: center; }
+    .swal2-container.swal2-grow-column.swal2-top-start, .swal2-container.swal2-grow-column.swal2-center-start, .swal2-container.swal2-grow-column.swal2-bottom-start, .swal2-container.swal2-grow-column.swal2-top-left, .swal2-container.swal2-grow-column.swal2-center-left, .swal2-container.swal2-grow-column.swal2-bottom-left {
+      align-items: flex-start; }
+    .swal2-container.swal2-grow-column.swal2-top-end, .swal2-container.swal2-grow-column.swal2-center-end, .swal2-container.swal2-grow-column.swal2-bottom-end, .swal2-container.swal2-grow-column.swal2-top-right, .swal2-container.swal2-grow-column.swal2-center-right, .swal2-container.swal2-grow-column.swal2-bottom-right {
+      align-items: flex-end; }
+    .swal2-container.swal2-grow-column > .swal2-modal {
+      display: flex !important;
+      flex: 1;
+      align-content: center;
+      justify-content: center; }
+  .swal2-container:not(.swal2-top):not(.swal2-top-start):not(.swal2-top-end):not(.swal2-top-left):not(.swal2-top-right):not(.swal2-center-start):not(.swal2-center-end):not(.swal2-center-left):not(.swal2-center-right):not(.swal2-bottom):not(.swal2-bottom-start):not(.swal2-bottom-end):not(.swal2-bottom-left):not(.swal2-bottom-right) > .swal2-modal {
+    margin: auto; }
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .swal2-container .swal2-modal {
+      margin: 0 !important; } }
+  .swal2-container.swal2-fade {
+    transition: background-color .1s; }
+  .swal2-container.swal2-shown {
+    background-color: rgba(0, 0, 0, 0.4); }
+
+.swal2-popup {
+  display: none;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  width: 32em;
+  max-width: 100%;
+  padding: 1.25em;
+  border-radius: 0.3125em;
+  background: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  box-sizing: border-box; }
+  .swal2-popup:focus {
+    outline: none; }
+  .swal2-popup.swal2-loading {
+    overflow-y: hidden; }
+  .swal2-popup .swal2-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .swal2-popup .swal2-title {
+    display: block;
+    position: relative;
+    max-width: 100%;
+    margin: 0 0 0.4em;
+    padding: 0;
+    color: #595959;
+    font-size: 1.875em;
+    font-weight: 600;
+    text-align: center;
+    text-transform: none;
+    word-wrap: break-word; }
+  .swal2-popup .swal2-actions {
+    float: right;
+    margin: 60px 10px 10px 10px; }
+    .swal2-popup .swal2-actions:not(.swal2-loading) .swal2-styled[disabled] {
+      opacity: .4; }
+    .swal2-popup .swal2-actions:not(.swal2-loading) .swal2-styled:hover {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)); }
+    .swal2-popup .swal2-actions:not(.swal2-loading) .swal2-styled:active {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)); }
+    .swal2-popup .swal2-actions.swal2-loading .swal2-styled.swal2-confirm {
+      width: 2.5em;
+      height: 2.5em;
+      margin: .46875em;
+      padding: 0;
+      border: .25em solid transparent;
+      border-radius: 100%;
+      border-color: transparent;
+      background-color: transparent !important;
+      color: transparent;
+      cursor: default;
+      box-sizing: border-box;
+      -webkit-animation: swal2-rotate-loading 1.5s linear 0s infinite normal;
+              animation: swal2-rotate-loading 1.5s linear 0s infinite normal;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none; }
+    .swal2-popup .swal2-actions.swal2-loading .swal2-styled.swal2-cancel {
+      margin-right: 30px;
+      margin-left: 30px; }
+    .swal2-popup .swal2-actions.swal2-loading :not(.swal2-styled).swal2-confirm::after {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      margin-left: 5px;
+      border: 3px solid #999999;
+      border-radius: 50%;
+      border-right-color: transparent;
+      box-shadow: 1px 1px 1px #fff;
+      content: '';
+      -webkit-animation: swal2-rotate-loading 1.5s linear 0s infinite normal;
+              animation: swal2-rotate-loading 1.5s linear 0s infinite normal; }
+  .swal2-popup .swal2-styled {
+    margin: 0 .3125em;
+    padding: .625em 2em;
+    font-weight: 500;
+    box-shadow: none; }
+    .swal2-popup .swal2-styled:not([disabled]) {
+      cursor: pointer; }
+    .swal2-popup .swal2-styled.swal2-confirm {
+      border: 0;
+      border-radius: 50px;
+      background: initial;
+      background-color: #00365a;
+      color: #fff;
+      font-size: 1.0625em; }
+    .swal2-popup .swal2-styled.swal2-cancel {
+      border: 0;
+      border-radius: 50px;
+      background: initial;
+      background-color: #aaa;
+      color: #fff;
+      font-size: 1.0625em; }
+    .swal2-popup .swal2-styled:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(50, 100, 150, 0.4); }
+    .swal2-popup .swal2-styled::-moz-focus-inner {
+      border: 0; }
+  .swal2-popup .swal2-footer {
+    justify-content: center;
+    margin: 1.25em 0 0;
+    padding-top: 1em;
+    border-top: 1px solid #eee;
+    color: #545454;
+    font-size: 1em; }
+  .swal2-popup .swal2-image {
+    max-width: 100%;
+    margin: 1.25em auto; }
+  .swal2-popup .swal2-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    justify-content: center;
+    width: 1.2em;
+    min-width: 1.2em;
+    height: 1.2em;
+    margin: 0;
+    padding: 0;
+    transition: color 0.1s ease-out;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    color: #cccccc;
+    font-family: serif;
+    font-size: calc(2.5em - 0.25em);
+    line-height: 1.2em;
+    cursor: pointer; }
+    .swal2-popup .swal2-close:hover {
+      -webkit-transform: none;
+              transform: none;
+      color: #f27474; }
+  .swal2-popup > .swal2-input,
+  .swal2-popup > .swal2-file,
+  .swal2-popup > .swal2-textarea,
+  .swal2-popup > .swal2-select,
+  .swal2-popup > .swal2-radio,
+  .swal2-popup > .swal2-checkbox {
+    display: none; }
+  .swal2-popup .swal2-content {
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    color: #545454;
+    font-size: 1.125em;
+    font-weight: 300;
+    line-height: normal;
+    word-wrap: break-word; }
+  .swal2-popup #swal2-content {
+    text-align: center; }
+  .swal2-popup .swal2-input,
+  .swal2-popup .swal2-file,
+  .swal2-popup .swal2-textarea,
+  .swal2-popup .swal2-select,
+  .swal2-popup .swal2-radio,
+  .swal2-popup .swal2-checkbox {
+    margin: 1em auto; }
+  .swal2-popup .swal2-input,
+  .swal2-popup .swal2-file,
+  .swal2-popup .swal2-textarea {
+    width: 100%;
+    transition: border-color .3s, box-shadow .3s;
+    border: 1px solid #d9d9d9;
+    border-radius: 0.1875em;
+    font-size: 1.125em;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06);
+    box-sizing: border-box; }
+    .swal2-popup .swal2-input.swal2-inputerror,
+    .swal2-popup .swal2-file.swal2-inputerror,
+    .swal2-popup .swal2-textarea.swal2-inputerror {
+      border-color: #f27474 !important;
+      box-shadow: 0 0 2px #f27474 !important; }
+    .swal2-popup .swal2-input:focus,
+    .swal2-popup .swal2-file:focus,
+    .swal2-popup .swal2-textarea:focus {
+      border: 1px solid #b4dbed;
+      outline: none;
+      box-shadow: 0 0 3px #c4e6f5; }
+    .swal2-popup .swal2-input::-webkit-input-placeholder,
+    .swal2-popup .swal2-file::-webkit-input-placeholder,
+    .swal2-popup .swal2-textarea::-webkit-input-placeholder {
+      color: #cccccc; }
+    .swal2-popup .swal2-input:-ms-input-placeholder,
+    .swal2-popup .swal2-file:-ms-input-placeholder,
+    .swal2-popup .swal2-textarea:-ms-input-placeholder {
+      color: #cccccc; }
+    .swal2-popup .swal2-input::-ms-input-placeholder,
+    .swal2-popup .swal2-file::-ms-input-placeholder,
+    .swal2-popup .swal2-textarea::-ms-input-placeholder {
+      color: #cccccc; }
+    .swal2-popup .swal2-input::placeholder,
+    .swal2-popup .swal2-file::placeholder,
+    .swal2-popup .swal2-textarea::placeholder {
+      color: #cccccc; }
+  .swal2-popup .swal2-range input {
+    width: 80%; }
+  .swal2-popup .swal2-range output {
+    width: 20%;
+    font-weight: 600;
+    text-align: center; }
+  .swal2-popup .swal2-range input,
+  .swal2-popup .swal2-range output {
+    height: 2.625em;
+    margin: 1em auto;
+    padding: 0;
+    font-size: 1.125em;
+    line-height: 2.625em; }
+  .swal2-popup .swal2-input {
+    height: 2.625em;
+    padding: 0.75em; }
+    .swal2-popup .swal2-input[type='number'] {
+      max-width: 10em; }
+  .swal2-popup .swal2-file {
+    font-size: 1.125em; }
+  .swal2-popup .swal2-textarea {
+    height: 6.75em;
+    padding: 0.75em; }
+  .swal2-popup .swal2-select {
+    min-width: 50%;
+    max-width: 100%;
+    padding: .375em .625em;
+    color: #545454;
+    font-size: 1.125em; }
+  .swal2-popup .swal2-radio,
+  .swal2-popup .swal2-checkbox {
+    align-items: center;
+    justify-content: center; }
+    .swal2-popup .swal2-radio label,
+    .swal2-popup .swal2-checkbox label {
+      margin: 0 .6em;
+      font-size: 1.125em; }
+    .swal2-popup .swal2-radio input,
+    .swal2-popup .swal2-checkbox input {
+      margin: 0 .4em; }
+  .swal2-popup .swal2-validationerror {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625em;
+    background: #f0f0f0;
+    color: #666666;
+    font-size: 1em;
+    font-weight: 300;
+    overflow: hidden; }
+    .swal2-popup .swal2-validationerror::before {
+      display: inline-block;
+      width: 1.5em;
+      height: 1.5em;
+      margin: 0 .625em;
+      border-radius: 50%;
+      background-color: #f27474;
+      color: #fff;
+      font-weight: 600;
+      line-height: 1.5em;
+      text-align: center;
+      content: '!';
+      zoom: normal; }
+
+@supports (-ms-accelerator: true) {
+  .swal2-range input {
+    width: 100% !important; }
+  .swal2-range output {
+    display: none; } }
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .swal2-range input {
+    width: 100% !important; }
+  .swal2-range output {
+    display: none; } }
+
+.swal2-icon {
+  position: relative;
+  justify-content: center;
+  width: 5em;
+  height: 5em;
+  margin: 1.25em auto 1.875em;
+  border: .25em solid transparent;
+  border-radius: 50%;
+  line-height: 5em;
+  cursor: default;
+  box-sizing: content-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  zoom: normal; }
+  .swal2-icon-text {
+    font-size: 3.75em; }
+  .swal2-icon.swal2-error {
+    border-color: #f27474; }
+    .swal2-icon.swal2-error .swal2-x-mark {
+      position: relative;
+      flex-grow: 1; }
+    .swal2-icon.swal2-error [class^='swal2-x-mark-line'] {
+      display: block;
+      position: absolute;
+      top: 2.3125em;
+      width: 2.9375em;
+      height: .3125em;
+      border-radius: .125em;
+      background-color: #f27474; }
+      .swal2-icon.swal2-error [class^='swal2-x-mark-line'][class$='left'] {
+        left: 1.0625em;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg); }
+      .swal2-icon.swal2-error [class^='swal2-x-mark-line'][class$='right'] {
+        right: 1em;
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg); }
+  .swal2-icon.swal2-warning {
+    border-color: #facea8;
+    color: #f8bb86; }
+  .swal2-icon.swal2-info {
+    border-color: #9de0f6;
+    color: #3fc3ee; }
+  .swal2-icon.swal2-question {
+    border-color: #c9dae1;
+    color: #87adbd; }
+  .swal2-icon.swal2-success {
+    border-color: #a5dc86; }
+    .swal2-icon.swal2-success [class^='swal2-success-circular-line'] {
+      position: absolute;
+      width: 3.75em;
+      height: 7.5em;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+      border-radius: 50%; }
+      .swal2-icon.swal2-success [class^='swal2-success-circular-line'][class$='left'] {
+        top: -.4375em;
+        left: -2.0635em;
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+        -webkit-transform-origin: 3.75em 3.75em;
+                transform-origin: 3.75em 3.75em;
+        border-radius: 7.5em 0 0 7.5em; }
+      .swal2-icon.swal2-success [class^='swal2-success-circular-line'][class$='right'] {
+        top: -.6875em;
+        left: 1.875em;
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+        -webkit-transform-origin: 0 3.75em;
+                transform-origin: 0 3.75em;
+        border-radius: 0 7.5em 7.5em 0; }
+    .swal2-icon.swal2-success .swal2-success-ring {
+      position: absolute;
+      top: -.25em;
+      left: -.25em;
+      width: 100%;
+      height: 100%;
+      border: 0.25em solid rgba(165, 220, 134, 0.3);
+      border-radius: 50%;
+      z-index: 2;
+      box-sizing: content-box; }
+    .swal2-icon.swal2-success .swal2-success-fix {
+      position: absolute;
+      top: .5em;
+      left: 1.625em;
+      width: .4375em;
+      height: 5.625em;
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+      z-index: 1; }
+    .swal2-icon.swal2-success [class^='swal2-success-line'] {
+      display: block;
+      position: absolute;
+      height: .3125em;
+      border-radius: .125em;
+      background-color: #a5dc86;
+      z-index: 2; }
+      .swal2-icon.swal2-success [class^='swal2-success-line'][class$='tip'] {
+        top: 2.875em;
+        left: .875em;
+        width: 1.5625em;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg); }
+      .swal2-icon.swal2-success [class^='swal2-success-line'][class$='long'] {
+        top: 2.375em;
+        right: .5em;
+        width: 2.9375em;
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg); }
+
+.swal2-progresssteps {
+  align-items: center;
+  margin: 0 0 1.25em;
+  padding: 0;
+  font-weight: 600; }
+  .swal2-progresssteps li {
+    display: inline-block;
+    position: relative; }
+  .swal2-progresssteps .swal2-progresscircle {
+    width: 2em;
+    height: 2em;
+    border-radius: 2em;
+    background: #00365a;
+    color: #fff;
+    line-height: 2em;
+    text-align: center;
+    z-index: 20; }
+    .swal2-progresssteps .swal2-progresscircle:first-child {
+      margin-left: 0; }
+    .swal2-progresssteps .swal2-progresscircle:last-child {
+      margin-right: 0; }
+    .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep {
+      background: #00365a; }
+      .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep ~ .swal2-progresscircle {
+        background: #add8e6; }
+      .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep ~ .swal2-progressline {
+        background: #add8e6; }
+  .swal2-progresssteps .swal2-progressline {
+    width: 2.5em;
+    height: .4em;
+    margin: 0 -1px;
+    background: #00365a;
+    z-index: 10; }
+
+[class^='swal2'] {
+  -webkit-tap-highlight-color: transparent; }
+
+.swal2-show {
+  -webkit-animation: swal2-show 0.3s;
+          animation: swal2-show 0.3s; }
+  .swal2-show.swal2-noanimation {
+    -webkit-animation: none;
+            animation: none; }
+
+.swal2-hide {
+  -webkit-animation: swal2-hide 0.15s forwards;
+          animation: swal2-hide 0.15s forwards; }
+  .swal2-hide.swal2-noanimation {
+    -webkit-animation: none;
+            animation: none; }
+
+[dir='rtl'] .swal2-close {
+  right: auto;
+  left: 0; }
+
+.swal2-animate-success-icon .swal2-success-line-tip {
+  -webkit-animation: swal2-animate-success-line-tip 0.75s;
+          animation: swal2-animate-success-line-tip 0.75s; }
+
+.swal2-animate-success-icon .swal2-success-line-long {
+  -webkit-animation: swal2-animate-success-line-long 0.75s;
+          animation: swal2-animate-success-line-long 0.75s; }
+
+.swal2-animate-success-icon .swal2-success-circular-line-right {
+  -webkit-animation: swal2-rotate-success-circular-line 4.25s ease-in;
+          animation: swal2-rotate-success-circular-line 4.25s ease-in; }
+
+.swal2-animate-error-icon {
+  -webkit-animation: swal2-animate-error-icon 0.5s;
+          animation: swal2-animate-error-icon 0.5s; }
+  .swal2-animate-error-icon .swal2-x-mark {
+    -webkit-animation: swal2-animate-error-x-mark 0.5s;
+            animation: swal2-animate-error-x-mark 0.5s; }
+
+@-webkit-keyframes swal2-rotate-loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes swal2-rotate-loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }</style></head>
+
+<body id="app-container" class="ltr rounded menu-default menu-sub-hidden sub-hidden" cz-shortcut-listen="true">
+    <nav class="navbar fixed-top" style="opacity: 1;">
+        <div class="d-flex align-items-center navbar-left">
+            <a href="#" class="menu-button d-none d-md-block">
+                <svg class="main" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 17">
+                    <rect x="0.48" y="0.5" width="7" height="1"></rect>
+                    <rect x="0.48" y="7.5" width="7" height="1"></rect>
+                    <rect x="0.48" y="15.5" width="7" height="1"></rect>
+                </svg>
+                <svg class="sub" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 17">
+                    <rect x="1.56" y="0.5" width="16" height="1"></rect>
+                    <rect x="1.56" y="7.5" width="16" height="1"></rect>
+                    <rect x="1.56" y="15.5" width="16" height="1"></rect>
+                </svg>
+            </a>
+            <a href="#" class="menu-button-mobile d-xs-block d-sm-block d-md-none">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 17">
+                    <rect x="0.5" y="0.5" width="25" height="1"></rect>
+                    <rect x="0.5" y="7.5" width="25" height="1"></rect>
+                    <rect x="0.5" y="15.5" width="25" height="1"></rect>
+                </svg>
+            </a>
+            <!--<div class="search" data-search-path="Pages.Search.html?q=">
+                <input placeholder="Search...">
+                <span class="search-icon">
+                </span>
+            </div>-->
+
+            <div class="topbar-custom">
+                <ul class="navbar-right d-flex list-inline float-right mb-0">
+                    <li class="list-inline-item dropdown notification-list flags-dropdown d-none d-sm-inline-block">
+                        <a class="nav-link dropdown-toggle arrow-none waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <img src="img/flags/us_flag.jpg" alt="" class="flag-img">
+                            United States <i class="mdi mdi-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-animated">
+                            <a href="#" class="dropdown-item"><img src="img/flags/french_flag.jpg" alt="" class="flag-img"> French</a>
+                            <a href="#" class="dropdown-item"><img src="img/flags/germany_flag.jpg" alt="" class="flag-img"> Germany</a>
+                            <a href="#" class="dropdown-item"><img src="img/flags/italy_flag.jpg" alt="" class="flag-img"> Italy</a>
+                            <a href="#" class="dropdown-item"><img src="img/flags/spain_flag.jpg" alt="" class="flag-img"> Spain</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!--<div class="menu-extras topbar-custom navbar p-0">
+                <ul class="list-inline flags-dropdown d-none d-lg-block mb-0">
+                    <li class="list-inline-item dropdown notification-list">
+                        <a class="nav-link dropdown-toggle text-white-50 arrow-none waves-effect waves-light" data-toggle="dropdown" href="#" role="button"
+                           aria-haspopup="false" aria-expanded="false">
+                            <img src="../assets_v5/img/flags/us_flag.jpg" alt="" class="flag-img">
+                            United States <i class="mdi mdi-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-animated">
+                            <a href="#" class="dropdown-item"><img src="../assets_v5/img/flags/french_flag.jpg" alt="" class="flag-img"> French</a>
+                            <a href="#" class="dropdown-item"><img src="../assets_v5/img/flags/germany_flag.jpg" alt="" class="flag-img"> Germany</a>
+                            <a href="#" class="dropdown-item"><img src="../assets_v5/img/flags/italy_flag.jpg" alt="" class="flag-img"> Italy</a>
+                            <a href="#" class="dropdown-item"><img src="../assets_v5/img/flags/spain_flag.jpg" alt="" class="flag-img"> Spain</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>-->
+
+            <a class="btn btn-sm btn-outline-primary ml-3 d-none d-md-inline-block" href="#" onclick="investNow()">&nbsp;Invest Now&nbsp;</a>
+        </div>
+
+        <a class="navbar-logo" href="Dashboard.Default.html">
+            <span class="logo d-none d-xs-block"></span>
+            <span class="logo-mobile d-block d-xs-none"></span>
+        </a>
+        <div class="navbar-right">
+            <div class="header-icons d-inline-block align-middle">
+                <!--<div class="d-none d-md-inline-block align-text-bottom mr-3">
+                    <div class="custom-switch custom-switch-primary-inverse custom-switch-small pl-1"
+                         data-toggle="tooltip" data-placement="left" title="Dark Mode">
+                        <input class="custom-switch-input" id="switchDark" type="checkbox" checked>
+                        <label class="custom-switch-btn" for="switchDark"></label>
+                    </div>
+                </div>-->
+                <!--<div class="position-relative d-none d-sm-inline-block">
+                    <button class="header-icon btn btn-empty" type="button" id="iconMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="simple-icon-grid"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right mt-3  position-absolute" id="iconMenuDropdown">
+                        <a href="#" class="icon-menu-item">
+                            <i class="iconsminds-equalizer d-block"></i>
+                            <span>Settings</span>
+                        </a>
+
+                        <a href="#" class="icon-menu-item">
+                            <i class="iconsminds-male-female d-block"></i>
+                            <span>Users</span>
+                        </a>
+
+                        <a href="#" class="icon-menu-item">
+                            <i class="iconsminds-puzzle d-block"></i>
+                            <span>Components</span>
+                        </a>
+
+                        <a href="#" class="icon-menu-item">
+                            <i class="iconsminds-bar-chart-4 d-block"></i>
+                            <span>Profits</span>
+                        </a>
+
+                        <a href="#" class="icon-menu-item">
+                            <i class="iconsminds-file d-block"></i>
+                            <span>Surveys</span>
+                        </a>
+
+                        <a href="#" class="icon-menu-item">
+                            <i class="iconsminds-suitcase d-block"></i>
+                            <span>Tasks</span>
+                        </a>
+
+                    </div>
+                </div>-->
+                
+                AS
+            </div>
+            <div class="user d-inline-block">
+                <button class="btn btn-empty p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="name">2BPLATINUM LP</span>
+                    <span>
+                        <img alt="Profile Picture" src="img/profiles/default-user.png">
+                    </span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right mt-3">
+                    <a class="dropdown-item" href="../Profile">Account</a>
+                    <a class="dropdown-item" href="../Help">Support</a>
+                    <a class="dropdown-item" href="../Login/LogOff">Sign out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar fixed-top" style="opacity: 1;">
+        <div class="d-flex align-items-center navbar-left">
+            <a href="#" class="menu-button d-none d-md-block">
+                <svg class="main" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 17">
+                    <rect x="0.48" y="0.5" width="7" height="1"></rect>
+                    <rect x="0.48" y="7.5" width="7" height="1"></rect>
+                    <rect x="0.48" y="15.5" width="7" height="1"></rect>
+                </svg>
+                <svg class="sub" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 17">
+                    <rect x="1.56" y="0.5" width="16" height="1"></rect>
+                    <rect x="1.56" y="7.5" width="16" height="1"></rect>
+                    <rect x="1.56" y="15.5" width="16" height="1"></rect>
+                </svg>
+            </a>
+            <a href="#" class="menu-button-mobile d-xs-block d-sm-block d-md-none">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 17">
+                    <rect x="0.5" y="0.5" width="25" height="1"></rect>
+                    <rect x="0.5" y="7.5" width="25" height="1"></rect>
+                    <rect x="0.5" y="15.5" width="25" height="1"></rect>
+                </svg>
+            </a>
+            <!--<div class="search" data-search-path="Pages.Search.html?q=">
+                <input placeholder="Search...">
+                <span class="search-icon">
+                </span>
+            </div>-->
+
+            <div class="topbar-custom">
+                <ul class="navbar-right d-flex list-inline float-right mb-0">
+                    <li class="list-inline-item dropdown notification-list flags-dropdown d-none d-sm-inline-block">
+
+                                <a class="nav-link dropdown-toggle arrow-none waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                    <img src="img/flags/us_flag.jpg" alt="" class="flag-img">
+                                    English <i class="mdi mdi-chevron-down"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-animated">
+                                    <a href="#" class="dropdown-item" onclick="setLanguage('pt-BR')"><img src="../assets_v5/img/flags/br-flag.png" alt="" class="flag-img"> Portuguese</a>
+                                </div>
+
+
+
+
+
+
+                    </li>
+                </ul>
+            </div>
+
+            <!--<div class="menu-extras topbar-custom navbar p-0">
+                <ul class="list-inline flags-dropdown d-none d-lg-block mb-0">
+                    <li class="list-inline-item dropdown notification-list">
+                        <a class="nav-link dropdown-toggle text-white-50 arrow-none waves-effect waves-light" data-toggle="dropdown" href="#" role="button"
+                           aria-haspopup="false" aria-expanded="false">
+                            <img src="../assets_v5/img/flags/us_flag.jpg" alt="" class="flag-img">
+                            United States <i class="mdi mdi-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-animated">
+                            <a href="#" class="dropdown-item"><img src="../assets_v5/img/flags/french_flag.jpg" alt="" class="flag-img"> French</a>
+                            <a href="#" class="dropdown-item"><img src="../assets_v5/img/flags/germany_flag.jpg" alt="" class="flag-img"> Germany</a>
+                            <a href="#" class="dropdown-item"><img src="../assets_v5/img/flags/italy_flag.jpg" alt="" class="flag-img"> Italy</a>
+                            <a href="#" class="dropdown-item"><img src="../assets_v5/img/flags/spain_flag.jpg" alt="" class="flag-img"> Spain</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>-->
+
+            <a class="btn btn-sm btn-outline-primary ml-3 d-none d-md-inline-block" href="#" onclick="investNow()">&nbsp;Invest Now&nbsp;</a>
+        </div>
+
+        <a class="navbar-logo" href="../Home">
+            <span class="logo d-none d-xs-block" style="width: 240px;  height: 80px;  background-position: center center;  margin: 0 auto; margin-top: -17px;"></span>
+            <span class="logo-mobile d-block d-xs-none"></span>
+        </a>
+        <div class="navbar-right">
+            <div class="header-icons d-inline-block align-middle">
+                <!--<div class="d-none d-md-inline-block align-text-bottom mr-3">
+                    <div class="custom-switch custom-switch-primary-inverse custom-switch-small pl-1"
+                         data-toggle="tooltip" data-placement="left" title="Dark Mode">
+                        <input class="custom-switch-input" id="switchDark" type="checkbox" checked>
+                        <label class="custom-switch-btn" for="switchDark"></label>
+                    </div>
+                </div>-->
+                <!--<div class="position-relative d-none d-sm-inline-block">
+                    <button class="header-icon btn btn-empty" type="button" id="iconMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="simple-icon-grid"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right mt-3  position-absolute" id="iconMenuDropdown">
+                        <a href="#" class="icon-menu-item">
+                            <i class="iconsminds-equalizer d-block"></i>
+                            <span>Settings</span>
+                        </a>
+
+                        <a href="#" class="icon-menu-item">
+                            <i class="iconsminds-male-female d-block"></i>
+                            <span>Users</span>
+                        </a>
+
+                        <a href="#" class="icon-menu-item">
+                            <i class="iconsminds-puzzle d-block"></i>
+                            <span>Components</span>
+                        </a>
+
+                        <a href="#" class="icon-menu-item">
+                            <i class="iconsminds-bar-chart-4 d-block"></i>
+                            <span>Profits</span>
+                        </a>
+
+                        <a href="#" class="icon-menu-item">
+                            <i class="iconsminds-file d-block"></i>
+                            <span>Surveys</span>
+                        </a>
+
+                        <a href="#" class="icon-menu-item">
+                            <i class="iconsminds-suitcase d-block"></i>
+                            <span>Tasks</span>
+                        </a>
+
+                    </div>
+                </div>-->
+                
+                <button class="header-icon btn btn-empty d-none d-sm-inline-block" type="button" id="fullScreenButton">
+                    <i class="simple-icon-size-fullscreen"></i>
+                    <i class="simple-icon-size-actual"></i>
+                </button>
+
+            </div>
+            <div class="user d-inline-block">
+                <button class="btn btn-empty p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="name">2BPLATINUM LP</span>
+                    <span>
+                        <img alt="Profile Picture" src="img/profiles/default-user.png">
+                    </span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right mt-3">
+                    <a class="dropdown-item" href="../Profile">Account</a>
+                    <a class="dropdown-item" href="../Help">Support</a>
+                    <a class="dropdown-item" href="../Login/LogOff">Sign out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="menu" style="opacity: 1;">
+        <div class="main-menu default-transition">
+            <div class="scroll ps ps--active-y">
+                <ul class="list-unstyled">
+                    <li class="clMenu active" id="clMenu_Overview">
+                        <a href="../Home">
+                            <i class="glyph-icon iconsminds-digital-drawing"></i>
+                            <span>Overview</span>
+                        </a>
+                    </li>
+                    <li class="clMenu" id="clMenu_Transactions">
+                        <a href="../Transaction">
+                            <i class="glyph-icon iconsminds-receipt-4"></i> Transactions
+                        </a>
+                    </li>
+                    <li class="clMenu" id="clMenu_Portifolio">
+                        <a href="../Portifolio">
+                            <i class="glyph-icon iconsminds-monitor-analytics"></i> My Portfolio
+                        </a>
+                    </li>
+                    <li class="clMenu" id="clMenu_Investiments">
+                        <a href="../Investiment/New">
+                            <i class="glyph-icon simple-icon-paper-plane"></i> Investments
+                        </a>
+                    </li>
+                    <li class="clMenu" id="clMenu_Transfer">
+                        <a href="../Transfer">
+                            <i class="glyph-icon iconsminds-dollar"></i> Transfer
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Doc" id="clMenu_Documents">
+                            <i class="glyph-icon iconsminds-add-file"></i> Documents
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Help" id="clMenu_Helps">
+                            <i class="glyph-icon iconsminds-idea"></i> Help
+                        </a>
+                    </li>
+                </ul>
+            <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; height: 526px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 345px;"></div></div></div>
+        </div>
+        <div class="sub-menu default-transition">
+            <div class="scroll ps">
+                <ul class="list-unstyled" data-link="overview">
+                    <li class="active">
+                        <a href="Dashboard.Default.html">
+                            <i class="simple-icon-rocket"></i> <span class="d-inline-block">Default</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Dashboard.Analytics.html">
+                            <i class="simple-icon-pie-chart"></i> <span class="d-inline-block">Analytics</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Dashboard.Ecommerce.html">
+                            <i class="simple-icon-basket-loaded"></i> <span class="d-inline-block">Ecommerce</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Dashboard.Content.html">
+                            <i class="simple-icon-doc"></i> <span class="d-inline-block">Content</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-unstyled" data-link="transactions" id="transactions">
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#collapseAuthorization" aria-expanded="true" aria-controls="collapseAuthorization" class="rotate-arrow-icon opacity-50">
+                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Authorization</span>
+                        </a>
+                        <div id="collapseAuthorization" class="collapse show">
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="Pages.Auth.Login.html">
+                                        <i class="simple-icon-user-following"></i> <span class="d-inline-block">Login</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Auth.Register.html">
+                                        <i class="simple-icon-user-follow"></i> <span class="d-inline-block">Register</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Auth.ForgotPassword.html">
+                                        <i class="simple-icon-user-unfollow"></i> <span class="d-inline-block">
+                                            Forgot
+                                            Password
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#collapseProduct" aria-expanded="true" aria-controls="collapseProduct" class="rotate-arrow-icon opacity-50">
+                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Product</span>
+                        </a>
+                        <div id="collapseProduct" class="collapse show">
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="Pages.Product.List.html">
+                                        <i class="simple-icon-credit-card"></i> <span class="d-inline-block">
+                                            Data
+                                            List
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Product.Thumbs.html">
+                                        <i class="simple-icon-list"></i> <span class="d-inline-block">
+                                            Thumb
+                                            List
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Product.Images.html">
+                                        <i class="simple-icon-grid"></i> <span class="d-inline-block">
+                                            Image
+                                            List
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Product.Detail.html">
+                                        <i class="simple-icon-book-open"></i> <span class="d-inline-block">Detail</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#collapseProfile" aria-expanded="true" aria-controls="collapseProfile" class="rotate-arrow-icon opacity-50">
+                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Profile</span>
+                        </a>
+                        <div id="collapseProfile" class="collapse show">
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="Pages.Profile.Social.html">
+                                        <i class="simple-icon-share"></i> <span class="d-inline-block">Social</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Profile.Portfolio.html">
+                                        <i class="simple-icon-link"></i> <span class="d-inline-block">Portfolio</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#collapseBlog" aria-expanded="true" aria-controls="collapseBlog" class="rotate-arrow-icon opacity-50">
+                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Blog</span>
+                        </a>
+                        <div id="collapseBlog" class="collapse show">
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="Pages.Blog.html">
+                                        <i class="simple-icon-list"></i> <span class="d-inline-block">List</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Blog.Detail.html">
+                                        <i class="simple-icon-book-open"></i> <span class="d-inline-block">Detail</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Blog.Detail.Alt.html">
+                                        <i class="simple-icon-picture"></i> <span class="d-inline-block">
+                                            Detail
+                                            Alt
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#collapseMisc" aria-expanded="true" aria-controls="collapseMisc" class="rotate-arrow-icon opacity-50">
+                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Miscellaneous</span>
+                        </a>
+                        <div id="collapseMisc" class="collapse show">
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="Pages.Misc.Coming.Soon.html">
+                                        <i class="simple-icon-hourglass"></i> <span class="d-inline-block">
+                                            Coming
+                                            Soon
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Misc.Error.html">
+                                        <i class="simple-icon-exclamation"></i> <span class="d-inline-block">Error</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Misc.Faq.html">
+                                        <i class="simple-icon-question"></i> <span class="d-inline-block">Faq</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Misc.Invoice.html">
+                                        <i class="simple-icon-bag"></i> <span class="d-inline-block">Invoice</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Misc.Knowledge.Base.html">
+                                        <i class="simple-icon-graduation"></i> <span class="d-inline-block">
+                                            Knowledge
+                                            Base
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Misc.Mailing.html">
+                                        <i class="simple-icon-envelope-open"></i> <span class="d-inline-block">Mailing</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Misc.Pricing.html">
+                                        <i class="simple-icon-diamond"></i> <span class="d-inline-block">Pricing</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Misc.Search.html">
+                                        <i class="simple-icon-magnifier"></i> <span class="d-inline-block">Search</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="list-unstyled" data-link="protfolio">
+                    <li>
+                        <a href="Apps.MediaLibrary.html">
+                            <i class="simple-icon-picture"></i> <span class="d-inline-block">Library</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Apps.Todo.List.html">
+                            <i class="simple-icon-check"></i> <span class="d-inline-block">Todo</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Apps.Survey.List.html">
+                            <i class="simple-icon-calculator"></i> <span class="d-inline-block">Survey</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Apps.Chat.html">
+                            <i class="simple-icon-bubbles"></i> <span class="d-inline-block">Chat</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-unstyled" data-link="investments">
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#collapseForms" aria-expanded="true" aria-controls="collapseForms" class="rotate-arrow-icon opacity-50">
+                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Forms</span>
+                        </a>
+                        <div id="collapseForms" class="collapse show">
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="Ui.Forms.Components.html">
+                                        <i class="simple-icon-event"></i> <span class="d-inline-block">Components</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Forms.Layouts.html">
+                                        <i class="simple-icon-doc"></i> <span class="d-inline-block">Layouts</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Forms.Validation.html">
+                                        <i class="simple-icon-check"></i> <span class="d-inline-block">Validation</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Forms.Wizard.html">
+                                        <i class="simple-icon-magic-wand"></i> <span class="d-inline-block">Wizard</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#collapseDataTables" aria-expanded="true" aria-controls="collapseDataTables" class="rotate-arrow-icon opacity-50">
+                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Datatables</span>
+                        </a>
+                        <div id="collapseDataTables" class="collapse show">
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="Ui.Datatables.Rows.html">
+                                        <i class="simple-icon-screen-desktop"></i> <span class="d-inline-block">
+                                            Full
+                                            Page UI
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Datatables.Scroll.html">
+                                        <i class="simple-icon-mouse"></i> <span class="d-inline-block">Scrollable</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Datatables.Pagination.html">
+                                        <i class="simple-icon-notebook"></i> <span class="d-inline-block">Pagination</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Datatables.Default.html">
+                                        <i class="simple-icon-grid"></i> <span class="d-inline-block">Default</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#collapseComponents" aria-expanded="true" aria-controls="collapseComponents" class="rotate-arrow-icon opacity-50">
+                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Components</span>
+                        </a>
+                        <div id="collapseComponents" class="collapse show">
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="Ui.Components.Alerts.html">
+                                        <i class="simple-icon-bell"></i> <span class="d-inline-block">Alerts</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.Badges.html">
+                                        <i class="simple-icon-badge"></i> <span class="d-inline-block">Badges</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.Buttons.html">
+                                        <i class="simple-icon-control-play"></i> <span class="d-inline-block">Buttons</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.Cards.html">
+                                        <i class="simple-icon-layers"></i> <span class="d-inline-block">Cards</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.Carousel.html">
+                                        <i class="simple-icon-picture"></i> <span class="d-inline-block">Carousel</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.Charts.html">
+                                        <i class="simple-icon-chart"></i> <span class="d-inline-block">Charts</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.Collapse.html">
+                                        <i class="simple-icon-arrow-up"></i> <span class="d-inline-block">Collapse</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.Dropdowns.html">
+                                        <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Dropdowns</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.Editors.html">
+                                        <i class="simple-icon-book-open"></i> <span class="d-inline-block">Editors</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.Icons.html">
+                                        <i class="simple-icon-star"></i> <span class="d-inline-block">Icons</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.InputGroups.html">
+                                        <i class="simple-icon-note"></i> <span class="d-inline-block">
+                                            Input
+                                            Groups
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.Jumbotron.html">
+                                        <i class="simple-icon-screen-desktop"></i> <span class="d-inline-block">Jumbotron</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.Modal.html">
+                                        <i class="simple-icon-docs"></i> <span class="d-inline-block">Modal</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.Navigation.html">
+                                        <i class="simple-icon-cursor"></i> <span class="d-inline-block">Navigation</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.PopoverandTooltip.html">
+                                        <i class="simple-icon-pin"></i> <span class="d-inline-block">
+                                            Popover &amp;
+                                            Tooltip
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.Sortable.html">
+                                        <i class="simple-icon-shuffle"></i> <span class="d-inline-block">Sortable</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.Tables.html">
+                                        <i class="simple-icon-grid"></i> <span class="d-inline-block">Tables</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="list-unstyled" data-link="transfer" id="menuTypes">
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#collapseMenuTypes" aria-expanded="true" aria-controls="collapseMenuTypes" class="rotate-arrow-icon">
+                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Menu Types</span>
+                        </a>
+                        <div id="collapseMenuTypes" class="collapse show" data-parent="#menuTypes">
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="Menu.Default.html">
+                                        <i class="simple-icon-control-pause"></i> <span class="d-inline-block">Default</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Menu.Subhidden.html">
+                                        <i class="simple-icon-arrow-left mi-subhidden"></i> <span class="d-inline-block">Subhidden</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Menu.Hidden.html">
+                                        <i class="simple-icon-control-start mi-hidden"></i> <span class="d-inline-block">Hidden</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Menu.Mainhidden.html">
+                                        <i class="simple-icon-control-rewind mi-hidden"></i> <span class="d-inline-block">Mainhidden</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#collapseMenuLevel" aria-expanded="true" aria-controls="collapseMenuLevel" class="rotate-arrow-icon collapsed">
+                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Menu Levels</span>
+                        </a>
+                        <div id="collapseMenuLevel" class="collapse" data-parent="#menuTypes">
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="#">
+                                        <i class="simple-icon-layers"></i> <span class="d-inline-block">
+                                            Sub
+                                            Level
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-toggle="collapse" data-target="#collapseMenuLevel2" aria-expanded="true" aria-controls="collapseMenuLevel2" class="rotate-arrow-icon collapsed">
+                                        <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">
+                                            Another
+                                            Level
+                                        </span>
+                                    </a>
+                                    <div id="collapseMenuLevel2" class="collapse">
+                                        <ul class="list-unstyled inner-level-menu">
+                                            <li>
+                                                <a href="#">
+                                                    <i class="simple-icon-layers"></i> <span class="d-inline-block">
+                                                        Sub
+                                                        Level
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#collapseMenuDetached" aria-expanded="true" aria-controls="collapseMenuDetached" class="rotate-arrow-icon collapsed">
+                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Detached</span>
+                        </a>
+                        <div id="collapseMenuDetached" class="collapse">
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="#">
+                                        <i class="simple-icon-layers"></i> <span class="d-inline-block">
+                                            Sub
+                                            Level
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+        </div>
+    </div>
+
+
+    <main class="default-transition" style="opacity: 1;">
+
+
+
+        <div class="container-fluid rounded pb-0">
+
+            
+
+
+
+
+
+<div class="row">
+    <div class="col-12 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Portfolio</h5>
+                <h3 class=" " style=" font-size: 30px; color: #155489; ">$0.00</h3>
+                <div class="dashboard-line-chart chart"><div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                    <canvas id="portifolioChart" width="1728" height="566" style="display: block; width: 864px; height: 283px;" class="chartjs-render-monitor"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end row -->
+<div class="row mb-4">
+    <div class="col-xl-5">
+        <div class="card product-sales mb-4">
+            <div class="card-body">
+                
+                <div class="row align-items-center mb-4">
+                    <div class="col-6">
+                        <p class="text-muted">This Month Yield</p>
+                        <h4><sup class="mr-1"><small>$</small></sup><b>0.00</b><span class="ml-3">+0%</span></h4>
+
+                    </div>
+                    <div class="col-6">
+                        <div class="text-right">
+                            <span class="pie" style="display: none;">0</span><svg class="peity" height="50" width="50"><path d="M 25 25 L 25 0 A 25 25 0 0 1 NaN NaN Z" fill="#f0f0f4"></path></svg>
+                        </div>
+                    </div>
+
+                </div>
+                <div>
+                    <p class="text-muted mb-3">Dividend Yield by fund</p>
+
+                        <div class="row">
+
+                            <div class="col-6">
+                                <p class="text-muted mb-0 text-right"><b>No fund invested</b></p>
+                            </div>
+                        </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title mb-4">Reviews</h4>
+                <div class="mb-4">
+                    <h5><span class="text-info">500</span>+ Satisfied clients</h5>
+                </div>
+                <div class="mb-3">
+                    <i class="fas fa-quote-left h4 text-primary"></i>
+                </div>
+                <div id="reviewExampleControls" class="carousel slide review-carousel" data-ride="carousel">
+
+
+
+                    <div class="carousel-inner">
+                                <div class="carousel-item">
+                                    <div>
+                                        <p>I feel quite safe investing in 2btrust.
+The management is serious and reliable.
+I recommend it to anyone who wants to diversify their investments.
+</p>
+                                        <div class="media mt-4">
+                                            <div class="avatar-sm mr-3">
+                                                <span class="avatar-title bg-soft-primary text-primary rounded-circle">
+                                                    M
+                                                </span>
+                                            </div>
+                                            <div class="media-body">
+                                                <h5 class="font-size-16 mb-1">Matteuzzy</h5>
+                                                <p class="mb-2">CEO of Matteuzzy Company</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item active">
+                                    <div>
+                                        <p>Marcus and his team are excellent professionals. Very attentive, transparent and the investments are sound. I would highly recommend them!</p>
+                                        <div class="media mt-4">
+                                            <div class="avatar-sm mr-3">
+                                                <span class="avatar-title bg-soft-primary text-primary rounded-circle">
+                                                    F
+                                                </span>
+                                            </div>
+                                            <div class="media-body">
+                                                <h5 class="font-size-16 mb-1">Felipe Mardakis  </h5>
+                                                <p class="mb-2">CEO Ascent Accounting Group</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div>
+                                        <p>Thank you for all</p>
+                                        <div class="media mt-4">
+                                            <div class="avatar-sm mr-3">
+                                                <span class="avatar-title bg-soft-primary text-primary rounded-circle">
+                                                    M
+                                                </span>
+                                            </div>
+                                            <div class="media-body">
+                                                <h5 class="font-size-16 mb-1">Marcus </h5>
+                                                <p class="mb-2">Ceo</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                    </div>
+
+                    <a class="carousel-control-prev" href="#reviewExampleControls" role="button" data-slide="prev">
+                        <i class="mdi mdi-chevron-left carousel-control-icon"></i>
+                    </a>
+                    <a class="carousel-control-next" href="#reviewExampleControls" role="button" data-slide="next">
+                        <i class="mdi mdi-chevron-right carousel-control-icon"></i>
+                    </a>
+                </div>
+                <div class="align-items-center">
+                    <button type="button" onclick="$('#dvSendReview').css('display', 'block');" class="btn btn-primary btn-sm">Make Your Review</button>
+                </div>
+
+                <div style="padding:20px; display:none" id="dvSendReview">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group position-relative error-l-75">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control   " name="sNome" id="sNome" placeholder="Your Name" required="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group position-relative error-l-75">
+                                <label for="name">Title</label>
+                                <input type="text" class="form-control " name="sTitulo" id="sTitulo" placeholder="Your Title" required="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group position-relative error-l-75">
+                                <label for="name">Description</label>
+                                <textarea class="form-control " name="sDescricao" id="sDescricao" placeholder="Description for your review" required=""></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="align-items-center">
+                                <button type="button" onclick="fnSendReview()" class="btn btn-primary btn-sm">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <hr class="d-xl-none">
+
+    </div>
+
+    <div class="col-xl-7 col-lg-12 mb-4">
+        <div class="card">
+            <div class="position-absolute card-top-buttons">
+                <button class="btn btn-header-light icon-button">
+                    <i class="simple-icon-refresh"></i>
+                </button>
+            </div>
+
+            <div class="card-body">
+                <h5 class="card-title">Recent Activity</h5>
+                <div class="scroll dashboard-list-with-thumbs ps ps--active-y">
+
+                        <div class="d-flex flex-row mb-3">
+                            <a class="d-block position-relative" href="#">
+                                        <img src="https://storage.2btrust.com/upload_HML/Image/RecentActivity/1.jpeg" alt="Marble Cake" class="list-thumbnail border-0">
+                                        <span class="badge badge-pill badge-theme-2 position-absolute badge-top-right">New</span>
+
+
+                            </a>
+                            <div class="pl-3 pt-2 pr-2 pb-2">
+                                <a href="#">
+                                    <p class="list-item-heading">
+
+                                        <b>Construction Loan</b>
+
+                                    </p>
+                                    <div class="pr-4 d-none d-sm-block">
+                                        <p class="text-muted mb-1 text-small">Construction Loan Orland eFund, LP</p>
+                                    </div>
+                                    <div class="text-primary text-small font-weight-medium d-none d-sm-block">
+                                        02/01/2022
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row mb-3">
+                            <a class="d-block position-relative" href="#">
+                                        <img src="https://storage.2btrust.com/upload_HML/Image/RecentActivity/enclave.jpeg" alt="Marble Cake" class="list-thumbnail border-0">
+                                        <span class="badge badge-pill badge-theme-2 position-absolute badge-top-right">New</span>
+
+
+                            </a>
+                            <div class="pl-3 pt-2 pr-2 pb-2">
+                                <a href="#">
+                                    <p class="list-item-heading">
+
+                                        <b>The best Airbnb in Orlando</b>
+
+                                    </p>
+                                    <div class="pr-4 d-none d-sm-block">
+                                        <p class="text-muted mb-1 text-small">Vocation Home</p>
+                                    </div>
+                                    <div class="text-primary text-small font-weight-medium d-none d-sm-block">
+                                        12/30/2021
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row mb-3">
+                            <a class="d-block position-relative" href="#">
+                                        <img src="https://storage.2btrust.com/upload_HML/Image/RecentActivity/encl.png" alt="Marble Cake" class="list-thumbnail border-0">
+                                        <span class="badge badge-pill badge-theme-2 position-absolute badge-top-right">New</span>
+
+
+                            </a>
+                            <div class="pl-3 pt-2 pr-2 pb-2">
+                                <a href="#">
+                                    <p class="list-item-heading">
+
+                                        <b>Modern Resort - Orland Fund INC</b>
+
+                                    </p>
+                                    <div class="pr-4 d-none d-sm-block">
+                                        <p class="text-muted mb-1 text-small">Vacation home near Universal Studios</p>
+                                    </div>
+                                    <div class="text-primary text-small font-weight-medium d-none d-sm-block">
+                                        09/30/2021
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row mb-3">
+                            <a class="d-block position-relative" href="#">
+                                        <img src="https://storage.2btrust.com/upload_HML/Image/RecentActivity/WhatsApp Image 2021-07-30 at 00.47.57 (1).jpeg" alt="Marble Cake" class="list-thumbnail border-0">
+                                        <span class="badge badge-pill badge-theme-2 position-absolute badge-top-right">New</span>
+
+
+                            </a>
+                            <div class="pl-3 pt-2 pr-2 pb-2">
+                                <a href="#">
+                                    <p class="list-item-heading">
+
+                                        <b>Orland Fund INC</b>
+
+                                    </p>
+                                    <div class="pr-4 d-none d-sm-block">
+                                        <p class="text-muted mb-1 text-small">Private Equity Fund focused on the tourism real estate market in Orlando </p>
+                                    </div>
+                                    <div class="text-primary text-small font-weight-medium d-none d-sm-block">
+                                        06/01/2021
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row mb-3">
+                            <a class="d-block position-relative" href="#">
+                                        <img src="https://storage.2btrust.com/upload_HML/Image/RecentActivity/WhatsApp Image 2021-07-30 at 00.47.57.jpeg" alt="Marble Cake" class="list-thumbnail border-0">
+                                        <span class="badge badge-pill badge-theme-2 position-absolute badge-top-right">New</span>
+
+
+                            </a>
+                            <div class="pl-3 pt-2 pr-2 pb-2">
+                                <a href="#">
+                                    <p class="list-item-heading">
+
+                                        <b>Downtown Orlando - 2B Infinite</b>
+
+                                    </p>
+                                    <div class="pr-4 d-none d-sm-block">
+                                        <p class="text-muted mb-1 text-small">Acquired CRE 4,655 sf in the financial center of Orlando.</p>
+                                    </div>
+                                    <div class="text-primary text-small font-weight-medium d-none d-sm-block">
+                                        05/18/2021
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row mb-3">
+                            <a class="d-block position-relative" href="#">
+                                        <img src="https://storage.2btrust.com/upload_HML/Image/RecentActivity/WhatsApp Image 2021-07-30 at 00.47.56.jpeg" alt="Marble Cake" class="list-thumbnail border-0">
+                                        <span class="badge badge-pill badge-theme-2 position-absolute badge-top-right">Fund</span>
+
+
+                            </a>
+                            <div class="pl-3 pt-2 pr-2 pb-2">
+                                <a href="#">
+                                    <p class="list-item-heading">
+
+                                        <b>2B Infinite Capital Fund, LP</b>
+
+                                    </p>
+                                    <div class="pr-4 d-none d-sm-block">
+                                        <p class="text-muted mb-1 text-small">Opportunity to join 2B Infinite and get access to a diverse range of properties.</p>
+                                    </div>
+                                    <div class="text-primary text-small font-weight-medium d-none d-sm-block">
+                                        03/01/2021
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row mb-3">
+                            <a class="d-block position-relative" href="#">
+                                        <img src="https://storage.2btrust.com/upload_HML/Image/RecentActivity/2b.png" alt="Marble Cake" class="list-thumbnail border-0">
+                                        <span class="badge badge-pill badge-theme-2 position-absolute badge-top-right">Hi</span>
+
+
+                            </a>
+                            <div class="pl-3 pt-2 pr-2 pb-2">
+                                <a href="#">
+                                    <p class="list-item-heading">
+
+                                        <b>Welcome to 2BTRUST</b>
+
+                                    </p>
+                                    <div class="pr-4 d-none d-sm-block">
+                                        <p class="text-muted mb-1 text-small">Congratulations on joining the 2BTRUST platform as an investor. We’re grateful to have you onboard...</p>
+                                    </div>
+                                    <div class="text-primary text-small font-weight-medium d-none d-sm-block">
+                                        01/03/2021
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; height: 500px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 403px;"></div></div>
+                <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; height: 500px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 331px;"></div></div></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!---end row-->
+<div class="row mb-4">
+    <div class="col-12 data-tables-hide-filter">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Latest Transactions</h5>
+                <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer"><div class="row view-filter"><div class="col-sm-12"><div class="float-left"></div><div class="float-right"></div><div class="clearfix"></div></div></div><table class="data-table data-tables-no-pagination responsive nowrap dataTable no-footer dtr-inline" id="DataTables_Table_0" role="grid" style="width: 879px;">
+                    <thead>
+                        <tr role="row"><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 113px;">Date</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 459px;">Description</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 124px;">Amount</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 175px;">Avaliable Balance</th></tr>
+                    </thead>
+                    <tbody>
+                            
+                            
+                            
+                            
+                            
+                    <tr role="row" class="odd">
+                                <td tabindex="0">04/07/2022</td>
+                                <td style="">Withdrawal Completed</td>
+                                <td style="">$100,000.00</td>
+                                <td style="">$0.00</td>
+                            </tr><tr role="row" class="even">
+                                <td tabindex="0">04/07/2022</td>
+                                <td style="">Withdrawal Requested</td>
+                                <td style="">$100,000.00</td>
+                                <td style="">$100,000.00</td>
+                            </tr><tr role="row" class="odd">
+                                <td tabindex="0">03/01/2022</td>
+                                <td style="">Sell Order Accept - 1000 Units Orland eFund, LP</td>
+                                <td style="">$100,000.00</td>
+                                <td style="">$100,000.00</td>
+                            </tr><tr role="row" class="even">
+                                <td tabindex="0">03/01/2022</td>
+                                <td style="">Sell Order - 1000 Units Orland eFund, LP </td>
+                                <td style="">$100,000.00</td>
+                                <td style="">$0.00</td>
+                            </tr><tr role="row" class="odd">
+                                <td tabindex="0">02/24/2022</td>
+                                <td style="">Withdrawal Completed</td>
+                                <td style="">$185,000.00</td>
+                                <td style="">$0.00</td>
+                            </tr></tbody>
+                </table><div class="row view-pager"><div class="col-sm-12"><div class="text-center"></div></div></div></div>
+                <div class="col-sm-12">
+                    <div class="text-center">
+                        <button type="button" onclick="window.location='../Transaction'" class="btn btn-primary btn-lg mt-3 text-center">See more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/vendor/jquery-3.3.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".clMenu").removeClass("active");
+        $("#clMenu_Overview").addClass("active");
+
+
+
+
+        var listaPie =  [{"mValor":0.00,"iPorcentagem":"0","sCor":"#f0f0f4"}];
+        var listaLancamentos =  [{"iMes":12,"Valor":0,"Texto":"12-20-2021"},{"iMes":12,"Valor":200000.0000,"Texto":"12-20-2021"},{"iMes":1,"Valor":225000.0000,"Texto":"01-20-2022"},{"iMes":1,"Valor":235000.0000,"Texto":"01-28-2022"},{"iMes":2,"Valor":285000.0000,"Texto":"02-03-2022"},{"iMes":2,"Valor":100000.0000,"Texto":"02-24-2022"},{"iMes":4,"Valor":0.0000,"Texto":"04-07-2022"}];
+
+        var arrColorsPie = [];
+        var arrLabel = [];
+        var arrValores= [];
+
+
+        $.each( listaLancamentos, function( key, value ) {
+            arrLabel.push(listaLancamentos[key].Texto)
+            arrValores.push(listaLancamentos[key].Valor)
+        });
+
+        $.each(listaPie, function (key, value) {
+            arrColorsPie.push(listaPie[key].sCor)
+        });
+          console.log(arrColorsPie)
+
+        $(".pie").peity("pie", {
+            fill:arrColorsPie,  diameter: 50
+        })
+
+
+        setTimeout(function () { loadDvInvestimentoLateral(0) }, 2000);
+        setTimeout(function () { geraGrafico(arrLabel, arrValores); }, 1000);
+
+
+    });
+
+
+
+    function geraGrafico(arrLabel, arrValues) {
+
+
+    var rootStyle = getComputedStyle(document.body);
+    var themeColor1 = rootStyle.getPropertyValue("--theme-color-1").trim();
+    var themeColor2 = rootStyle.getPropertyValue("--theme-color-2").trim();
+    var themeColor3 = rootStyle.getPropertyValue("--theme-color-3").trim();
+    var themeColor4 = rootStyle.getPropertyValue("--theme-color-4").trim();
+    var themeColor5 = rootStyle.getPropertyValue("--theme-color-5").trim();
+    var themeColor6 = rootStyle.getPropertyValue("--theme-color-6").trim();
+    var themeColor1_10 = rootStyle
+      .getPropertyValue("--theme-color-1-10")
+      .trim();
+    var themeColor2_10 = rootStyle
+      .getPropertyValue("--theme-color-2-10")
+      .trim();
+    var themeColor3_10 = rootStyle
+      .getPropertyValue("--theme-color-3-10")
+      .trim();
+    var themeColor4_10 = rootStyle
+      .getPropertyValue("--theme-color-4-10")
+      .trim();
+
+    var themeColor5_10 = rootStyle
+      .getPropertyValue("--theme-color-5-10")
+      .trim();
+    var themeColor6_10 = rootStyle
+      .getPropertyValue("--theme-color-6-10")
+      .trim();
+
+    var primaryColor = rootStyle.getPropertyValue("--primary-color").trim();
+    var foregroundColor = rootStyle
+      .getPropertyValue("--foreground-color")
+      .trim();
+    var separatorColor = rootStyle.getPropertyValue("--separator-color").trim();
+    var chartTooltip = {
+        backgroundColor: foregroundColor,
+        titleFontColor: primaryColor,
+        borderColor: separatorColor,
+        borderWidth: 0.5,
+        bodyFontColor: primaryColor,
+        bodySpacing: 10,
+        xPadding: 15,
+        yPadding: 15,
+        cornerRadius: 0.15,
+        displayColors: false
+        };
+
+
+        var salesChart = document.getElementById("portifolioChart").getContext("2d");
+        var myChart = new Chart(salesChart, {
+          type: "LineWithShadow",
+          options: {
+            plugins: {
+              datalabels: {
+                display: false
+              }
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              yAxes: [
+                {
+                  gridLines: {
+                    display: true,
+                    lineWidth: 1,
+                    color: "rgba(0,0,0,0.1)",
+                    drawBorder: false
+                  },
+                }
+              ],
+              xAxes: [
+                {
+                  gridLines: {
+                    display: false
+                  }
+                }
+              ]
+            },
+            legend: {
+              display: false
+            },
+            tooltips: chartTooltip
+          },
+          data: {
+            labels: arrLabel,
+            datasets: [
+              {
+                label: "",
+                data: arrValues,
+                borderColor: themeColor1,
+                pointBackgroundColor: foregroundColor,
+                pointBorderColor: themeColor1,
+                pointHoverBackgroundColor: themeColor1,
+                pointHoverBorderColor: foregroundColor,
+                pointRadius: 6,
+                pointBorderWidth: 2,
+                pointHoverRadius: 8,
+                fill: false
+              }
+            ]
+          }
+        });
+    }
+
+
+    function fnSendReview() {
+
+
+        var sNome = $("#sNome").val();
+        var sTitle = $("#sTitulo").val();
+        var sDescricao = $("#sDescricao").val();
+
+
+        if (sNome == '' || sTitle == '' || sDescricao == '') {
+            $("#modalAlertError").modal("show")
+            $("#spnAlertError").html("Fill in all fields.")
+
+        }
+        else {
+
+            $.ajax({
+                url: '../Home/SendReview',
+                type: 'POST',
+                data: { sNome: sNome, sDescricao:sDescricao, sTitulo: sTitle },
+                beforeSend: function () {
+                    fnOpenLoadingJs('In Process...');
+
+                },
+                onsuccess: function () { },
+                success: function (result) {
+                    fnCloseLoadingJs();
+                    if (result.statusRetorno == 'success') {
+
+                        $("#modalAlertSuccessRefresh").modal("show")
+                        $("#spnAlertSuccessRefresh").html("Request made successfully")
+                    }
+                    else {
+
+                        $("#modalAlertErrorRefresh").modal("show")
+                        $("#spnAlertErrorRefresh").html("There was an error in your request.")
+                    }
+                }
+            });
+
+        }
+    }
+</script>
+            <input type="hidden" id="accountNumberhd" value="000403-8">
+            <input type="hidden" id="nameClienthd" value="2BPLATINUM LP">
+            <div class="row">
+                <div class="col-12">
+                    <p class="text-muted text-extra-small">
+                        This site is property of 2BTRUST, LLC and its affiliates (collectively, “2BTRUST” or “we,” “us,” or “our”). By accessing or using the Site, you agree that your access to and use of the Site, including any Content (defined below) provided by 2BTRUST, LLC shall be exclusively governed by the Terms and Conditions. The Terms and Conditions may be adjusted by 2BTRUST at any time by its sole discretion and are automatically incorporated into and considered part of this Terms and Condition. If you do not accept the terms and conditions stated here in, do not use the Site. We reserve the right to refuse access to and usage of the Site by anyone at any time. Therefore, 2BTRUST reserves the right to change, modify, update, amend all or any part of the Site or discontinue the Site at any time, without notice. In addition, we reserve the right to change the terms and conditions governing your access to and use of the Site and the Content at any time, without notice.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <script src="js/vendor/jquery-3.3.1.min.js" style="opacity: 1;"></script>
+    <script src="js/vendor/bootstrap.bundle.min.js" style="opacity: 1;"></script>
+    <script src="js/vendor/Chart.bundle.min.js" style="opacity: 1;"></script>
+    <script src="js/vendor/chartjs-plugin-datalabels.js" style="opacity: 1;"></script>
+    <script src="js/vendor/moment.min.js" style="opacity: 1;"></script>
+    <script src="js/vendor/fullcalendar.min.js" style="opacity: 1;"></script>
+    <script src="vendor/datatables.min.js" style="opacity: 1;"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js" style="opacity: 1;"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js" style="opacity: 1;"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js" style="opacity: 1;"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js" style="opacity: 1;"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.print.min.js" style="opacity: 1;"></script>
+
+
+    <script src="../assets_v5/js/vendor/perfect-scrollbar.min.js" style="opacity: 1;"></script>
+    <script src="../assets_v5/js/vendor/progressbar.min.js" style="opacity: 1;"></script>
+    <script src="../assets_v5/js/vendor/jquery.barrating.min.js" style="opacity: 1;"></script>
+    <script src="../assets_v5/js/vendor/select2.full.js" style="opacity: 1;"></script>
+    <script src="../assets/js/plugins/nouslider/jquery.nouislider.min.js" style="opacity: 1;"></script> 
+    <script src="../assets_v5/js/vendor/bootstrap-datepicker.js" style="opacity: 1;"></script>
+    <script src="../assets_v5/js/vendor/Sortable.js" style="opacity: 1;"></script>
+    <script src="../assets_v5/js/vendor/mousetrap.min.js" style="opacity: 1;"></script>
+    <script src="../assets_v5/js/vendor/glide.min.js" style="opacity: 1;"></script>
+    <script src="../assets_v5/js/dore.script.js" style="opacity: 1;"></script>
+    <script src="../assets_v5/js/scripts.js" style="opacity: 1;"></script>
+    <script src="../assets/js/plugins/sweetalert/sweetalert.min.js" style="opacity: 1;"></script>
+    <script src="../assets_v5/loading.js/loadingJs.js" style="opacity: 1;"></script>
+    <script src="../assets_v5/multilanguage/multiLanguage2BTrust.js" style="opacity: 1;"></script>
+    <script src="../assets/fine-uploader/fine-upload-teste.js" style="opacity: 1;"></script>
+    <script src="../assets/js/plugins/MaskMoney/jquery.maskMoney.js" style="opacity: 1;"></script>
+    <script src="../assets/js/plugins/peity/jquery.peity.min.js" style="opacity: 1;"></script>
+
+    <div class="modal fade" id="modalAlertYesOrNoCompleteRegistration" tabindex="-1" role="dialog" aria-hidden="true" style="opacity: 1;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Attention</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    You have not yet completed your registration. Do you want to do it now?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        No
+                    </button>
+                    <button type="button" id="btnYesCompleteRegistration" onclick="btnYesCompleteRegistration()" class="btn btn-primary">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalAlertSuccess" tabindex="-1" role="dialog" aria-hidden="true" style="opacity: 1;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Success</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <span id="spnAlertSuccess"></span>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" id="btnYesCompleteRegistration" onclick="$(&quot;#modalAlertSuccess&quot;).modal(&quot;hide&quot;) " class="btn btn-primary">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalAlertError" tabindex="-1" role="dialog" aria-hidden="true" style="opacity: 1;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Attention</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <span id="spnAlertError"></span>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" id="btnYesCompleteRegistration" onclick="$(&quot;#modalAlertError&quot;).modal(&quot;hide&quot;)" class="btn btn-primary">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalAlertSuccessRefresh" tabindex="-1" role="dialog" aria-hidden="true" style="opacity: 1;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Success</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <span id="spnAlertSuccessRefresh"></span>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" onclick="$(&quot;#modalAlertSuccessRefresh&quot;).modal(&quot;hide&quot;);window.location.reload()" class="btn btn-primary">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalAlertErrorRefresh" tabindex="-1" role="dialog" aria-hidden="true" style="opacity: 1;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Attention</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <span id="spnAlertErrorRefresh"></span>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" onclick="$(&quot;#modalAlertErrorRefresh&quot;).modal(&quot;hide&quot;);window.location.reload()" class="btn btn-primary">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+<script style="opacity: 1;">
+
+    function btnYesCompleteRegistration() {
+        window.location = '../Profile/Profile'
+    }
+
+    function validaPrimeiroAcessoInvestir(idFundo) {
+
+
+                   $.ajax({
+                    url: '../Home/ValidaPrimeiroAcessoUsuarioAtivo',
+                    type: 'POST', 
+                    beforeSend: function () {
+                       
+                    },
+                    onsuccess: function () { },
+                       success: function (result) {
+                           if (result.statusRetorno == 'success' && result.objetoRetorno == true) {
+
+                                 $("#modalAlertYesOrNoCompleteRegistration").modal("show")
+                               //primeiro acesso, nao deixar invesitr (dados incompletos)
+
+                        }
+                        else {
+                           window.location = '../Investiment/New'
+                        }
+                    }
+                });
+
+    }
+      
+
+    //
+    $(".validaCaracteresNumeroOutros").keypress(function (e) {
+        var charCode = !e.charCode ? e.which : e.charCode;
+
+        console.log(charCode)
+
+        if (charCode != 48 &&
+            charCode != 49 &&
+            charCode != 50 &&
+            charCode != 51 &&
+            charCode != 52 &&
+            charCode != 53 &&
+            charCode != 54 &&
+            charCode != 55 &&
+            charCode != 56 &&
+            charCode != 57 &&
+            charCode != 40 &&
+            charCode != 41 &&
+            charCode != 45 &&
+            charCode != 47) {
+            e.preventDefault();
+            return false;
+
+        }
+
+    })
+    $(document).ready(function () {
+
+
+        $('.money').maskMoney({ prefix: 'US$ ', allowNegative: true, thousands: ',', decimal: '.', affixesStay: false });
+        $('.percent').maskMoney({ prefix: '% ', allowNegative: true, thousands: ',', decimal: '.', affixesStay: false });
+
+    }); 
+
+    function investNow() {
+        fnOpenLoadingJs('In Process...');
+       // loadDvInvestimentoLateralOpened(0)
+
+        $.ajax({
+            url: '../Home/ValidaPrimeiroAcessoUsuarioAtivo',
+            type: 'POST',
+            beforeSend: function () {
+
+            },
+            onsuccess: function () { },
+            success: function (result) {
+                fnCloseLoadingJs();
+                if (result.statusRetorno == 'success' && result.objetoRetorno == true) {
+
+                    $("#modalAlertYesOrNoCompleteRegistration").modal("show")
+                     
+                }
+                else {
+                     
+                    loadDvInvestimentoLateralOpened(0)
+                }
+            }
+        });
+
+
+    }
+    function acessoAdim() {
+        fnOpenLoadingJs('In Process...');
+        // loadDvInvestimentoLateralOpened(0)
+
+        $.ajax({
+            url: '../Home/acessoAdim',
+            type: 'POST',
+            beforeSend: function () {
+
+            },
+            onsuccess: function () { },
+            success: function (result) {
+                fnCloseLoadingJs();
+                if (result.statusRetorno == '200' && result.objetoRetorno == true) {
+
+                    window.location = '../Home'
+
+                }
+            
+            }
+        });
+
+
+    }
+    function loadDvInvestimentoLateral(id) {
+        console.log("ENtrou")
+        if ($(".theme-colors").length > 0) {
+            $(".theme-colors").remove()
+        }
+
+
+        (function ($) {
+            if ($().dropzone) {
+              Dropzone.autoDiscover = false;
+            }
+
+
+
+            var contentRetornoAppend = '';
+ 
+
+
+            $.ajax({
+                            url: '../Investiment/InvestirLateral?idFundo=' + id,
+                            type: 'GET',
+                            beforeSend: function () {
+
+                            },
+                            onsuccess: function () { },
+                            success: function (result) {
+                                contentRetornoAppend = result;
+
+                                var themeColorsDom = `
+     <div class="theme-colors">  
+      <div class="p-4">  
+         <div class="dvinvest"> 
+        </div> <a href="#" class="theme-button"> <i class="simple-icon-paper-plane"></i> </a>
+      </div> 
+    </div> 
+ `;
+
+                                $("body").append(themeColorsDom);
+
+                                $(".dvinvest").append(contentRetornoAppend);
+
+                                /* Default Theme Color, Border Radius and  Direction */
+                                var theme = "dore.light.bluenavy.min.css";
+                                var direction = "ltr";
+                                var radius = "rounded";
+
+                                if (typeof Storage !== "undefined") {
+                                    if (localStorage.getItem("dore-theme-color")) {
+                                        theme = localStorage.getItem("dore-theme-color");
+                                    } else {
+                                        localStorage.setItem("dore-theme-color", theme);
+                                    }
+                                    if (localStorage.getItem("dore-direction")) {
+                                        direction = localStorage.getItem("dore-direction");
+                                    } else {
+                                        localStorage.setItem("dore-direction", direction);
+                                    }
+                                    if (localStorage.getItem("dore-radius")) {
+                                        radius = localStorage.getItem("dore-radius");
+                                    } else {
+                                        localStorage.setItem("dore-radius", radius);
+                                    }
+                                }
+
+                                $(".theme-color[data-theme='" + theme + "']").addClass("active");
+                                $(".direction-radio[data-direction='" + direction + "']").attr("checked", true);
+                                $(".radius-radio[data-radius='" + radius + "']").attr("checked", true);
+                                $("#switchDark").attr("checked", theme.indexOf("dark") > 0 ? true : false);
+
+                                loadStyle("../assets_v5/css/" + theme, onStyleComplete);
+                                function onStyleComplete() {
+                                    setTimeout(onStyleCompleteDelayed, 300);
+                                }
+
+                                function onStyleCompleteDelayed() {
+                                    $("body").addClass(direction);
+                                    $("html").attr("dir", direction);
+                                    $("body").addClass(radius);
+                                    $("body").dore();
+                                }
+
+                                $("body").on("click", ".theme-color", function (event) {
+                                    event.preventDefault();
+                                    var dataTheme = $(this).data("theme");
+                                    if (typeof Storage !== "undefined") {
+                                        localStorage.setItem("dore-theme-color", dataTheme);
+                                        window.location.reload();
+                                    }
+                                });
+
+                                $("input[name='directionRadio']").on("change", function (event) {
+                                    var direction = $(event.currentTarget).data("direction");
+                                    if (typeof Storage !== "undefined") {
+                                        localStorage.setItem("dore-direction", direction);
+                                        window.location.reload();
+                                    }
+                                });
+
+                                $("input[name='radiusRadio']").on("change", function (event) {
+                                    var radius = $(event.currentTarget).data("radius");
+                                    if (typeof Storage !== "undefined") {
+                                        localStorage.setItem("dore-radius", radius);
+                                        window.location.reload();
+                                    }
+                                });
+
+                                $("#switchDark").on("change", function (event) {
+                                    var mode = $(event.currentTarget)[0].checked ? "dark" : "light";
+                                    if (mode == "dark") {
+                                        theme = theme.replace("light", "dark");
+                                    } else if (mode == "light") {
+                                        theme = theme.replace("dark", "light");
+                                    }
+                                    if (typeof Storage !== "undefined") {
+                                        localStorage.setItem("dore-theme-color", theme);
+                                        window.location.reload();
+                                    }
+                                });
+
+                                $(".theme-button").on("click", function (event) {
+                                    event.preventDefault();
+                                    $(this)
+                                        .parents(".theme-colors")
+                                        .toggleClass("shown");
+                                });
+
+                                $(document).on("click", function (event) {
+                                    if (
+                                        !(
+                                            $(event.target)
+                                                .parents()
+                                                .hasClass("theme-colors") ||
+                                            $(event.target)
+                                                .parents()
+                                                .hasClass("theme-button") ||
+                                            $(event.target).hasClass("theme-button") ||
+                                            $(event.target).hasClass("theme-colors")
+                                        )
+                                    ) {
+                                        if ($(".theme-colors").hasClass("shown")) {
+                                            $(".theme-colors").removeClass("shown");
+                                        }
+                                    }
+                                });
+
+                            }
+                        });
+
+
+ 
+        
+
+
+
+
+
+})(jQuery);
+    }
+
+    function loadDvInvestimentoLateralOpened(id) {
+
+
+        if ($(".theme-colors").length > 0) {
+            $(".theme-colors").remove()
+        }
+
+
+        (function ($) {
+            if ($().dropzone) {
+              Dropzone.autoDiscover = false;
+            }
+
+
+
+            var contentRetornoAppend = '';
+
+             
+
+                $.ajax({
+                    url: '../Investiment/InvestirLateral?idFundo=' + id,
+                    type: 'GET',
+                    beforeSend: function () {
+
+                    },
+                    onsuccess: function () {
+                      },
+                    success: function (result) {
+                      
+                        contentRetornoAppend = result; 
+                        var themeColorsDom = `
+     <div class="theme-colors">  
+      <div class="p-4">  
+         <div class="dvinvest"> 
+        </div> <a href="#" class="theme-button"> <i class="simple-icon-paper-plane"></i> </a>
+      </div> 
+    </div> 
+ `;
+                                 
+                                   $("body").append(themeColorsDom);
+                                
+                                   $(".dvinvest").append(contentRetornoAppend);
+                                
+                                  /* Default Theme Color, Border Radius and  Direction */
+                                  var theme = "dore.light.bluenavy.min.css";
+                                  var direction = "ltr";
+                                  var radius = "rounded";
+                                
+                                  if (typeof Storage !== "undefined") {
+                                    if (localStorage.getItem("dore-theme-color")) {
+                                      theme = localStorage.getItem("dore-theme-color");
+                                    } else {
+                                      localStorage.setItem("dore-theme-color", theme);
+                                    }
+                                    if (localStorage.getItem("dore-direction")) {
+                                      direction = localStorage.getItem("dore-direction");
+                                    } else {
+                                      localStorage.setItem("dore-direction", direction);
+                                    }
+                                    if (localStorage.getItem("dore-radius")) {
+                                      radius = localStorage.getItem("dore-radius");
+                                    } else {
+                                      localStorage.setItem("dore-radius", radius);
+                                    }
+                                  }
+                                
+                                  $(".theme-color[data-theme='" + theme + "']").addClass("active");
+                                  $(".direction-radio[data-direction='" + direction + "']").attr("checked", true);
+                                  $(".radius-radio[data-radius='" + radius + "']").attr("checked", true);
+                                  $("#switchDark").attr("checked", theme.indexOf("dark") > 0 ? true : false);
+                                
+                                    loadStyle("../assets_v5/css/" + theme, onStyleComplete);
+                                  function onStyleComplete() {
+                                    setTimeout(onStyleCompleteDelayed, 300);
+                                  }
+                                
+                                  function onStyleCompleteDelayed() {
+                                    $("body").addClass(direction);
+                                    $("html").attr("dir", direction);
+                                    $("body").addClass(radius);
+                                    $("body").dore();
+                                  }
+                                
+                                  $("body").on("click", ".theme-color", function (event) {
+                                    event.preventDefault();
+                                    var dataTheme = $(this).data("theme");
+                                    if (typeof Storage !== "undefined") {
+                                      localStorage.setItem("dore-theme-color", dataTheme);
+                                      window.location.reload();
+                                    }
+                                  });
+                                
+                                  $("input[name='directionRadio']").on("change", function (event) {
+                                    var direction = $(event.currentTarget).data("direction");
+                                    if (typeof Storage !== "undefined") {
+                                      localStorage.setItem("dore-direction", direction);
+                                      window.location.reload();
+                                    }
+                                  });
+                                
+                                  $("input[name='radiusRadio']").on("change", function (event) {
+                                    var radius = $(event.currentTarget).data("radius");
+                                    if (typeof Storage !== "undefined") {
+                                      localStorage.setItem("dore-radius", radius);
+                                      window.location.reload();
+                                    }
+                                  });
+                                
+                                  $("#switchDark").on("change", function (event) {
+                                    var mode = $(event.currentTarget)[0].checked ? "dark" : "light";
+                                    if (mode == "dark") {
+                                      theme = theme.replace("light", "dark");
+                                    } else if (mode == "light") {
+                                      theme = theme.replace("dark", "light");
+                                    }
+                                    if (typeof Storage !== "undefined") {
+                                      localStorage.setItem("dore-theme-color", theme);
+                                      window.location.reload();
+                                    }
+                                  });
+                                
+                                  $(".theme-button").on("click", function (event) {
+                                    event.preventDefault();
+                                    $(this)
+                                      .parents(".theme-colors")
+                                      .toggleClass("shown");
+                                  });
+                                
+                                  $(document).on("click", function (event) {
+                                    if (
+                                      !(
+                                        $(event.target)
+                                          .parents()
+                                          .hasClass("theme-colors") ||
+                                        $(event.target)
+                                          .parents()
+                                          .hasClass("theme-button") ||
+                                        $(event.target).hasClass("theme-button") ||
+                                        $(event.target).hasClass("theme-colors")
+                                      )
+                                    ) {
+                                      if ($(".theme-colors").hasClass("shown")) {
+                                        $(".theme-colors").removeClass("shown");
+                                      }
+                                    }
+                                  });
+
+                        $(".theme-button").trigger("click")
+                    }
+                });
+        
+
+
+
+
+
+})(jQuery);
+    }
+   
+</script>
+     <div class="theme-colors">  
+      <div class="p-4">  
+         <div class="dvinvest"> 
+        
+
+
+<form id="fmSolicitarEntrada" style="max-height: 480px;  overflow: auto;">
+
+
+
+    <div>
+        <div class="d-flex flex-row justify-content-between mb-2">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <label style=" font-size: 30px; color: #155489; "> Invest Now</label>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row justify-content-between mb-2">
+            <select id="idPoolBens" name="idPoolBens" class="form-control select2-single" data-width="100%">
+                    <option valorcotas="100.00" unitsdisponiveis="0" value="11">2B Infinite Capital Fund, LP</option>
+                    <option valorcotas="100.00" unitsdisponiveis="5046" value="13">Orland eFund, LP</option>
+                    <option valorcotas="100.00" unitsdisponiveis="0" value="14">Orland Fund, INC</option>
+                    <option valorcotas="100.00" unitsdisponiveis="0" value="12">Solid Capital Fund, LP</option>
+
+            </select>
+
+        </div>
+        <div class="d-flex flex-row justify-content-between mb-2">
+
+
+            <div class="row" style="width:100%">
+                <div class="col-md-12 mb-3">
+                    <div class="form-group mb-4">
+                        <label style=" font-size: 16px; "> My balance</label>
+                        <div>
+                                <span style="color:#e40a0a" id="myBalance"> U$ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="d-flex flex-row justify-content-between mb-2">
+
+
+            <div class="row" style="width:100%">
+                <div class="col-md-12 mb-3" style=" padding-left: 33px; ">
+                    <div class="form-group mb-4">
+                        <label style=" font-size: 16px; ">Units</label> <input style="border: none;border-bottom: 1px solid #bfbbbb;" type="text" id="txtSetUNit">
+                        <div>
+                            <div class="slider" id="singleSlider"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row justify-content-between mb-2">
+
+
+            <div class="row" style="width:100%">
+                <div class="col-md-12 mb-3">
+                    <div class="form-group mb-4">
+                        <label style=" font-size: 16px; ">Total Investment</label>
+                        <div>
+                            <span id="valorTotal">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex-row justify-content-between mb-2" style="text-align:center">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="#" class="btn btn-primary btn-sm" onclick="btnSolicitar()"> Invest Now</a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <input type="hidden" name="DtInclusaoAdm" id="DtInclusaoAdm">
+        <input type="hidden" name="Cotas" id="Cotas">
+        <input type="hidden" name="idPessoa" id="idPessoa" value="403">
+        <input type="hidden" name="mValorCotas" id="mValorCotas">
+
+    </div>
+
+
+
+
+
+</form>
+<script>
+
+
+    function btnSolicitar() {
+
+        swal({
+            title: "Confirm",
+            text: "Please confirm your investment. If it is correct Press INVEST NOW. If not, Back to make changes.",
+            showCancelButton: true,
+            confirmButtonClass: "btn-danger",
+            confirmButtonText: "Invest Now",
+            cancelButtonText: "Back",
+            closeOnConfirm: false
+        }).then((result) => {
+            console.log(result)
+
+            if (result.value == true) {
+
+                var form = $("#fmSolicitarEntrada");
+
+                $.ajax({
+                    url: '../Investiment/SolicitarEntradaPool',
+                    type: 'POST',
+                    data: form.serialize(),
+                    beforeSend: function () {
+
+                    },
+                    onsuccess: function () { },
+                    success: function (result) {
+
+                        if (result.statusRetorno == 'success') {
+
+                            swal({
+                                title: "Successful",
+                                text: "Your investment successful. You will receive a confirmation email from the company with details about your investmenst!",
+                                type: "success",
+                                showCancelButton: false,
+                                confirmButtonText: "OK",
+                                closeOnConfirm: false
+                            }).then((result) => {
+
+                                window.location = '../Home'
+                            });
+
+
+                        }
+                        else {
+
+                            swal("Attention", result.statusRetorno, "error");
+                        }
+                    }
+                });
+            }
+        });
+
+
+        $(".swal2-content").css("margin-top", "20px")
+        $(".swal2-actions").css("margin-top", "30px")
+        $(".swal2-header").css("margin-top", "20px")
+
+    }
+
+
+    var direction = localStorage.getItem("dore-direction");
+    if ($("#singleSlider").length > 0) {
+        var sliderUI = noUiSlider.create($("#singleSlider")[0], {
+            start: 0,
+            connect: true,
+            tooltips: true,
+            direction: direction,
+            range: {
+                min: 0,
+                max: parseInt($("#idPoolBens :selected").attr("unitsDisponiveis"))
+            },
+            step: 1,
+            format: {
+                to: function (value) {
+                    return $.fn.addCommas(Math.round(value));
+                },
+                from: function (value) {
+
+                    return value;
+                }
+            }
+        });
+
+
+        $("#singleSlider")[0].noUiSlider.on('update', function () {
+            var valorUnits = $("#singleSlider")[0].noUiSlider.get();
+            $("#txtSetUNit").val(valorUnits)
+            valorUnits = valorUnits.replace(",", "")
+
+            var valorCotas =  $("#idPoolBens :selected").attr("ValorCotas")
+            var valor = parseFloat(valorUnits) * parseFloat(valorCotas);
+
+             
+            var texto = valor.toLocaleString("us-EN", { style: "currency", currency: "USS" });
+
+
+            $("#valorTotal").html(texto);
+            $("#mValorCotas").val(valor);
+            $("#Cotas").val(valorUnits)
+        });
+
+
+        $("#txtSetUNit").keyup(function() {
+             $("#singleSlider")[0].noUiSlider.set($(this).val());
+
+        })
+        $("#idPoolBens").on("change", function () {
+
+            $("#singleSlider")[0].noUiSlider.set($("#txtSetUNit").val());
+
+
+            $("#singleSlider")[0].noUiSlider.destroy()
+            var sliderUI = noUiSlider.create($("#singleSlider")[0], {
+                start: 0,
+                connect: true,
+                tooltips: true,
+                direction: direction,
+                range: {
+                    min: 0,
+                    max: parseInt($("#idPoolBens :selected").attr("unitsDisponiveis"))
+                },
+                step: 1,
+                format: {
+                    to: function (value) {
+                        return $.fn.addCommas(Math.round(value));
+                    },
+                    from: function (value) {
+
+                        return value;
+                    }
+                }
+            });
+            $("#singleSlider")[0].noUiSlider.on('update', function () {
+                var valorUnits = $("#singleSlider")[0].noUiSlider.get();
+                $("#txtSetUNit").val(valorUnits)
+                valorUnits = valorUnits.replace(",", "")
+
+                var valorCotas = $("#idPoolBens :selected").attr("ValorCotas")
+                var valor = parseFloat(valorUnits) * parseFloat(valorCotas);
+
+
+                var texto = valor.toLocaleString("us-EN", { style: "currency", currency: "USS" });
+
+
+                $("#valorTotal").html(texto);
+                $("#mValorCotas").val(valor);
+                $("#Cotas").val(valorUnits)
+            });
+ 
+        })
+    }
+</script></div> <a href="#" class="theme-button"> <i class="simple-icon-paper-plane"></i> </a>
+      </div> 
+    </div> 
+ </body>

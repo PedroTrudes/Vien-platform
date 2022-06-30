@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>2bTrust | Investiment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="font/iconsmind-s/css/iconsminds.css" />
+    <link rel="stylesheet" href="font/simple-line-icons/css/simple-line-icons.css" />
+
+    <link rel="icon" type="image/png" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/vendor/bootstrap.rtl.only.min.css" />
+    <link rel="stylesheet" href="css/vendor/fullcalendar.min.css" />
+    <link rel="stylesheet" href="css/vendor/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" href="css/vendor/datatables.responsive.bootstrap4.min.css" />
+    <link rel="stylesheet" href="css/vendor/select2.min.css" />
+    <link rel="stylesheet" href="css/vendor/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="css/vendor/glide.core.min.css" />
+    <link rel="stylesheet" href="css/vendor/bootstrap-stars.css" />
+    <link rel="stylesheet" href="css/vendor/nouislider.min.css" />
+    <link rel="stylesheet" href="css/vendor/bootstrap-datepicker3.min.css" />
+    <link rel="stylesheet" href="css/vendor/component-custom-switch.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body id="app-container" class="menu-default show-spinner">
+    
+    <nav class="navbar fixed-top">
+        <div class="d-flex align-items-center navbar-left">
+            <a href="#" class="menu-button d-none d-md-block">
+                <svg class="main" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 17">
+                    <rect x="0.48" y="0.5" width="7" height="1" />
+                    <rect x="0.48" y="7.5" width="7" height="1" />
+                    <rect x="0.48" y="15.5" width="7" height="1" />
+                </svg>
+                <svg class="sub" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 17">
+                    <rect x="1.56" y="0.5" width="16" height="1" />
+                    <rect x="1.56" y="7.5" width="16" height="1" />
+                    <rect x="1.56" y="15.5" width="16" height="1" />
+                </svg>
+            </a>
+
+            <a href="#" class="menu-button-mobile d-xs-block d-sm-block d-md-none">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 17">
+                    <rect x="0.5" y="0.5" width="25" height="1" />
+                    <rect x="0.5" y="7.5" width="25" height="1" />
+                    <rect x="0.5" y="15.5" width="25" height="1" />
+                </svg>
+            </a>
+
+            <div class="topbar-custom">
+                <ul class="navbar-right d-flex list-inline float-right mb-0">
+                    <li class="list-inline-item dropdown notification-list flags-dropdown d-none d-sm-inline-block">
+
+                                <a class="nav-link dropdown-toggle arrow-none waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                    <img src="../assets_v5/img/flags/us_flag.jpg" alt="" class="flag-img">
+                                    English <i class="mdi mdi-chevron-down"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-animated">
+                                    <a href="#" class="dropdown-item" onclick="setLanguage('pt-BR')"><img src="../assets_v5/img/flags/br-flag.png" alt="" class="flag-img"> Portuguese</a>
+                                </div>
+                    </li>
+                </ul>
+            </div>
+
+            <a class="btn btn-sm btn-outline-primary ml-3 d-none d-md-inline-block"
+                href="https://1.envato.market/5kAb">&nbsp;Invest Now&nbsp;</a>
+        </div>
+
+
+        <a class="navbar-logo" href="Dashboard.Default.html">
+            <img class=" d-none d-md-block" src="logos/logo@2x.gif" alt="" style="width: 200px;">
+            <img class="logo-mobile d-md-none " src="logos/logo@2x.gif" alt="" style="width: 65px;">
+        
+            <!-- <span class="logo d-none d-xs-block"></span>
+            <span class="logo-mobile d-xs-block "></span> -->
+        </a>
+
+        <div class="navbar-right">
+            
+
+            <div class="user d-inline-block">
+                <button class="btn btn-empty p-0" type="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <span class="name">Sarah Kortney</span>
+                    <span>
+                        <img alt="Profile Picture" src="img/profiles/l-1.jpg" />
+                    </span>
+                </button>
+
+                <div class="dropdown-menu dropdown-menu-right mt-3">
+                    <a class="dropdown-item" href="#">Account</a>
+                    <a class="dropdown-item" href="#">Features</a>
+                    <a class="dropdown-item" href="#">History</a>
+                    <a class="dropdown-item" href="#">Support</a>
+                    <a class="dropdown-item" href="#">Sign out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="menu" style="opacity: 1;">
+        <div class="main-menu default-transition">
+            <div class="scroll ps">
+                <ul class="list-unstyled">
+                    <li class="clMenu active" id="clMenu_Overview">
+                        <a href="../Home">
+                            <i class="glyph-icon iconsminds-digital-drawing"></i>
+                            <span>Overview</span>
+                        </a>
+                    </li>
+                    <li class="clMenu" id="clMenu_Transactions">
+                        <a href="../Transaction">
+                            <i class="glyph-icon iconsminds-receipt-4"></i> Transactions
+                        </a>
+                    </li>
+                    <li class="clMenu" id="clMenu_Portifolio">
+                        <a href="../Portifolio">
+                            <i class="glyph-icon iconsminds-monitor-analytics"></i> My Portfolio
+                        </a>
+                    </li>
+                    <li class="clMenu" id="clMenu_Investiments">
+                        <a href="../Investiment/New">
+                            <i class="glyph-icon simple-icon-paper-plane"></i> Investments
+                        </a>
+                    </li>
+                    <li class="clMenu" id="clMenu_Transfer">
+                        <a href="../Transfer">
+                            <i class="glyph-icon iconsminds-dollar"></i> Transfer
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Doc" id="clMenu_Documents">
+                            <i class="glyph-icon iconsminds-add-file"></i> Documents
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Help" id="clMenu_Helps">
+                            <i class="glyph-icon iconsminds-idea"></i> Help
+                        </a>
+                    </li>
+                </ul>
+            <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+        </div>
+        <div class="sub-menu default-transition">
+            <div class="scroll ps">
+                <ul class="list-unstyled" data-link="overview">
+                    <li class="active">
+                        <a href="Dashboard.Default.html">
+                            <i class="simple-icon-rocket"></i> <span class="d-inline-block">Default</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Dashboard.Analytics.html">
+                            <i class="simple-icon-pie-chart"></i> <span class="d-inline-block">Analytics</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Dashboard.Ecommerce.html">
+                            <i class="simple-icon-basket-loaded"></i> <span class="d-inline-block">Ecommerce</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Dashboard.Content.html">
+                            <i class="simple-icon-doc"></i> <span class="d-inline-block">Content</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-unstyled" data-link="transactions" id="transactions">
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#collapseAuthorization" aria-expanded="true" aria-controls="collapseAuthorization" class="rotate-arrow-icon opacity-50">
+                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Authorization</span>
+                        </a>
+                        <div id="collapseAuthorization" class="collapse show">
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="Pages.Auth.Login.html">
+                                        <i class="simple-icon-user-following"></i> <span class="d-inline-block">Login</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Auth.Register.html">
+                                        <i class="simple-icon-user-follow"></i> <span class="d-inline-block">Register</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Auth.ForgotPassword.html">
+                                        <i class="simple-icon-user-unfollow"></i> <span class="d-inline-block">
+                                            Forgot
+                                            Password
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#collapseProduct" aria-expanded="true" aria-controls="collapseProduct" class="rotate-arrow-icon opacity-50">
+                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Product</span>
+                        </a>
+                        <div id="collapseProduct" class="collapse show">
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="Pages.Product.List.html">
+                                        <i class="simple-icon-credit-card"></i> <span class="d-inline-block">
+                                            Data
+                                            List
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Product.Thumbs.html">
+                                        <i class="simple-icon-list"></i> <span class="d-inline-block">
+                                            Thumb
+                                            List
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Product.Images.html">
+                                        <i class="simple-icon-grid"></i> <span class="d-inline-block">
+                                            Image
+                                            List
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Product.Detail.html">
+                                        <i class="simple-icon-book-open"></i> <span class="d-inline-block">Detail</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#collapseProfile" aria-expanded="true" aria-controls="collapseProfile" class="rotate-arrow-icon opacity-50">
+                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Profile</span>
+                        </a>
+                        <div id="collapseProfile" class="collapse show">
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="Pages.Profile.Social.html">
+                                        <i class="simple-icon-share"></i> <span class="d-inline-block">Social</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Profile.Portfolio.html">
+                                        <i class="simple-icon-link"></i> <span class="d-inline-block">Portfolio</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#collapseBlog" aria-expanded="true" aria-controls="collapseBlog" class="rotate-arrow-icon opacity-50">
+                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Blog</span>
+                        </a>
+                        <div id="collapseBlog" class="collapse show">
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="Pages.Blog.html">
+                                        <i class="simple-icon-list"></i> <span class="d-inline-block">List</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Blog.Detail.html">
+                                        <i class="simple-icon-book-open"></i> <span class="d-inline-block">Detail</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Blog.Detail.Alt.html">
+                                        <i class="simple-icon-picture"></i> <span class="d-inline-block">
+                                            Detail
+                                            Alt
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#collapseMisc" aria-expanded="true" aria-controls="collapseMisc" class="rotate-arrow-icon opacity-50">
+                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Miscellaneous</span>
+                        </a>
+                        <div id="collapseMisc" class="collapse show">
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="Pages.Misc.Coming.Soon.html">
+                                        <i class="simple-icon-hourglass"></i> <span class="d-inline-block">
+                                            Coming
+                                            Soon
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Misc.Error.html">
+                                        <i class="simple-icon-exclamation"></i> <span class="d-inline-block">Error</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Misc.Faq.html">
+                                        <i class="simple-icon-question"></i> <span class="d-inline-block">Faq</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Misc.Invoice.html">
+                                        <i class="simple-icon-bag"></i> <span class="d-inline-block">Invoice</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Misc.Knowledge.Base.html">
+                                        <i class="simple-icon-graduation"></i> <span class="d-inline-block">
+                                            Knowledge
+                                            Base
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Misc.Mailing.html">
+                                        <i class="simple-icon-envelope-open"></i> <span class="d-inline-block">Mailing</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Misc.Pricing.html">
+                                        <i class="simple-icon-diamond"></i> <span class="d-inline-block">Pricing</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Pages.Misc.Search.html">
+                                        <i class="simple-icon-magnifier"></i> <span class="d-inline-block">Search</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="list-unstyled" data-link="protfolio">
+                    <li>
+                        <a href="Apps.MediaLibrary.html">
+                            <i class="simple-icon-picture"></i> <span class="d-inline-block">Library</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Apps.Todo.List.html">
+                            <i class="simple-icon-check"></i> <span class="d-inline-block">Todo</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Apps.Survey.List.html">
+                            <i class="simple-icon-calculator"></i> <span class="d-inline-block">Survey</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Apps.Chat.html">
+                            <i class="simple-icon-bubbles"></i> <span class="d-inline-block">Chat</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-unstyled" data-link="investments">
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#collapseForms" aria-expanded="true" aria-controls="collapseForms" class="rotate-arrow-icon opacity-50">
+                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Forms</span>
+                        </a>
+                        <div id="collapseForms" class="collapse show">
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="Ui.Forms.Components.html">
+                                        <i class="simple-icon-event"></i> <span class="d-inline-block">Components</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Forms.Layouts.html">
+                                        <i class="simple-icon-doc"></i> <span class="d-inline-block">Layouts</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Forms.Validation.html">
+                                        <i class="simple-icon-check"></i> <span class="d-inline-block">Validation</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Forms.Wizard.html">
+                                        <i class="simple-icon-magic-wand"></i> <span class="d-inline-block">Wizard</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#collapseDataTables" aria-expanded="true" aria-controls="collapseDataTables" class="rotate-arrow-icon opacity-50">
+                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Datatables</span>
+                        </a>
+                        <div id="collapseDataTables" class="collapse show">
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="Ui.Datatables.Rows.html">
+                                        <i class="simple-icon-screen-desktop"></i> <span class="d-inline-block">
+                                            Full
+                                            Page UI
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Datatables.Scroll.html">
+                                        <i class="simple-icon-mouse"></i> <span class="d-inline-block">Scrollable</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Datatables.Pagination.html">
+                                        <i class="simple-icon-notebook"></i> <span class="d-inline-block">Pagination</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Datatables.Default.html">
+                                        <i class="simple-icon-grid"></i> <span class="d-inline-block">Default</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#collapseComponents" aria-expanded="true" aria-controls="collapseComponents" class="rotate-arrow-icon opacity-50">
+                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Components</span>
+                        </a>
+                        <div id="collapseComponents" class="collapse show">
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="Ui.Components.Alerts.html">
+                                        <i class="simple-icon-bell"></i> <span class="d-inline-block">Alerts</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.Badges.html">
+                                        <i class="simple-icon-badge"></i> <span class="d-inline-block">Badges</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.Buttons.html">
+                                        <i class="simple-icon-control-play"></i> <span class="d-inline-block">Buttons</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.Cards.html">
+                                        <i class="simple-icon-layers"></i> <span class="d-inline-block">Cards</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.Carousel.html">
+                                        <i class="simple-icon-picture"></i> <span class="d-inline-block">Carousel</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.Charts.html">
+                                        <i class="simple-icon-chart"></i> <span class="d-inline-block">Charts</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.Collapse.html">
+                                        <i class="simple-icon-arrow-up"></i> <span class="d-inline-block">Collapse</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.Dropdowns.html">
+                                        <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Dropdowns</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.Editors.html">
+                                        <i class="simple-icon-book-open"></i> <span class="d-inline-block">Editors</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.Icons.html">
+                                        <i class="simple-icon-star"></i> <span class="d-inline-block">Icons</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.InputGroups.html">
+                                        <i class="simple-icon-note"></i> <span class="d-inline-block">
+                                            Input
+                                            Groups
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.Jumbotron.html">
+                                        <i class="simple-icon-screen-desktop"></i> <span class="d-inline-block">Jumbotron</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.Modal.html">
+                                        <i class="simple-icon-docs"></i> <span class="d-inline-block">Modal</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.Navigation.html">
+                                        <i class="simple-icon-cursor"></i> <span class="d-inline-block">Navigation</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.PopoverandTooltip.html">
+                                        <i class="simple-icon-pin"></i> <span class="d-inline-block">
+                                            Popover &amp;
+                                            Tooltip
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.Sortable.html">
+                                        <i class="simple-icon-shuffle"></i> <span class="d-inline-block">Sortable</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Ui.Components.Tables.html">
+                                        <i class="simple-icon-grid"></i> <span class="d-inline-block">Tables</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="list-unstyled" data-link="transfer" id="menuTypes">
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#collapseMenuTypes" aria-expanded="true" aria-controls="collapseMenuTypes" class="rotate-arrow-icon">
+                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Menu Types</span>
+                        </a>
+                        <div id="collapseMenuTypes" class="collapse show" data-parent="#menuTypes">
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="Menu.Default.html">
+                                        <i class="simple-icon-control-pause"></i> <span class="d-inline-block">Default</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Menu.Subhidden.html">
+                                        <i class="simple-icon-arrow-left mi-subhidden"></i> <span class="d-inline-block">Subhidden</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Menu.Hidden.html">
+                                        <i class="simple-icon-control-start mi-hidden"></i> <span class="d-inline-block">Hidden</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Menu.Mainhidden.html">
+                                        <i class="simple-icon-control-rewind mi-hidden"></i> <span class="d-inline-block">Mainhidden</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#collapseMenuLevel" aria-expanded="true" aria-controls="collapseMenuLevel" class="rotate-arrow-icon collapsed">
+                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Menu Levels</span>
+                        </a>
+                        <div id="collapseMenuLevel" class="collapse" data-parent="#menuTypes">
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="#">
+                                        <i class="simple-icon-layers"></i> <span class="d-inline-block">
+                                            Sub
+                                            Level
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-toggle="collapse" data-target="#collapseMenuLevel2" aria-expanded="true" aria-controls="collapseMenuLevel2" class="rotate-arrow-icon collapsed">
+                                        <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">
+                                            Another
+                                            Level
+                                        </span>
+                                    </a>
+                                    <div id="collapseMenuLevel2" class="collapse">
+                                        <ul class="list-unstyled inner-level-menu">
+                                            <li>
+                                                <a href="#">
+                                                    <i class="simple-icon-layers"></i> <span class="d-inline-block">
+                                                        Sub
+                                                        Level
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#collapseMenuDetached" aria-expanded="true" aria-controls="collapseMenuDetached" class="rotate-arrow-icon collapsed">
+                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Detached</span>
+                        </a>
+                        <div id="collapseMenuDetached" class="collapse">
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="#">
+                                        <i class="simple-icon-layers"></i> <span class="d-inline-block">
+                                            Sub
+                                            Level
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+        </div>
+    </div>
+        
+
+    <main>
+        <div class="container-fluid">
+            <div class="card p-2">
+                <div class="row">
+                    <div class="col-12 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Portfolio</h5>
+                                <h3 class=" " style=" font-size: 30px; color: #155489; ">$0.00</h3>
+                                <div class="dashboard-line-chart chart"><div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                                    <canvas id="portifolioChart" width="1728" height="566" style="display: block; width: 864px; height: 283px;" class="chartjs-render-monitor"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="row mb-4">
+                <div class="col-xl-5">
+                    <div class="card product-sales mb-4">
+                        <div class="card-body">
+                            
+                            <div class="row align-items-center mb-4">
+                                <div class="col-6">
+                                    <p class="text-muted">This Month Yield</p>
+                                    <h4><sup class="mr-1"><small>$</small></sup><b>0.00</b><span class="ml-3">+0%</span></h4>
+            
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-right">
+                                        <span class="pie" style="display: none;">0</span><svg class="peity" height="50" width="50"><path d="M 25 25 L 25 0 A 25 25 0 0 1 NaN NaN Z" fill="#f0f0f4"></path></svg>
+                                    </div>
+                                </div>
+            
+                            </div>
+                            <div>
+                                <p class="text-muted mb-3">Dividend Yield by fund</p>
+            
+                                    <div class="row">
+            
+                                        <div class="col-6">
+                                            <p class="text-muted mb-0 text-right"><b>No fund invested</b></p>
+                                        </div>
+                                    </div>
+            
+            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title mb-4">Reviews</h4>
+                            <div class="mb-4">
+                                <h5><span class="text-info">500</span>+ Satisfied clients</h5>
+                            </div>
+                            <div class="mb-3">
+                                <i class="fas fa-quote-left h4 text-primary"></i>
+                            </div>
+                            <div id="reviewExampleControls" class="carousel slide review-carousel" data-ride="carousel">
+            
+            
+            
+                                <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div>
+                                                    <p>I feel quite safe investing in 2btrust.
+            The management is serious and reliable.
+            I recommend it to anyone who wants to diversify their investments.
+            </p>
+                                                    <div class="media mt-4">
+                                                        <div class="avatar-sm mr-3">
+                                                            <span class="avatar-title bg-soft-primary text-primary rounded-circle">
+                                                                M
+                                                            </span>
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h5 class="font-size-16 mb-1">Matteuzzy</h5>
+                                                            <p class="mb-2">CEO of Matteuzzy Company</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div>
+                                                    <p>Marcus and his team are excellent professionals. Very attentive, transparent and the investments are sound. I would highly recommend them!</p>
+                                                    <div class="media mt-4">
+                                                        <div class="avatar-sm mr-3">
+                                                            <span class="avatar-title bg-soft-primary text-primary rounded-circle">
+                                                                F
+                                                            </span>
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h5 class="font-size-16 mb-1">Felipe Mardakis  </h5>
+                                                            <p class="mb-2">CEO Ascent Accounting Group</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div>
+                                                    <p>Thank you for all</p>
+                                                    <div class="media mt-4">
+                                                        <div class="avatar-sm mr-3">
+                                                            <span class="avatar-title bg-soft-primary text-primary rounded-circle">
+                                                                M
+                                                            </span>
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h5 class="font-size-16 mb-1">Marcus </h5>
+                                                            <p class="mb-2">Ceo</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+            
+            
+            
+                                </div>
+            
+                                <a class="carousel-control-prev" href="#reviewExampleControls" role="button" data-slide="prev">
+                                    <i class="mdi mdi-chevron-left carousel-control-icon"></i>
+                                </a>
+                                <a class="carousel-control-next" href="#reviewExampleControls" role="button" data-slide="next">
+                                    <i class="mdi mdi-chevron-right carousel-control-icon"></i>
+                                </a>
+                            </div>
+                            <div class="align-items-center">
+                                <button type="button" onclick="$('#dvSendReview').css('display', 'block');" class="btn btn-primary btn-sm">Make Your Review</button>
+                            </div>
+            
+                            <div style="padding:20px; display:none" id="dvSendReview">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group position-relative error-l-75">
+                                            <label for="name">Name</label>
+                                            <input type="text" class="form-control   " name="sNome" id="sNome" placeholder="Your Name" required="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group position-relative error-l-75">
+                                            <label for="name">Title</label>
+                                            <input type="text" class="form-control " name="sTitulo" id="sTitulo" placeholder="Your Title" required="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group position-relative error-l-75">
+                                            <label for="name">Description</label>
+                                            <textarea class="form-control " name="sDescricao" id="sDescricao" placeholder="Description for your review" required=""></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="align-items-center">
+                                            <button type="button" onclick="fnSendReview()" class="btn btn-primary btn-sm">Send</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+            
+                    <hr class="d-xl-none">
+            
+                </div>
+            
+                <div class="col-xl-7 col-lg-12 mb-4">
+                    <div class="card">
+                        <div class="position-absolute card-top-buttons">
+                            <button class="btn btn-header-light icon-button">
+                                <i class="simple-icon-refresh"></i>
+                            </button>
+                        </div>
+            
+                        <div class="card-body">
+                            <h5 class="card-title">Recent Activity</h5>
+                            <div class="scroll dashboard-list-with-thumbs ps ps--active-y">
+            
+                                    <div class="d-flex flex-row mb-3">
+                                        <a class="d-block position-relative" href="#">
+                                                    <img src="https://storage.2btrust.com/upload_HML/Image/RecentActivity/1.jpeg" alt="Marble Cake" class="list-thumbnail border-0">
+                                                    <span class="badge badge-pill badge-theme-2 position-absolute badge-top-right">New</span>
+            
+            
+                                        </a>
+                                        <div class="pl-3 pt-2 pr-2 pb-2">
+                                            <a href="#">
+                                                <p class="list-item-heading">
+            
+                                                    <b>Construction Loan</b>
+            
+                                                </p>
+                                                <div class="pr-4 d-none d-sm-block">
+                                                    <p class="text-muted mb-1 text-small">Construction Loan Orland eFund, LP</p>
+                                                </div>
+                                                <div class="text-primary text-small font-weight-medium d-none d-sm-block">
+                                                    02/01/2022
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-row mb-3">
+                                        <a class="d-block position-relative" href="#">
+                                                    <img src="https://storage.2btrust.com/upload_HML/Image/RecentActivity/enclave.jpeg" alt="Marble Cake" class="list-thumbnail border-0">
+                                                    <span class="badge badge-pill badge-theme-2 position-absolute badge-top-right">New</span>
+            
+            
+                                        </a>
+                                        <div class="pl-3 pt-2 pr-2 pb-2">
+                                            <a href="#">
+                                                <p class="list-item-heading">
+            
+                                                    <b>The best Airbnb in Orlando</b>
+            
+                                                </p>
+                                                <div class="pr-4 d-none d-sm-block">
+                                                    <p class="text-muted mb-1 text-small">Vocation Home</p>
+                                                </div>
+                                                <div class="text-primary text-small font-weight-medium d-none d-sm-block">
+                                                    12/30/2021
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-row mb-3">
+                                        <a class="d-block position-relative" href="#">
+                                                    <img src="https://storage.2btrust.com/upload_HML/Image/RecentActivity/encl.png" alt="Marble Cake" class="list-thumbnail border-0">
+                                                    <span class="badge badge-pill badge-theme-2 position-absolute badge-top-right">New</span>
+            
+            
+                                        </a>
+                                        <div class="pl-3 pt-2 pr-2 pb-2">
+                                            <a href="#">
+                                                <p class="list-item-heading">
+            
+                                                    <b>Modern Resort - Orland Fund INC</b>
+            
+                                                </p>
+                                                <div class="pr-4 d-none d-sm-block">
+                                                    <p class="text-muted mb-1 text-small">Vacation home near Universal Studios</p>
+                                                </div>
+                                                <div class="text-primary text-small font-weight-medium d-none d-sm-block">
+                                                    09/30/2021
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-row mb-3">
+                                        <a class="d-block position-relative" href="#">
+                                                    <img src="https://storage.2btrust.com/upload_HML/Image/RecentActivity/WhatsApp Image 2021-07-30 at 00.47.57 (1).jpeg" alt="Marble Cake" class="list-thumbnail border-0">
+                                                    <span class="badge badge-pill badge-theme-2 position-absolute badge-top-right">New</span>
+            
+            
+                                        </a>
+                                        <div class="pl-3 pt-2 pr-2 pb-2">
+                                            <a href="#">
+                                                <p class="list-item-heading">
+            
+                                                    <b>Orland Fund INC</b>
+            
+                                                </p>
+                                                <div class="pr-4 d-none d-sm-block">
+                                                    <p class="text-muted mb-1 text-small">Private Equity Fund focused on the tourism real estate market in Orlando </p>
+                                                </div>
+                                                <div class="text-primary text-small font-weight-medium d-none d-sm-block">
+                                                    06/01/2021
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-row mb-3">
+                                        <a class="d-block position-relative" href="#">
+                                                    <img src="https://storage.2btrust.com/upload_HML/Image/RecentActivity/WhatsApp Image 2021-07-30 at 00.47.57.jpeg" alt="Marble Cake" class="list-thumbnail border-0">
+                                                    <span class="badge badge-pill badge-theme-2 position-absolute badge-top-right">New</span>
+            
+            
+                                        </a>
+                                        <div class="pl-3 pt-2 pr-2 pb-2">
+                                            <a href="#">
+                                                <p class="list-item-heading">
+            
+                                                    <b>Downtown Orlando - 2B Infinite</b>
+            
+                                                </p>
+                                                <div class="pr-4 d-none d-sm-block">
+                                                    <p class="text-muted mb-1 text-small">Acquired CRE 4,655 sf in the financial center of Orlando.</p>
+                                                </div>
+                                                <div class="text-primary text-small font-weight-medium d-none d-sm-block">
+                                                    05/18/2021
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-row mb-3">
+                                        <a class="d-block position-relative" href="#">
+                                                    <img src="https://storage.2btrust.com/upload_HML/Image/RecentActivity/WhatsApp Image 2021-07-30 at 00.47.56.jpeg" alt="Marble Cake" class="list-thumbnail border-0">
+                                                    <span class="badge badge-pill badge-theme-2 position-absolute badge-top-right">Fund</span>
+            
+            
+                                        </a>
+                                        <div class="pl-3 pt-2 pr-2 pb-2">
+                                            <a href="#">
+                                                <p class="list-item-heading">
+            
+                                                    <b>2B Infinite Capital Fund, LP</b>
+            
+                                                </p>
+                                                <div class="pr-4 d-none d-sm-block">
+                                                    <p class="text-muted mb-1 text-small">Opportunity to join 2B Infinite and get access to a diverse range of properties.</p>
+                                                </div>
+                                                <div class="text-primary text-small font-weight-medium d-none d-sm-block">
+                                                    03/01/2021
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-row mb-3">
+                                        <a class="d-block position-relative" href="#">
+                                                    <img src="https://storage.2btrust.com/upload_HML/Image/RecentActivity/2b.png" alt="Marble Cake" class="list-thumbnail border-0">
+                                                    <span class="badge badge-pill badge-theme-2 position-absolute badge-top-right">Hi</span>
+            
+            
+                                        </a>
+                                        <div class="pl-3 pt-2 pr-2 pb-2">
+                                            <a href="#">
+                                                <p class="list-item-heading">
+            
+                                                    <b>Welcome to 2BTRUST</b>
+            
+                                                </p>
+                                                <div class="pr-4 d-none d-sm-block">
+                                                    <p class="text-muted mb-1 text-small">Congratulations on joining the 2BTRUST platform as an investor. We’re grateful to have you onboard...</p>
+                                                </div>
+                                                <div class="text-primary text-small font-weight-medium d-none d-sm-block">
+                                                    01/03/2021
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+            
+                                <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; height: 500px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 403px;"></div></div>
+                            <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; height: 500px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 331px;"></div></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-12 data-tables-hide-filter">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Latest Transactions</h5>
+                            <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer"><div class="row view-filter"><div class="col-sm-12"><div class="float-left"></div><div class="float-right"></div><div class="clearfix"></div></div></div><table class="data-table data-tables-no-pagination responsive nowrap dataTable no-footer dtr-inline" id="DataTables_Table_0" role="grid" style="width: 879px;">
+                                <thead>
+                                    <tr role="row"><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 113px;">Date</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 459px;">Description</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 124px;">Amount</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 175px;">Avaliable Balance</th></tr>
+                                </thead>
+                                <tbody>
+                                        
+                                        
+                                        
+                                        
+                                        
+                                <tr role="row" class="odd">
+                                            <td tabindex="0">04/07/2022</td>
+                                            <td>Withdrawal Completed</td>
+                                            <td>$100,000.00</td>
+                                            <td>$0.00</td>
+                                        </tr><tr role="row" class="even">
+                                            <td tabindex="0">04/07/2022</td>
+                                            <td>Withdrawal Requested</td>
+                                            <td>$100,000.00</td>
+                                            <td>$100,000.00</td>
+                                        </tr><tr role="row" class="odd">
+                                            <td tabindex="0">03/01/2022</td>
+                                            <td>Sell Order Accept - 1000 Units Orland eFund, LP</td>
+                                            <td>$100,000.00</td>
+                                            <td>$100,000.00</td>
+                                        </tr><tr role="row" class="even">
+                                            <td tabindex="0">03/01/2022</td>
+                                            <td>Sell Order - 1000 Units Orland eFund, LP </td>
+                                            <td>$100,000.00</td>
+                                            <td>$0.00</td>
+                                        </tr><tr role="row" class="odd">
+                                            <td tabindex="0">02/24/2022</td>
+                                            <td>Withdrawal Completed</td>
+                                            <td>$185,000.00</td>
+                                            <td>$0.00</td>
+                                        </tr></tbody>
+                            </table><div class="row view-pager"><div class="col-sm-12"><div class="text-center"></div></div></div></div>
+                            <div class="col-sm-12">
+                                <div class="text-center">
+                                    <button type="button" onclick="window.location='../Transaction'" class="btn btn-primary btn-lg mt-3 text-center">See more</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <p class="text-muted text-extra-small">
+                        This site is property of 2BTRUST, LLC and its affiliates (collectively, “2BTRUST” or “we,” “us,” or “our”). By accessing or using the Site, you agree that your access to and use of the Site, including any Content (defined below) provided by 2BTRUST, LLC shall be exclusively governed by the Terms and Conditions. The Terms and Conditions may be adjusted by 2BTRUST at any time by its sole discretion and are automatically incorporated into and considered part of this Terms and Condition. If you do not accept the terms and conditions stated here in, do not use the Site. We reserve the right to refuse access to and usage of the Site by anyone at any time. Therefore, 2BTRUST reserves the right to change, modify, update, amend all or any part of the Site or discontinue the Site at any time, without notice. In addition, we reserve the right to change the terms and conditions governing your access to and use of the Site and the Content at any time, without notice.
+                    </p>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="js/vendor/Chart.bundle.min.js"></script>
+    <script src="js/vendor/chartjs-plugin-datalabels.js"></script>
+    <script src="js/vendor/moment.min.js"></script>
+    <script src="js/vendor/fullcalendar.min.js"></script>
+    <script src="js/vendor/datatables.min.js"></script>
+    <script src="js/vendor/perfect-scrollbar.min.js"></script>
+    <script src="js/vendor/progressbar.min.js"></script>
+    <script src="js/vendor/jquery.barrating.min.js"></script>
+    <script src="js/vendor/select2.full.js"></script>
+    <script src="js/vendor/nouislider.min.js"></script>
+    <script src="js/vendor/bootstrap-datepicker.js"></script>
+    <script src="js/vendor/Sortable.js"></script>
+    <script src="js/vendor/mousetrap.min.js"></script>
+    <script src="js/vendor/glide.min.js"></script>
+    <script src="js/dore.script.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
