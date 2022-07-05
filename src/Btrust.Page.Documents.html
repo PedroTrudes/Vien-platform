@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>2bTrust | Investiment</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <link rel="stylesheet" href="font/iconsmind-s/css/iconsminds.css" />
+    <link
+      rel="stylesheet"
+      href="font/simple-line-icons/css/simple-line-icons.css"
+    />
+
+    <link rel="icon" type="image/png" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/vendor/bootstrap.rtl.only.min.css" />
+    <link rel="stylesheet" href="css/vendor/select2.min.css" />
+    <link rel="stylesheet" href="css/vendor/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="css/vendor/bootstrap-stars.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body id="app-container" class="menu-default show-spinner">
+    <nav class="navbar fixed-top">
+      <div class="d-flex align-items-center navbar-left">
+        <a href="#" class="menu-button d-none d-md-block">
+          <svg
+            class="main"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 9 17"
+          >
+            <rect x="0.48" y="0.5" width="7" height="1" />
+            <rect x="0.48" y="7.5" width="7" height="1" />
+            <rect x="0.48" y="15.5" width="7" height="1" />
+          </svg>
+          <svg
+            class="sub"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 18 17"
+          >
+            <rect x="1.56" y="0.5" width="16" height="1" />
+            <rect x="1.56" y="7.5" width="16" height="1" />
+            <rect x="1.56" y="15.5" width="16" height="1" />
+          </svg>
+        </a>
+
+        <a href="#" class="menu-button-mobile d-xs-block d-sm-block d-md-none">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 17">
+            <rect x="0.5" y="0.5" width="25" height="1" />
+            <rect x="0.5" y="7.5" width="25" height="1" />
+            <rect x="0.5" y="15.5" width="25" height="1" />
+          </svg>
+        </a>
+
+        <div class="topbar-custom">
+          <ul class="navbar-right d-flex list-inline float-right mb-0">
+            <li
+              class="list-inline-item dropdown notification-list flags-dropdown d-none d-sm-inline-block"
+            >
+              <a
+                class="nav-link dropdown-toggle arrow-none waves-effect waves-light"
+                data-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-haspopup="false"
+                aria-expanded="false"
+              >
+                <img
+                  src="../assets_v5/img/flags/us_flag.jpg"
+                  alt=""
+                  class="flag-img"
+                />
+                English <i class="mdi mdi-chevron-down"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-animated">
+                <a href="#" class="dropdown-item" onclick="setLanguage('pt-BR')"
+                  ><img
+                    src="../assets_v5/img/flags/br-flag.png"
+                    alt=""
+                    class="flag-img"
+                  />
+                  Portuguese</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <a
+          class="btn btn-sm btn-outline-primary ml-3 d-none d-md-inline-block"
+          href="https://1.envato.market/5kAb"
+          >&nbsp;Invest Now&nbsp;</a
+        >
+      </div>
+
+      <a class="navbar-logo" href="Dashboard.Default.html">
+        <img
+          class="d-none d-md-block"
+          src="logos/logo@2x.gif"
+          alt=""
+          style="width: 200px"
+        />
+        <img
+          class="logo-mobile d-md-none"
+          src="logos/logo@2x.gif"
+          alt=""
+          style="width: 65px"
+        />
+
+        <!-- <span class="logo d-none d-xs-block"></span>
+            <span class="logo-mobile d-xs-block "></span> -->
+      </a>
+
+      <div class="navbar-right">
+        <div class="user d-inline-block">
+          <button
+            class="btn btn-empty p-0"
+            type="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <span class="name">Sarah Kortney</span>
+            <span>
+              <img alt="Profile Picture" src="img/profiles/l-1.jpg" />
+            </span>
+          </button>
+
+          <div class="dropdown-menu dropdown-menu-right mt-3">
+            <a class="dropdown-item" href="#">Account</a>
+            <a class="dropdown-item" href="#">Features</a>
+            <a class="dropdown-item" href="#">History</a>
+            <a class="dropdown-item" href="#">Support</a>
+            <a class="dropdown-item" href="#">Sign out</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="menu" style="opacity: 1;">
+        <div class="main-menu default-transition">
+            <div class="scroll ps">
+                <ul class="list-unstyled">
+                    <li class="clMenu" id="clMenu_Overview">
+                        <a href="Btrust.Dashboard.Default.html">
+                            <i class="glyph-icon iconsminds-digital-drawing"></i>
+                            <span>Overview</span>
+                        </a>
+                    </li>
+                    <li class="clMenu" id="clMenu_Transactions">
+                        <a href="../Transaction">
+                            <i class="glyph-icon iconsminds-receipt-4"></i> Transactions
+                        </a>
+                    </li>
+                    <li class="clMenu" id="clMenu_Portifolio">
+                        <a href="../Portifolio">
+                            <i class="glyph-icon iconsminds-monitor-analytics"></i> My Portfolio
+                        </a>
+                    </li>
+                    <li class="clMenu" id="clMenu_Investiments">
+                        <a href="Btrust.Page.Investments.html">
+                            <i class="glyph-icon simple-icon-paper-plane"></i> Investments
+                        </a>
+                    </li>
+                    <li class="clMenu" id="clMenu_Transfer">
+                        <a href="../Transfer">
+                            <i class="glyph-icon iconsminds-dollar"></i> Transfer
+                        </a>
+                    </li>
+                    <li class="clMenu active">
+                        <a href="Btrust.Page.Documents.html" id="clMenu_Documents">
+                            <i class="glyph-icon iconsminds-add-file"></i> Documents
+                        </a>
+                    </li>
+                    <li class="clMenu">
+                        <a href="Btrust.Page.Help.html" id="clMenu_Helps">
+                            <i class="glyph-icon iconsminds-idea"></i> Help
+                        </a>
+                    </li>
+                </ul>
+            <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+        </div>
+    </div>
+
+    <main class="default-transition card card-body" style="opacity: 1">
+      <div class="container-fluid rounded pb-0">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="mb-4">Documents</h2>
+
+            <div class="row icon-cards-row mb-4">
+              <div class="col-3">
+                <a href="#" onclick="liberaDiv('dvPending')" class="card">
+                  <div class="card-body text-center">
+                    <i class="iconsminds-information"></i>
+                    <p class="card-text font-weight-semibold mb-0">0</p>
+                    <p class="lead text-center" style="font-size: 15px">
+                      Pending Documents
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-3">
+                <a href="#" onclick="liberaDiv('dvCompleted')" class="card">
+                  <div class="card-body text-center">
+                    <i class="iconsminds-idea"></i>
+                    <p class="card-text font-weight-semibold mb-0">0</p>
+                    <p class="lead text-center" style="font-size: 15px">
+                      Completed Documents
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-3">
+                <a href="#" onclick="liberaDiv('dvUpload')" class="card">
+                  <div class="card-body text-center">
+                    <i class="iconsminds-environmental-3"></i>
+                    <p class="card-text font-weight-semibold mb-0">0</p>
+                    <p class="lead text-center" style="font-size: 15px">
+                      Upload Requests
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-3">
+                <a href="#" onclick="liberaDiv('dvNew')" class="card">
+                  <div class="card-body text-center">
+                    <i class="iconsminds-monitor---phone"></i>
+                    <p class="card-text font-weight-semibold mb-0">0</p>
+                    <p class="lead text-center" style="font-size: 15px">
+                      New Document
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="row card card-body mb-5 dvSelected"
+          style="display: none"
+          id="dvPending"
+        >
+          <div class="col-md-12">
+            <h2 class="mb-4">Pending Documents</h2>
+          </div>
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-12" style="text-align: center">
+                <span>No Documents Avaliable </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="row card card-body mb-5 dvSelected"
+          style="display: none"
+          id="dvCompleted"
+        >
+          <div class="col-md-12">
+            <h2 class="mb-4">Completed Documents</h2>
+          </div>
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-12" style="text-align: center">
+                <span>No Documents Avaliable </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="row card card-body mb-5 dvSelected"
+          style="display: none"
+          id="dvUpload"
+        >
+          <div class="col-md-12">
+            <h2 class="mb-4">Upload Requests</h2>
+          </div>
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-12" style="text-align: center">
+                <span>No Documents Avaliable </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="row card card-body mb-5 dvSelected"
+          style="display: none"
+          id="dvNew"
+        >
+          <div class="col-md-12">
+            <h2 class="mb-4">New Document</h2>
+          </div>
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-12" style="text-align: center">
+                <span>No Documents Avaliable </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          $(document).ready(function () {
+            $(".clMenu").removeClass("active");
+            $("#clMenu_Documents").addClass("active");
+          });
+
+          function liberaDiv(dv) {
+            $(".dvSelected").css("display", "none");
+            $("#" + dv).css("display", "block");
+          }
+        </script>
+        <input type="hidden" id="accountNumberhd" value="000403-8" />
+        <input type="hidden" id="nameClienthd" value="2BPLATINUM LP" />
+        <div class="row">
+          <div class="col-12">
+            <p class="text-muted text-extra-small">
+              This site is property of 2BTRUST, LLC and its affiliates
+              (collectively, “2BTRUST” or “we,” “us,” or “our”). By accessing or
+              using the Site, you agree that your access to and use of the Site,
+              including any Content (defined below) provided by 2BTRUST, LLC
+              shall be exclusively governed by the Terms and Conditions. The
+              Terms and Conditions may be adjusted by 2BTRUST at any time by its
+              sole discretion and are automatically incorporated into and
+              considered part of this Terms and Condition. If you do not accept
+              the terms and conditions stated here in, do not use the Site. We
+              reserve the right to refuse access to and usage of the Site by
+              anyone at any time. Therefore, 2BTRUST reserves the right to
+              change, modify, update, amend all or any part of the Site or
+              discontinue the Site at any time, without notice. In addition, we
+              reserve the right to change the terms and conditions governing
+              your access to and use of the Site and the Content at any time,
+              without notice.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="js/vendor/chartjs-plugin-datalabels.js"></script>
+    <script src="js/vendor/moment.min.js"></script>
+    <script src="js/vendor/perfect-scrollbar.min.js"></script>
+    <script src="js/vendor/progressbar.min.js"></script>
+    <script src="js/vendor/jquery.barrating.min.js"></script>
+    <script src="js/vendor/select2.full.js"></script>
+    <script src="js/vendor/nouislider.min.js"></script>
+    <script src="js/vendor/mousetrap.min.js"></script>
+    <script src="js/vendor/glide.min.js"></script>
+    <script src="js/dore.script.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
