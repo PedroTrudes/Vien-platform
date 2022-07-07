@@ -1484,7 +1484,7 @@ button {
 .logo-mobile {
   width: 20px;
   height: 35px;
-  background: url("../logos/logo@2x.gif") no-repeat;
+  background: url("../logos/mobile.svg") no-repeat;
   background-position: center center; }
 
 #app-container.sub-hidden .menu-button .sub,

@@ -20,75 +20,69 @@
 
 <body id="app-container" class="ltr rounded menu-default menu-sub-hidden menu-mobile">
     
-    <nav class="navbar fixed-top">
+    <nav class="navbar fixed-top" style="opacity: 1;">
         <div class="d-flex align-items-center navbar-left">
             <a href="#" class="menu-button d-none d-md-block">
                 <svg class="main" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 17">
-                    <rect x="0.48" y="0.5" width="7" height="1" />
-                    <rect x="0.48" y="7.5" width="7" height="1" />
-                    <rect x="0.48" y="15.5" width="7" height="1" />
+                    <rect x="0.48" y="0.5" width="7" height="1"></rect>
+                    <rect x="0.48" y="7.5" width="7" height="1"></rect>
+                    <rect x="0.48" y="15.5" width="7" height="1"></rect>
                 </svg>
                 <svg class="sub" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 17">
-                    <rect x="1.56" y="0.5" width="16" height="1" />
-                    <rect x="1.56" y="7.5" width="16" height="1" />
-                    <rect x="1.56" y="15.5" width="16" height="1" />
+                    <rect x="1.56" y="0.5" width="16" height="1"></rect>
+                    <rect x="1.56" y="7.5" width="16" height="1"></rect>
+                    <rect x="1.56" y="15.5" width="16" height="1"></rect>
                 </svg>
             </a>
-
             <a href="#" class="menu-button-mobile d-xs-block d-sm-block d-md-none">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 17">
-                    <rect x="0.5" y="0.5" width="25" height="1" />
-                    <rect x="0.5" y="7.5" width="25" height="1" />
-                    <rect x="0.5" y="15.5" width="25" height="1" />
+                    <rect x="0.5" y="0.5" width="25" height="1"></rect>
+                    <rect x="0.5" y="7.5" width="25" height="1"></rect>
+                    <rect x="0.5" y="15.5" width="25" height="1"></rect>
                 </svg>
             </a>
+           
 
             <div class="topbar-custom">
                 <ul class="navbar-right d-flex list-inline float-right mb-0">
                     <li class="list-inline-item dropdown notification-list flags-dropdown d-none d-sm-inline-block">
-
-                                <a class="nav-link dropdown-toggle arrow-none waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                    <img src="../assets_v5/img/flags/us_flag.jpg" alt="" class="flag-img">
-                                    English <i class="mdi mdi-chevron-down"></i>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-animated">
-                                    <a href="#" class="dropdown-item" onclick="setLanguage('pt-BR')"><img src="../assets_v5/img/flags/br-flag.png" alt="" class="flag-img"> Portuguese</a>
-                                </div>
+                        <a class="nav-link dropdown-toggle arrow-none waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <img src="logos/icons/us_flag.jpg" alt="" class="flag-img" style="height: 12px;">
+                            United States <i class="mdi mdi-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-animated">
+                           <a href="#" class="dropdown-item"><img src="logos/icons/br-flag.png" alt="" class="flag-img" style="height: 12px;"> Portuguese</a>
+                        </div>
                     </li>
                 </ul>
             </div>
 
-            <a class="btn btn-sm btn-outline-primary ml-3 d-none d-md-inline-block"
-                href="https://1.envato.market/5kAb">&nbsp;Invest Now&nbsp;</a>
+
+            <a class="btn btn-sm btn-outline-primary ml-3 d-none d-md-inline-block" href="#" onclick="investNow()">&nbsp;Invest Now&nbsp;</a>
         </div>
 
-
         <a class="navbar-logo" href="Dashboard.Default.html">
-            <img class=" d-none d-md-block" src="logos/logo@2x.gif" alt="" style="width: 200px;">
-            <img class="logo-mobile d-md-none " src="logos/logo@2x.gif" alt="" style="width: 65px;">
-        
-            <!-- <span class="logo d-none d-xs-block"></span>
-            <span class="logo-mobile d-xs-block "></span> -->
+            <span class="logo d-none d-xl-block"></span>
+            <span class="logo-mobile d-block d-xl-none"></span>
         </a>
-
         <div class="navbar-right">
-            
-
+            <div class="header-icons d-inline-block align-middle">
+                <button class="header-icon btn btn-empty d-none d-sm-inline-block" type="button" id="fullScreenButton">
+                    <i class="simple-icon-size-fullscreen"></i>
+                    <i class="simple-icon-size-actual"></i>
+                </button>
+            </div>
             <div class="user d-inline-block">
-                <button class="btn btn-empty p-0" type="button" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-                    <span class="name">Sarah Kortney</span>
+                <button class="btn btn-empty p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="name">2BPLATINUM LP</span>
                     <span>
-                        <img alt="Profile Picture" src="img/profiles/l-1.jpg" />
+                        <img alt="Profile Picture" src="/logos/icons/default-user.png">
                     </span>
                 </button>
-
                 <div class="dropdown-menu dropdown-menu-right mt-3">
-                    <a class="dropdown-item" href="#">Account</a>
-                    <a class="dropdown-item" href="#">Features</a>
-                    <a class="dropdown-item" href="#">History</a>
-                    <a class="dropdown-item" href="#">Support</a>
-                    <a class="dropdown-item" href="#">Sign out</a>
+                    <a class="dropdown-item" href="../Profile">Account</a>
+                    <a class="dropdown-item" href="../Help">Support</a>
+                    <a class="dropdown-item" href="../Login/LogOff">Sign out</a>
                 </div>
             </div>
         </div>
