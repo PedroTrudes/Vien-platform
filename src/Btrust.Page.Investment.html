@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>2bTrust | Investment</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <link rel="stylesheet" href="font/iconsmind-s/css/iconsminds.css" />
+    <link
+      rel="stylesheet"
+      href="font/simple-line-icons/css/simple-line-icons.css"
+    />
+    <link rel="icon" type="image/png" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/vendor/bootstrap.rtl.only.min.css" />
+    <link rel="stylesheet" href="css/vendor/slick.css" />
+    <link rel="stylesheet" href="css/vendor/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="css/vendor/glide.core.min.css" />
+    <link rel="stylesheet" href="css/vendor/component-custom-switch.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body id="app-container" class="menu-default show-spinner">
+    <nav class="navbar fixed-top" style="opacity: 1">
+      <div class="d-flex align-items-center navbar-left">
+        <a href="#" class="menu-button d-none d-md-block">
+          <svg
+            class="main"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 9 17"
+          >
+            <rect x="0.48" y="0.5" width="7" height="1"></rect>
+            <rect x="0.48" y="7.5" width="7" height="1"></rect>
+            <rect x="0.48" y="15.5" width="7" height="1"></rect>
+          </svg>
+          <svg
+            class="sub"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 18 17"
+          >
+            <rect x="1.56" y="0.5" width="16" height="1"></rect>
+            <rect x="1.56" y="7.5" width="16" height="1"></rect>
+            <rect x="1.56" y="15.5" width="16" height="1"></rect>
+          </svg>
+        </a>
+        <a href="#" class="menu-button-mobile d-xs-block d-sm-block d-md-none">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 17">
+            <rect x="0.5" y="0.5" width="25" height="1"></rect>
+            <rect x="0.5" y="7.5" width="25" height="1"></rect>
+            <rect x="0.5" y="15.5" width="25" height="1"></rect>
+          </svg>
+        </a>
+
+        <div class="topbar-custom">
+          <ul class="navbar-right d-flex list-inline float-right mb-0">
+            <li
+              class="list-inline-item dropdown notification-list flags-dropdown d-none d-sm-inline-block"
+            >
+              <a
+                class="nav-link dropdown-toggle arrow-none waves-effect waves-light"
+                data-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-haspopup="false"
+                aria-expanded="false"
+              >
+                <img
+                  src="logos/icons/us_flag.jpg"
+                  alt=""
+                  class="flag-img"
+                  style="height: 12px"
+                />
+                United States <i class="mdi mdi-chevron-down"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-animated">
+                <a href="#" class="dropdown-item"
+                  ><img
+                    src="logos/icons/br-flag.png"
+                    alt=""
+                    class="flag-img"
+                    style="height: 12px"
+                  />
+                  Portuguese</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <a
+          class="btn btn-sm btn-outline-primary ml-3 d-none d-md-inline-block"
+          href="#"
+          onclick="investNow()"
+          >&nbsp;Invest Now&nbsp;</a
+        >
+      </div>
+
+      <a class="navbar-logo" href="Dashboard.Default.html">
+        <span class="logo d-none d-xl-block"></span>
+        <span class="logo-mobile d-block d-xl-none"></span>
+      </a>
+      <div class="navbar-right">
+        <div class="header-icons d-inline-block align-middle">
+          <button
+            class="header-icon btn btn-empty d-none d-sm-inline-block"
+            type="button"
+            id="fullScreenButton"
+          >
+            <i class="simple-icon-size-fullscreen"></i>
+            <i class="simple-icon-size-actual"></i>
+          </button>
+        </div>
+        <div class="user d-inline-block">
+          <button
+            class="btn btn-empty p-0"
+            type="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <span class="name">2BPLATINUM LP</span>
+            <span>
+              <img alt="Profile Picture" src="/logos/icons/default-user.png" />
+            </span>
+          </button>
+          <div class="dropdown-menu dropdown-menu-right mt-3">
+            <a class="dropdown-item" href="../Profile">Account</a>
+            <a class="dropdown-item" href="../Help">Support</a>
+            <a class="dropdown-item" href="../Login/LogOff">Sign out</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="menu" style="opacity: 1">
+        <div class="main-menu default-transition">
+          <div class="scroll ps">
+            <ul class="list-unstyled">
+              <li class="clMenu" id="clMenu_Overview">
+                <a href="Btrust.Dashboard.Default.html">
+                  <i class="glyph-icon iconsminds-digital-drawing"></i>
+                  <span>Overview</span>
+                </a>
+              </li>
+              <li class="clMenu" id="clMenu_Transactions">
+                <a href="../Transaction">
+                  <i class="glyph-icon iconsminds-receipt-4"></i> Transactions
+                </a>
+              </li>
+              <li class="clMenu" id="clMenu_Portifolio">
+                <a href="../Portifolio">
+                  <i class="glyph-icon iconsminds-monitor-analytics"></i> My
+                  Portfolio
+                </a>
+              </li>
+              <li class="clMenu active" id="clMenu_Investiments">
+                <a href="Btrust.Page.Investments.html">
+                  <i class="glyph-icon simple-icon-paper-plane"></i> Investments
+                </a>
+              </li>
+              <li class="clMenu" id="clMenu_Transfer">
+                <a href="../Transfer">
+                  <i class="glyph-icon iconsminds-dollar"></i> Transfer
+                </a>
+              </li>
+              <li class="clMenu">
+                <a href="Btrust.Page.Documents.html" id="clMenu_Documents">
+                  <i class="glyph-icon iconsminds-add-file"></i> Documents
+                </a>
+              </li>
+              <li class="clMenu">
+                <a href="Btrust.Page.Help.html" id="clMenu_Helps ">
+                  <i class="glyph-icon iconsminds-idea"></i> Help
+                </a>
+              </li>
+            </ul>
+            <div class="ps__rail-x" style="left: 0px; bottom: 0px">
+              <div
+                class="ps__thumb-x"
+                tabindex="0"
+                style="left: 0px; width: 0px"
+              ></div>
+            </div>
+            <div class="ps__rail-y" style="top: 0px; right: 0px">
+              <div
+                class="ps__thumb-y"
+                tabindex="0"
+                style="top: 0px; height: 0px"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <main class="default-transition card card-body">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <h5 class="mb-4">Funds</h5>
+
+            <div class="row mb-4">
+              <div class="col-md-12 mb-4 pl-0 pr-0">
+                <div class="slick-container">
+                  <div class="slick basic">
+                    <div class="card mini-stats">
+                      <div
+                        class="p-3 mini-stats-content"
+                        style="
+                          background-image: url('https://storage.2btrust.com/upload_HML/Image/ImagemLogo/Logo_principal_11/2bTrusta.jpg');
+                          background-size: 100%;
+                          min-height: 140px;
+                        "
+                      >
+                        <div class="mb-3"></div>
+                      </div>
+                      <div class="ml-3 mr-3">
+                        <div class="bg-white p-3 mini-stats-desc">
+                          <h6 class="mt-0 mb-3 text-primary">
+                            <b>2B Infinite Capital Fund, LP</b>
+                          </h6>
+                          <p class="text-small mb-0"></p>
+                          <p class="text-small mb-0 mt-2">
+                            Opportunity to join 2B Infinite and get access to a
+                            diverse range of properties.
+                          </p>
+                          <p class="mb-0 mt-2 text-primary">
+                            <b>Performance</b>
+                          </p>
+
+                          <p class="mb-0 mt-1 text-primary text-small">
+                            <b>3.51% 2022</b>
+                          </p>
+                          <p class="mb-0 mt-1 text-primary text-small">
+                            <b>6.39% 2021</b>
+                          </p>
+                          <p class="mb-0 mt-1 text-primary text-small">
+                            <b>9.90% Begin</b>
+                          </p>
+
+                          <div class="row">
+                            <div class="col-md-4">
+                              <p class="mb-0 mt-3 text-small"><b>$0.00</b></p>
+                            </div>
+                            <div class="col-md-7">
+                              <p class="mb-0 mt-3 text-small">
+                                <b>0% Owner</b>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-4">
+                              <p class="mb-0 mt-1 text-small">
+                                <b>14724 Units</b>
+                              </p>
+                            </div>
+
+                            <div class="col-md-7">
+                              <p class="mb-0 mt-1 text-small">
+                                <b>$1,472,400.00 Total</b>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <input
+                              type="hidden"
+                              id="idPessoa"
+                              name="idPessoa"
+                              value="403"
+                            />
+                            <div
+                              class="col-md-12 mt-5"
+                              style="text-align: center"
+                            >
+                              <button
+                                onclick="fnOpenDetails('11')"
+                                type="button"
+                                class="btn btn-primary mb-1"
+                              >
+                                See Details
+                              </button>
+                            </div>
+                            <div
+                              id="sell-11"
+                              style="
+                                display: none;
+                                width: 100%;
+                                border: 1px solid #eaeaea;
+                                border-radius: 10px;
+                                margin: 10px;
+                              "
+                            >
+                              <div class="row" style="margin-top: 40px">
+                                <hr />
+                                <div
+                                  class="col-md-12 mb-3"
+                                  style="
+                                    padding-left: 33px;
+                                    padding-right: 44px;
+                                  "
+                                >
+                                  <div class="form-group mb-4">
+                                    <label style="font-size: 16px"
+                                      >Units for sell</label
+                                    >
+                                    <input
+                                      style="
+                                        border: none;
+                                        border-bottom: 1px solid #bfbbbb;
+                                      "
+                                      type="text"
+                                      id="txtSetUNit-11"
+                                    />
+                                    <div>
+                                      <div
+                                        class="slider"
+                                        id="singleSlider-11"
+                                      ></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="row"
+                                style="
+                                  width: 100%;
+                                  padding-left: 20px;
+                                  margin-top: 20px;
+                                "
+                              >
+                                <div class="col-md-12 mb-3">
+                                  <div class="form-group mb-4">
+                                    <label style="font-size: 16px"
+                                      >Total Investment</label
+                                    >
+                                    <div>
+                                      <span id="valorTotal-11">0</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="row"
+                                style="
+                                  width: 100%;
+                                  padding-left: 20px;
+                                  margin-top: 20px;
+                                "
+                              >
+                                <div
+                                  class="col-md-12 mb-3"
+                                  style="text-align: center"
+                                >
+                                  <button
+                                    onclick="fnSellConfirm('11')"
+                                    type="button"
+                                    class="btn btn-primary mb-1"
+                                    style="width: 150px"
+                                  >
+                                    Confirm
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card mini-stats">
+                      <div
+                        class="p-3 mini-stats-content"
+                        style="
+                          background-image: url('https://storage.2btrust.com/upload_HML/Image/ImagemLogo/Logo_principal_13/OrlanleLP.png');
+                          background-size: 100%;
+                          min-height: 140px;
+                        "
+                      >
+                        <div class="mb-3"></div>
+                      </div>
+                      <div class="ml-3 mr-3">
+                        <div class="bg-white p-3 mini-stats-desc">
+                          <h6 class="mt-0 mb-3 text-primary">
+                            <b>Orland eFund, LP</b>
+                          </h6>
+                          <p class="text-small mb-0"></p>
+                          <p class="text-small mb-0 mt-2">
+                            Private Equity Fund focused on the tourism real
+                            estate market and construction loan in Orlando.
+                          </p>
+                          <p class="mb-0 mt-2 text-primary">
+                            <b>Performance</b>
+                          </p>
+
+                          <p class="mb-0 mt-1 text-primary text-small">
+                            <b>6.63% 2022</b>
+                          </p>
+                          <p class="mb-0 mt-1 text-primary text-small">
+                            <b>2.57% 2021</b>
+                          </p>
+                          <p class="mb-0 mt-1 text-primary text-small">
+                            <b>9.20% Begin</b>
+                          </p>
+
+                          <div class="row">
+                            <div class="col-md-4">
+                              <p class="mb-0 mt-3 text-small"><b>$0.00</b></p>
+                            </div>
+                            <div class="col-md-7">
+                              <p class="mb-0 mt-3 text-small">
+                                <b>0% Owner</b>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-4">
+                              <p class="mb-0 mt-1 text-small">
+                                <b>10210 Units</b>
+                              </p>
+                            </div>
+
+                            <div class="col-md-7">
+                              <p class="mb-0 mt-1 text-small">
+                                <b>$1,021,000.00 Total</b>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <input
+                              type="hidden"
+                              id="idPessoa"
+                              name="idPessoa"
+                              value="403"
+                            />
+                            <div
+                              class="col-md-12 mt-5"
+                              style="text-align: center"
+                            >
+                              <button
+                                onclick="fnOpenDetails('13')"
+                                type="button"
+                                class="btn btn-primary mb-1"
+                              >
+                                See Details
+                              </button>
+                            </div>
+                            <div
+                              id="sell-13"
+                              style="
+                                display: none;
+                                width: 100%;
+                                border: 1px solid #eaeaea;
+                                border-radius: 10px;
+                                margin: 10px;
+                              "
+                            >
+                              <div class="row" style="margin-top: 40px">
+                                <hr />
+                                <div
+                                  class="col-md-12 mb-3"
+                                  style="
+                                    padding-left: 33px;
+                                    padding-right: 44px;
+                                  "
+                                >
+                                  <div class="form-group mb-4">
+                                    <label style="font-size: 16px"
+                                      >Units for sell</label
+                                    >
+                                    <input
+                                      style="
+                                        border: none;
+                                        border-bottom: 1px solid #bfbbbb;
+                                      "
+                                      type="text"
+                                      id="txtSetUNit-13"
+                                    />
+                                    <div>
+                                      <div
+                                        class="slider"
+                                        id="singleSlider-13"
+                                      ></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="row"
+                                style="
+                                  width: 100%;
+                                  padding-left: 20px;
+                                  margin-top: 20px;
+                                "
+                              >
+                                <div class="col-md-12 mb-3">
+                                  <div class="form-group mb-4">
+                                    <label style="font-size: 16px"
+                                      >Total Investment</label
+                                    >
+                                    <div>
+                                      <span id="valorTotal-13">0</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="row"
+                                style="
+                                  width: 100%;
+                                  padding-left: 20px;
+                                  margin-top: 20px;
+                                "
+                              >
+                                <div
+                                  class="col-md-12 mb-3"
+                                  style="text-align: center"
+                                >
+                                  <button
+                                    onclick="fnSellConfirm('13')"
+                                    type="button"
+                                    class="btn btn-primary mb-1"
+                                    style="width: 150px"
+                                  >
+                                    Confirm
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card mini-stats">
+                      <div
+                        class="p-3 mini-stats-content"
+                        style="
+                          background-image: url('https://storage.2btrust.com/upload_HML/Image/ImagemLogo/Logo_principal_0/Orlandoinc.png');
+                          background-size: 100%;
+                          min-height: 140px;
+                        "
+                      >
+                        <div class="mb-3"></div>
+                      </div>
+                      <div class="ml-3 mr-3">
+                        <div class="bg-white p-3 mini-stats-desc">
+                          <h6 class="mt-0 mb-3 text-primary">
+                            <b>Orland Fund, INC</b>
+                          </h6>
+                          <p class="text-small mb-0"></p>
+                          <p class="text-small mb-0 mt-2">
+                            This fund invests in the Orlando Fund, however the
+                            instrument used is a loan of 6.5% per year. Please
+                            read the PPM.
+                          </p>
+                          <p class="mb-0 mt-2 text-primary">
+                            <b>Performance</b>
+                          </p>
+
+                          <p class="mb-0 mt-1 text-primary text-small">
+                            <b>4.74% 2022</b>
+                          </p>
+                          <p class="mb-0 mt-1 text-primary text-small">
+                            <b>4.74% Begin</b>
+                          </p>
+
+                          <div class="row"></div>
+                          <div class="row">
+                            <div class="col-md-4">
+                              <p class="mb-0 mt-1 text-small">
+                                <b>4205 Units</b>
+                              </p>
+                            </div>
+
+                            <div class="col-md-7">
+                              <p class="mb-0 mt-1 text-small">
+                                <b>$420,500.00 Total</b>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div
+                              class="col-md-12 mt-5"
+                              style="text-align: center"
+                            >
+                              <button
+                                onclick="fnOpenDetails('14')"
+                                type="button"
+                                class="btn btn-primary mb-1"
+                              >
+                                See Details
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card mini-stats">
+                      <div
+                        class="p-3 mini-stats-content"
+                        style="
+                          background-image: url('https://storage.2btrust.com/upload_HML/Image/ImagemLogo/Logo_principal_12/Solid1.png');
+                          background-size: 100%;
+                          min-height: 140px;
+                        "
+                      >
+                        <div class="mb-3"></div>
+                      </div>
+                      <div class="ml-3 mr-3">
+                        <div class="bg-white p-3 mini-stats-desc">
+                          <h6 class="mt-0 mb-3 text-primary">
+                            <b>Solid Capital Fund, LP</b>
+                          </h6>
+                          <p class="text-small mb-0"></p>
+                          <p class="text-small mb-0 mt-2">
+                            Solid Development, Investments with returns and
+                            safety that only the real estate guarantee offers
+                          </p>
+                          <p class="mb-0 mt-2 text-primary">
+                            <b>Performance</b>
+                          </p>
+
+                          <p class="mb-0 mt-1 text-primary text-small">
+                            <b>4.42% 2022</b>
+                          </p>
+                          <p class="mb-0 mt-1 text-primary text-small">
+                            <b>4.42% Begin</b>
+                          </p>
+
+                          <div class="row"></div>
+                          <div class="row">
+                            <div class="col-md-4">
+                              <p class="mb-0 mt-1 text-small">
+                                <b>2000 Units</b>
+                              </p>
+                            </div>
+
+                            <div class="col-md-7">
+                              <p class="mb-0 mt-1 text-small">
+                                <b>$200,000.00 Total</b>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div
+                              class="col-md-12 mt-5"
+                              style="text-align: center"
+                            >
+                              <button
+                                onclick="fnOpenDetails('12')"
+                                type="button"
+                                class="btn btn-primary mb-1"
+                              >
+                                See Details
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card mini-stats">
+                      <div
+                        class="p-3 mini-stats-content"
+                        style="
+                          background-image: url('https://storage.2btrust.com/upload_HML/Image/ImagemLogo/Logo_principal_12/Solid1.png');
+                          background-size: 100%;
+                          min-height: 140px;
+                        "
+                      >
+                        <div class="mb-3"></div>
+                      </div>
+                      <div class="ml-3 mr-3">
+                        <div class="bg-white p-3 mini-stats-desc">
+                          <h6 class="mt-0 mb-3 text-primary">
+                            <b>Solid Capital Fund, LP</b>
+                          </h6>
+                          <p class="text-small mb-0"></p>
+                          <p class="text-small mb-0 mt-2">
+                            Solid Development, Investments with returns and
+                            safety that only the real estate guarantee offers
+                          </p>
+                          <p class="mb-0 mt-2 text-primary">
+                            <b>Performance</b>
+                          </p>
+
+                          <p class="mb-0 mt-1 text-primary text-small">
+                            <b>4.42% 2022</b>
+                          </p>
+                          <p class="mb-0 mt-1 text-primary text-small">
+                            <b>4.42% Begin</b>
+                          </p>
+
+                          <div class="row"></div>
+                          <div class="row">
+                            <div class="col-md-4">
+                              <p class="mb-0 mt-1 text-small">
+                                <b>2000 Units</b>
+                              </p>
+                            </div>
+
+                            <div class="col-md-7">
+                              <p class="mb-0 mt-1 text-small">
+                                <b>$200,000.00 Total</b>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div
+                              class="col-md-12 mt-5"
+                              style="text-align: center"
+                            >
+                              <button
+                                onclick="fnOpenDetails('12')"
+                                type="button"
+                                class="btn btn-primary mb-1"
+                              >
+                                See Details
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="slick-navs-dots slider-nav text-center">
+                    <a href="#" class="left-arrow">
+                      <i class="simple-icon-arrow-left"></i>
+                    </a>
+                    <div class="slider-dot-container"></div>
+                    <a href="#" class="right-arrow">
+                      <i class="simple-icon-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <p class="text-muted text-extra-small">
+              This site is property of 2BTRUST, LLC and its affiliates
+              (collectively, “2BTRUST” or “we,” “us,” or “our”). By accessing or
+              using the Site, you agree that your access to and use of the Site,
+              including any Content (defined below) provided by 2BTRUST, LLC
+              shall be exclusively governed by the Terms and Conditions. The
+              Terms and Conditions may be adjusted by 2BTRUST at any time by its
+              sole discretion and are automatically incorporated into and
+              considered part of this Terms and Condition. If you do not accept
+              the terms and conditions stated here in, do not use the Site. We
+              reserve the right to refuse access to and usage of the Site by
+              anyone at any time. Therefore, 2BTRUST reserves the right to
+              change, modify, update, amend all or any part of the Site or
+              discontinue the Site at any time, without notice. In addition, we
+              reserve the right to change the terms and conditions governing
+              your access to and use of the Site and the Content at any time,
+              without notice.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="footer-content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 col-sm-6">
+              <p class="mb-0 text-muted">ColoredStrategies 2019</p>
+            </div>
+            <div class="col-sm-6 d-none d-sm-block">
+              <ul class="breadcrumb pt-0 pr-0 float-right">
+                <li class="breadcrumb-item mb-0">
+                  <a href="#" class="btn-link">Review</a>
+                </li>
+                <li class="breadcrumb-item mb-0">
+                  <a href="#" class="btn-link">Purchase</a>
+                </li>
+                <li class="breadcrumb-item mb-0">
+                  <a href="#" class="btn-link">Docs</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="js/vendor/slick.min.js"></script>
+    <script src="js/vendor/perfect-scrollbar.min.js"></script>
+    <script src="js/vendor/glide.min.js"></script>
+    <script src="js/vendor/mousetrap.min.js"></script>
+    <script src="js/dore.script.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
