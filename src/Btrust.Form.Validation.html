@@ -34,118 +34,176 @@
   </head>
 
   <body id="app-container" class="menu-default show-spinner">
-    <nav class="navbar fixed-top" style="opacity: 1;">
+    <nav class="navbar fixed-top" style="opacity: 1">
       <div class="d-flex align-items-center navbar-left">
-          <a href="#" class="menu-button d-none d-md-block">
-              <svg class="main" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 17">
-                  <rect x="0.48" y="0.5" width="7" height="1"></rect>
-                  <rect x="0.48" y="7.5" width="7" height="1"></rect>
-                  <rect x="0.48" y="15.5" width="7" height="1"></rect>
-              </svg>
-              <svg class="sub" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 17">
-                  <rect x="1.56" y="0.5" width="16" height="1"></rect>
-                  <rect x="1.56" y="7.5" width="16" height="1"></rect>
-                  <rect x="1.56" y="15.5" width="16" height="1"></rect>
-              </svg>
-          </a>
-          <a href="#" class="menu-button-mobile d-xs-block d-sm-block d-md-none">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 17">
-                  <rect x="0.5" y="0.5" width="25" height="1"></rect>
-                  <rect x="0.5" y="7.5" width="25" height="1"></rect>
-                  <rect x="0.5" y="15.5" width="25" height="1"></rect>
-              </svg>
-          </a>
-         
+        <a href="#" class="menu-button d-none d-md-block">
+          <svg
+            class="main"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 9 17"
+          >
+            <rect x="0.48" y="0.5" width="7" height="1"></rect>
+            <rect x="0.48" y="7.5" width="7" height="1"></rect>
+            <rect x="0.48" y="15.5" width="7" height="1"></rect>
+          </svg>
+          <svg
+            class="sub"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 18 17"
+          >
+            <rect x="1.56" y="0.5" width="16" height="1"></rect>
+            <rect x="1.56" y="7.5" width="16" height="1"></rect>
+            <rect x="1.56" y="15.5" width="16" height="1"></rect>
+          </svg>
+        </a>
+        <a href="#" class="menu-button-mobile d-xs-block d-sm-block d-md-none">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 17">
+            <rect x="0.5" y="0.5" width="25" height="1"></rect>
+            <rect x="0.5" y="7.5" width="25" height="1"></rect>
+            <rect x="0.5" y="15.5" width="25" height="1"></rect>
+          </svg>
+        </a>
 
-          <div class="topbar-custom">
-              <ul class="navbar-right d-flex list-inline float-right mb-0">
-                  <li class="list-inline-item dropdown notification-list flags-dropdown d-none d-sm-inline-block">
-                      <a class="nav-link dropdown-toggle arrow-none waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                          <img src="logos/icons/us_flag.jpg" alt="" class="flag-img" style="height: 12px;">
-                          United States <i class="mdi mdi-chevron-down"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-animated">
-                         <a href="#" class="dropdown-item"><img src="logos/icons/br-flag.png" alt="" class="flag-img" style="height: 12px;"> Portuguese</a>
-                      </div>
-                  </li>
-              </ul>
-          </div>
+        <div class="topbar-custom">
+          <ul class="navbar-right d-flex list-inline float-right mb-0">
+            <li
+              class="list-inline-item dropdown notification-list flags-dropdown d-none d-sm-inline-block"
+            >
+              <a
+                class="nav-link dropdown-toggle arrow-none waves-effect waves-light"
+                data-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-haspopup="false"
+                aria-expanded="false"
+              >
+                <img
+                  src="logos/icons/us_flag.jpg"
+                  alt=""
+                  class="flag-img"
+                  style="height: 12px"
+                />
+                United States <i class="mdi mdi-chevron-down"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-animated">
+                <a href="#" class="dropdown-item"
+                  ><img
+                    src="logos/icons/br-flag.png"
+                    alt=""
+                    class="flag-img"
+                    style="height: 12px"
+                  />
+                  Portuguese</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
 
-
-          <a class="btn btn-sm btn-outline-primary ml-3 d-none d-md-inline-block" href="#" onclick="investNow()">&nbsp;Invest Now&nbsp;</a>
+        <a
+          class="btn btn-sm btn-outline-primary ml-3 d-none d-md-inline-block"
+          href="#"
+          onclick="investNow()"
+          >&nbsp;Invest Now&nbsp;</a
+        >
       </div>
 
       <a class="navbar-logo" href="Dashboard.Default.html">
-          <span class="logo d-none d-xl-block"></span>
-          <span class="logo-mobile d-block d-xl-none"></span>
+        <span class="logo d-none d-xl-block"></span>
+        <span class="logo-mobile d-block d-xl-none"></span>
       </a>
       <div class="navbar-right">
-          <div class="header-icons d-inline-block align-middle">
-              <button class="header-icon btn btn-empty d-none d-sm-inline-block" type="button" id="fullScreenButton">
-                  <i class="simple-icon-size-fullscreen"></i>
-                  <i class="simple-icon-size-actual"></i>
-              </button>
+        <div class="header-icons d-inline-block align-middle">
+          <button
+            class="header-icon btn btn-empty d-none d-sm-inline-block"
+            type="button"
+            id="fullScreenButton"
+          >
+            <i class="simple-icon-size-fullscreen"></i>
+            <i class="simple-icon-size-actual"></i>
+          </button>
+        </div>
+        <div class="user d-inline-block">
+          <button
+            class="btn btn-empty p-0"
+            type="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <span class="name">2BPLATINUM LP</span>
+            <span>
+              <img alt="Profile Picture" src="/logos/icons/default-user.png" />
+            </span>
+          </button>
+          <div class="dropdown-menu dropdown-menu-right mt-3">
+            <a class="dropdown-item" href="../Profile">Account</a>
+            <a class="dropdown-item" href="../Help">Support</a>
+            <a class="dropdown-item" href="../Login/LogOff">Sign out</a>
           </div>
-          <div class="user d-inline-block">
-              <button class="btn btn-empty p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="name">2BPLATINUM LP</span>
-                  <span>
-                      <img alt="Profile Picture" src="/logos/icons/default-user.png">
-                  </span>
-              </button>
-              <div class="dropdown-menu dropdown-menu-right mt-3">
-                  <a class="dropdown-item" href="../Profile">Account</a>
-                  <a class="dropdown-item" href="../Help">Support</a>
-                  <a class="dropdown-item" href="../Login/LogOff">Sign out</a>
-              </div>
-          </div>
+        </div>
       </div>
-  </nav>
+    </nav>
 
-  <div class="menu" style="opacity: 1;">
+    <div class="menu" style="opacity: 1">
       <div class="main-menu default-transition">
-          <div class="scroll ps">
-              <ul class="list-unstyled">
-                  <li class="clMenu active" id="clMenu_Overview">
-                      <a href="Btrust.Dashboard.Default.html">
-                          <i class="glyph-icon iconsminds-digital-drawing"></i>
-                          <span>Overview</span>
-                      </a>
-                  </li>
-                  <li class="clMenu" id="clMenu_Transactions">
-                      <a href="../Transaction">
-                          <i class="glyph-icon iconsminds-receipt-4"></i> Transactions
-                      </a>
-                  </li>
-                  <li class="clMenu" id="clMenu_Portifolio">
-                      <a href="../Portifolio">
-                          <i class="glyph-icon iconsminds-monitor-analytics"></i> My Portfolio
-                      </a>
-                  </li>
-                  <li class="clMenu" id="clMenu_Investiments">
-                      <a href="Btrust.Page.Investments.html">
-                          <i class="glyph-icon simple-icon-paper-plane"></i> Investments
-                      </a>
-                  </li>
-                  <li class="clMenu" id="clMenu_Transfer">
-                      <a href="../Transfer">
-                          <i class="glyph-icon iconsminds-dollar"></i> Transfer
-                      </a>
-                  </li>
-                  <li>
-                      <a href="Btrust.Page.Documents.html" id="clMenu_Documents">
-                          <i class="glyph-icon iconsminds-add-file"></i> Documents
-                      </a>
-                  </li>
-                  <li>
-                      <a href="Btrust.Page.Help.html" id="clMenu_Helps">
-                          <i class="glyph-icon iconsminds-idea"></i> Help
-                      </a>
-                  </li>
-              </ul>
-          <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+        <div class="scroll ps">
+          <ul class="list-unstyled">
+            <li class="clMenu active" id="clMenu_Overview">
+              <a href="Btrust.Dashboard.Default.html">
+                <i class="glyph-icon iconsminds-digital-drawing"></i>
+                <span>Overview</span>
+              </a>
+            </li>
+            <li class="clMenu" id="clMenu_Transactions">
+              <a href="../Transaction">
+                <i class="glyph-icon iconsminds-receipt-4"></i> Transactions
+              </a>
+            </li>
+            <li class="clMenu" id="clMenu_Portifolio">
+              <a href="../Portifolio">
+                <i class="glyph-icon iconsminds-monitor-analytics"></i> My
+                Portfolio
+              </a>
+            </li>
+            <li class="clMenu" id="clMenu_Investiments">
+              <a href="Btrust.Page.Investments.html">
+                <i class="glyph-icon simple-icon-paper-plane"></i> Investments
+              </a>
+            </li>
+            <li class="clMenu" id="clMenu_Transfer">
+              <a href="../Transfer">
+                <i class="glyph-icon iconsminds-dollar"></i> Transfer
+              </a>
+            </li>
+            <li>
+              <a href="Btrust.Page.Documents.html" id="clMenu_Documents">
+                <i class="glyph-icon iconsminds-add-file"></i> Documents
+              </a>
+            </li>
+            <li>
+              <a href="Btrust.Page.Help.html" id="clMenu_Helps">
+                <i class="glyph-icon iconsminds-idea"></i> Help
+              </a>
+            </li>
+          </ul>
+          <div class="ps__rail-x" style="left: 0px; bottom: 0px">
+            <div
+              class="ps__thumb-x"
+              tabindex="0"
+              style="left: 0px; width: 0px"
+            ></div>
+          </div>
+          <div class="ps__rail-y" style="top: 0px; right: 0px">
+            <div
+              class="ps__thumb-y"
+              tabindex="0"
+              style="top: 0px; height: 0px"
+            ></div>
+          </div>
+        </div>
       </div>
-  </div>
+    </div>
 
     <main>
       <div class="container-fluid">
@@ -170,15 +228,15 @@
           </div>
         </div>
 
-        <div class="row" >
-          <div class="col-12 mb-4" >
+        <div class="row">
+          <div class="col-12 mb-4">
             <h1 class="mb-1">Welcome "NAME",</h1>
             <p class="mb-4">
               The frist step to start investing the 2BTRUST way is to answer a
               few questions.
             </p>
 
-            <div class="card mb-4"  >
+            <div class="card mb-4">
               <div id="smartWizardValidation">
                 <ul class="card-header">
                   <li class="mr-5">
@@ -211,16 +269,15 @@
                 </ul>
 
                 <div class="card-body">
-                  <div id="step-0" style="height: auto ;">
+                  <div id="step-0" style="height: auto">
                     <form
                       id="form-step-0"
                       class="tooltip-label-right"
                       novalidate
-                      
                     >
-                      <div class="form-row" >
-                        <div class="col-sm-6" >
-                          <div class="form-row" >
+                      <div class="form-row">
+                        <div class="col-sm-6">
+                          <div class="form-row">
                             <div
                               class="form-group col-12 position-relative error-l-50"
                             >
@@ -277,34 +334,33 @@
                             </div>
 
                             <div
-                            class="form-group col-6 position-relative error-l-50"
-                            style="display: none;"
+                              class="form-group col-6 position-relative error-l-50"
+                              style="display: none"
                             >
-                            <label>Tax Residency Country</label>
-                            <select class="custom-select" required>
-                              <option value=""></option>
-                              <option value="1">One</option>
-                              <option value="2">Two</option>
-                              <option value="3">Three</option>
-                            </select>
+                              <label>Tax Residency Country</label>
+                              <select class="custom-select" required>
+                                <option value=""></option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
                             </div>
 
                             <div
-                            class="form-group col-6 position-relative error-l-50"
-                            style="display: none;"
-                          >
-                            <label>Tax Identification Number</label>
-                            <input
-                              autocomplete="off"
-                              type="text"
-                              class="form-control"
-                              name="jQueryName"
-                              required
-                            />
-                          </div>
+                              class="form-group col-6 position-relative error-l-50"
+                              style="display: none"
+                            >
+                              <label>Tax Identification Number</label>
+                              <input
+                                autocomplete="off"
+                                type="text"
+                                class="form-control"
+                                name="jQueryName"
+                                required
+                              />
+                            </div>
 
-                         
-                          <!-- <div class="custom-control custom-radio ml-2">
+                            <!-- <div class="custom-control custom-radio ml-2">
                             <input type="radio" id="jQueryCustomRadio1" name="jQueryCustomRadio"
                                 class="custom-control-input" required>
                             <label class="custom-control-label" for="jQueryCustomRadio1">
@@ -315,45 +371,43 @@
                           proceeds paid to the account. Update your entry and provide your TIN above. If you do not have a TIN, <br>
                         provide an appropriete reason (one selection required):</p>
                           </div> -->
-                          <!-- <div class="custom-control custom-radio ml-2">
+                            <!-- <div class="custom-control custom-radio ml-2">
                             <input type="radio" id="jQueryCustomRadio1" name="jQueryCustomRadio"
                                 class="custom-control-input" required>
                             <label class="custom-control-label" for="jQueryCustomRadio1">
                               I have a US taxpayer identfication number and I will add it to the WB tax Form</label>
                           </div> -->
-                          <!-- <div class="custom-control custom-radio ml-2">
+                            <!-- <div class="custom-control custom-radio ml-2">
                             <input type="radio" id="jQueryCustomRadio1" name="jQueryCustomRadio"
                                 class="custom-control-input" required>
                             <label class="custom-control-label" for="jQueryCustomRadio1">
                               The specited country ease not issue. TINs to its residents.</label>
                           </div> -->
-                          <!-- <div class="custom-control custom-radio ml-2">
+                            <!-- <div class="custom-control custom-radio ml-2">
                             <input type="radio" id="jQueryCustomRadio1" name="jQueryCustomRadio"
                                 class="custom-control-input" required>
                             <label class="custom-control-label" for="jQueryCustomRadio1">
                               I am not legally required to obtain a TIN from the specifted country</label>
                           </div> -->
-                          <!-- <div class="custom-control custom-radio ml-2">
+                            <!-- <div class="custom-control custom-radio ml-2">
                             <input type="radio" id="jQueryCustomRadio1" name="jQueryCustomRadio"
                                 class="custom-control-input" required>
                             <label class="custom-control-label" for="jQueryCustomRadio1">
                               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad tenetur alias facere,  </label>
                           </div> -->
-                          <!-- <div class="custom-control custom-radio ml-2">
+                            <!-- <div class="custom-control custom-radio ml-2">
                             <input type="radio" id="jQueryCustomRadio1" name="jQueryCustomRadio"
                                 class="custom-control-input" required>
                             <label class="custom-control-label" for="jQueryCustomRadio1">
                               Other.</label>
                           </div> -->
-                        
-
                           </div>
                         </div>
                       </div>
                     </form>
                   </div>
-                  
-                  <div id="step-1" style="height: auto;">
+
+                  <div id="step-1" style="height: auto">
                     <form
                       id="form-step-1"
                       class="tooltip-label-right"
@@ -424,98 +478,109 @@
                             </div>
 
                             <div class="custom-control custom-radio ml-2">
-                              <input type="radio" id="jQueryCustomRadio1" name="jQueryCustomRadio"
-                                  class="custom-control-input" required>
-                              <label class="custom-control-label" for="jQueryCustomRadio1">
-                                I have a Different mailing addres.</label>
+                              <input
+                                type="radio"
+                                id="jQueryCustomRadio1"
+                                name="jQueryCustomRadio"
+                                class="custom-control-input"
+                                required
+                              />
+                              <label
+                                class="custom-control-label"
+                                for="jQueryCustomRadio1"
+                              >
+                                I have a Different mailing addres.</label
+                              >
                             </div>
 
+                            <!-- mudar para check -->
                           </div>
                         </div>
                       </div>
                     </form>
                   </div>
-                  
-                  <div id="step-2" style="height: auto ;">
+
+                  <div id="step-2" style="height: auto">
                     <form
                       id="form-step-2"
                       class="tooltip-label-right"
                       novalidate
-                      
                     >
-                      <div class="form-row" >
-                        <div class="col-sm-6" >
-                          <div class="form-row" >
-                  
+                      <div class="form-row">
+                        <div class="col-sm-6">
+                          <div class="form-row">
                             <div
-                            class="form-group col-12 position-relative error-l-50"
+                              class="form-group col-12 position-relative error-l-50"
                             >
-                            <label>Tax Residency Country</label>
-                            <select class="custom-select" required>
-                              <option value="">Choose One</option>
-                              <option value="1">Employed</option>
-                              <option value="2">Retired</option>
-                              <option value="3">Self Employed</option>
-                              <option value="4">At-Home Trader (No Other Occupation) </option>
-                              <option value="5">Student/Intern</option>
-                              <option value="6">Homemaker</option>
-                              <option value="7">Unemployed</option>
-                            </select>
+                              <label>Tax Residency Country</label>
+                              <select class="custom-select" id="valor-check" required>
+                                <option value="">Choose One</option>
+                                <option value="1">Employed</option>
+                                <option value="2">Retired</option>
+                                <option value="3">Self Employed</option>
+                                <option value="4">
+                                  At-Home Trader (No Other Occupation)
+                                </option>
+                                <option value="5">Student/Intern</option>
+                                <option value="6">Homemaker</option>
+                                <option value="7">Unemployed</option>
+                              </select>
                             </div>
 
-                            <!-- <div
-                            class="form-group col-12 position-relative error-l-50"
-                            style="display: none;"
-                          >
-                            <label>Full Employer Name</label>
-                            <input
-                              autocomplete="off"
-                              type="text"
-                              class="form-control"
-                              name="jQueryName"
-                              required
-                            />
-                          </div> -->
+                           
 
-                            <!-- <div
-                              class="form-group col-6 position-relative error-l-50"
-                              style="display: none;"
-                            >
-                              <label>Phone Number</label>
-                              <input
-                                minlength="8"
-                                maxlength="12"
-                                autocomplete="off"
-                                type="text"
-                                class="form-control"
-                                name="jQueryName"
-                                required
-                              />
-                            </div> -->
+                            <div id="div-address" style="display: none;">
+                              <div
+                                class="form-group col-12 position-relative error-l-50"
+                                
+                              >
+                                <label>Full Employer Name</label>
+                                <input
+                                  autocomplete="off"
+                                  type="text"
+                                  class="form-control"
+                                  name="jQueryName"
+                                  required
+                                />
+                              </div>
 
-                         
-                            <!-- <div
-                            class="form-group col-6 position-relative error-l-50"
-                            style="display: none;"
-                          >
-                            <label>Annual Income</label>
-                            <input
-                              autocomplete="off"
-                              type="text"
-                              placeholder="$"
-                              class="form-control"
-                              name="jQueryName"
-                              required
-                            />
-                          </div> -->
-                          
+                              <div
+                                class="form-group col-6 position-relative error-l-50"
+                               
+                              >
+                                <label>Phone Number</label>
+                                <input
+                                  minlength="8"
+                                  maxlength="12"
+                                  autocomplete="off"
+                                  type="text"
+                                  class="form-control"
+                                  name="jQueryName"
+                                  required
+                                />
+                              </div>
+
+                              <div
+                                class="form-group col-6 position-relative error-l-50"
+                                                             >
+                                <label>Annual Income</label>
+                                <input
+                                  autocomplete="off"
+                                  type="text"
+                                  placeholder="$"
+                                  class="form-control"
+                                  name="jQueryName"
+                                  required
+                                />
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </form>
                   </div>
-            
-                  <div id="step-3" style="height: auto;" class="mb-4">
+
+                  <div id="step-3" style="height: auto" class="mb-4">
                     <h2 class="mb-4">
                       <strong> Agreements </strong>
                     </h2>
@@ -652,7 +717,7 @@
                     </form>
                   </div>
 
-                  <div id="step-4" style="height: auto;">
+                  <div id="step-4" style="height: auto">
                     <h2 class="mb-4">
                       <strong> teste de chamada </strong>
                     </h2>
@@ -789,11 +854,10 @@
                     </form>
                   </div>
                 </div>
-                
+
                 <div
                   class="btn-toolbar custom-toolbar text-center card-body pt-0 mt-5"
-                
-                  >
+                >
                   <button class="btn btn-secondary prev-btn" type="button">
                     Previous
                   </button>
@@ -805,31 +869,28 @@
                   </button>
                 </div>
               </div>
-              <div
-              class=" card-body  text-center p-2 m-0"
-              >
-              <p class="text-muted text-extra-small" >
-                This site is property of 2BTRUST, LLC and its affiliates
-                (collectively, “2BTRUST” or “we,” “us,” or “our”). By
-                accessing or using the Site, you agree that your access to
-                and use of the Site, including any Content (defined below)
-                provided by 2BTRUST, LLC shall be exclusively governed by
-                the Terms and Conditions. The Terms and Conditions may be
-                adjusted by 2BTRUST at any time by its sole discretion and
-                are automatically incorporated into and considered part of
-                this Terms and Condition. If you do not accept the terms and
-                conditions stated here in, do not use the Site. We reserve
-                the right to refuse access to and usage of the Site by
-                anyone at any time. Therefore, 2BTRUST reserves the right to
-                change, modify, update, amend all or any part of the Site or
-                discontinue the Site at any time, without notice. In
-                addition, we reserve the right to change the terms and
-                conditions governing your access to and use of the Site and
-                the Content at any time, without notice.
-              </p>
+              <div class="card-body text-center p-2 m-0">
+                <p class="text-muted text-extra-small">
+                  This site is property of 2BTRUST, LLC and its affiliates
+                  (collectively, “2BTRUST” or “we,” “us,” or “our”). By
+                  accessing or using the Site, you agree that your access to and
+                  use of the Site, including any Content (defined below)
+                  provided by 2BTRUST, LLC shall be exclusively governed by the
+                  Terms and Conditions. The Terms and Conditions may be adjusted
+                  by 2BTRUST at any time by its sole discretion and are
+                  automatically incorporated into and considered part of this
+                  Terms and Condition. If you do not accept the terms and
+                  conditions stated here in, do not use the Site. We reserve the
+                  right to refuse access to and usage of the Site by anyone at
+                  any time. Therefore, 2BTRUST reserves the right to change,
+                  modify, update, amend all or any part of the Site or
+                  discontinue the Site at any time, without notice. In addition,
+                  we reserve the right to change the terms and conditions
+                  governing your access to and use of the Site and the Content
+                  at any time, without notice.
+                </p>
+              </div>
             </div>
-            </div>
-      
           </div>
         </div>
       </div>
@@ -844,7 +905,6 @@
     <script src="js/vendor/jquery.validate/additional-methods.min.js"></script>
     <script src="js/dore.script.js"></script>
     <script src="js/scripts.js"></script>
-    <script src="js/2btrust/maskInput.js"></script>
 
     <script src="js/vendor/bootstrap-notify.min.js"></script>
     <script src="js/vendor/moment.min.js"></script>
@@ -859,5 +919,28 @@
     <script src="js/vendor/typeahead.bundle.js"></script>
     <script src="js/vendor/mousetrap.min.js"></script>
     <script src="js/dore-plugins/select.from.library.js"></script>
+
+    <script>
+      $("#valor-check").on("change", function () {
+        let me = $(this);
+        
+        if (me.val() == 1 || me.val() == 3) {
+          $("#div-address").show();
+          console.log(me.val());
+        } else {
+          $("#div-address").hide();
+        }
+      });
+
+
+      // checkbox 
+
+      if($("#id-check").is(":checked")){
+        $('#div-address').show();
+      }else{
+        $('#div-address').hide();
+      }
+      
+    </script>
   </body>
 </html>
