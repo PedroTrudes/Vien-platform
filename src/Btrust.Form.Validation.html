@@ -477,24 +477,89 @@
                               />
                             </div>
 
-                            <div class="custom-control custom-radio ml-2">
+                            <div class="mb-4">
+                              <div class="custom-control custom-checkbox mb-4">
+                                <input
+                                  type="checkbox"
+                                  class="custom-control-input"
+                                  id="customCheckThis"
+                                />
+                                <label
+                                  class="custom-control-label"
+                                  for="customCheckThis"
+                                  >I have a Different mailing
+                                  addres.</label
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="form-row"
+                        id="different-address"
+                       style="display: none;"
+                      >
+                            <div
+                              class="form-group col-sm-12 position-relative error-l-50"
+                            >
+                              <label>Address Line One</label>
                               <input
-                                type="radio"
-                                id="jQueryCustomRadio1"
-                                name="jQueryCustomRadio"
-                                class="custom-control-input"
+                                type="text"
+                                class="form-control"
+                                name="jQueryName"
                                 required
+                                placeholder="Required"
                               />
-                              <label
-                                class="custom-control-label"
-                                for="jQueryCustomRadio1"
-                              >
-                                I have a Different mailing addres.</label
-                              >
+                            </div>
+                            <div
+                              class="form-group col-sm-12 position-relative error-l-50"
+                            >
+                              <label>Address Line Two</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                name="jQueryName"
+                                required
+                                placeholder="Apt, Suite, Floor, etc"
+                              />
+                            </div>
+                            <div
+                              class="form-group col-4 position-relative error-l-50"
+                            >
+                              <label>City</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                name="jQueryName"
+                                required
+                                placeholder="Required"
+                              />
                             </div>
 
-                            <!-- mudar para check -->
-                          </div>
+                            <div
+                              class="form-group col-4 position-relative error-l-50"
+                            >
+                              <label>State</label>
+                              <select class="custom-select" required>
+                                <option value=""></option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+                            </div>
+                            <div
+                              class="form-group col-4 position-relative error-l-50"
+                            >
+                              <label>Zip/Postal Code</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                name="jQueryName"
+                                required
+                                placeholder="Required"
+                              />
                         </div>
                       </div>
                     </form>
@@ -513,7 +578,11 @@
                               class="form-group col-12 position-relative error-l-50"
                             >
                               <label>Tax Residency Country</label>
-                              <select class="custom-select" id="valor-check" required>
+                              <select
+                                class="custom-select"
+                                id="valor-check"
+                                required
+                              >
                                 <option value="">Choose One</option>
                                 <option value="1">Employed</option>
                                 <option value="2">Retired</option>
@@ -527,12 +596,9 @@
                               </select>
                             </div>
 
-                           
-
-                            <div id="div-address" style="display: none;">
+                            <div id="div-address" style="display: none">
                               <div
                                 class="form-group col-12 position-relative error-l-50"
-                                
                               >
                                 <label>Full Employer Name</label>
                                 <input
@@ -546,7 +612,6 @@
 
                               <div
                                 class="form-group col-6 position-relative error-l-50"
-                               
                               >
                                 <label>Phone Number</label>
                                 <input
@@ -562,7 +627,7 @@
 
                               <div
                                 class="form-group col-6 position-relative error-l-50"
-                                                             >
+                              >
                                 <label>Annual Income</label>
                                 <input
                                   autocomplete="off"
@@ -923,7 +988,7 @@
     <script>
       $("#valor-check").on("change", function () {
         let me = $(this);
-        
+
         if (me.val() == 1 || me.val() == 3) {
           $("#div-address").show();
           console.log(me.val());
@@ -932,15 +997,38 @@
         }
       });
 
+      // checkbox
 
-      // checkbox 
+    
 
-      if($("#id-check").is(":checked")){
-        $('#div-address').show();
-      }else{
-        $('#div-address').hide();
+      $("#customCheckThis").is(":checked", function(){
+        console.log("chamando varivel")
+        let check = $(this);
+        if ($("#customCheckThis").is(":checked")) {
+
+        $("#different-address").show();
+        
+        console.log(check.val());
+      } else {
+        $("#different-address").hide();
       }
+
+      })
       
+    </script>
+    <script>
+        $(function(){
+        $("#customCheckThis").click(function(event) {
+          var x = $(this).is(':checked');
+          if (x == true){
+            $(this).find("#different-address").show();
+            console.log(x.val)
+          }
+          else{
+            $(this).find("#different-address").hide();
+          }
+        })
+      })
     </script>
   </body>
 </html>
