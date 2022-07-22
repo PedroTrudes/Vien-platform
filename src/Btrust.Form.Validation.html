@@ -481,7 +481,7 @@
                               <div class="custom-control custom-checkbox mb-4">
                                 <input
                                   type="checkbox"
-                                  class="custom-control-input"
+                                  class="custom-control-input checkme"
                                   id="customCheckThis"
                                 />
                                 <label
@@ -492,76 +492,75 @@
                                 >
                               </div>
                             </div>
+
+
+                            <div class="container__different--addres form-row col-sm-12" style="display: none;">
+                            
+                            <div
+                            class="form-group col-sm-12 position-relative error-l-50"
+                          >
+                            <label>Address Line One</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="jQueryName"
+                              required
+                              placeholder="Required"
+                            />
+                          </div>
+                          <div
+                            class="form-group col-sm-12 position-relative error-l-50"
+                          >
+                            <label>Address Line Two</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="jQueryName"
+                              required
+                              placeholder="Apt, Suite, Floor, etc"
+                            />
+                          </div>
+                          <div
+                            class="form-group col-4 position-relative error-l-50"
+                          >
+                            <label>City</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="jQueryName"
+                              required
+                              placeholder="Required"
+                            />
+                          </div>
+
+                          <div
+                            class="form-group col-4 position-relative error-l-50"
+                          >
+                            <label>State</label>
+                            <select class="custom-select" required>
+                              <option value=""></option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                          </div>
+                          <div
+                            class="form-group col-4 position-relative error-l-50"
+                          >
+                            <label>Zip/Postal Code</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="jQueryName"
+                              required
+                              placeholder="Required"
+                            />
+                      </div>
+                    </div>
                           </div>
                         </div>
                       </div>
 
-                      <div
-                        class="form-row"
-                        id="different-address"
-                       style="display: none;"
-                      >
-                            <div
-                              class="form-group col-sm-12 position-relative error-l-50"
-                            >
-                              <label>Address Line One</label>
-                              <input
-                                type="text"
-                                class="form-control"
-                                name="jQueryName"
-                                required
-                                placeholder="Required"
-                              />
-                            </div>
-                            <div
-                              class="form-group col-sm-12 position-relative error-l-50"
-                            >
-                              <label>Address Line Two</label>
-                              <input
-                                type="text"
-                                class="form-control"
-                                name="jQueryName"
-                                required
-                                placeholder="Apt, Suite, Floor, etc"
-                              />
-                            </div>
-                            <div
-                              class="form-group col-4 position-relative error-l-50"
-                            >
-                              <label>City</label>
-                              <input
-                                type="text"
-                                class="form-control"
-                                name="jQueryName"
-                                required
-                                placeholder="Required"
-                              />
-                            </div>
-
-                            <div
-                              class="form-group col-4 position-relative error-l-50"
-                            >
-                              <label>State</label>
-                              <select class="custom-select" required>
-                                <option value=""></option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                              </select>
-                            </div>
-                            <div
-                              class="form-group col-4 position-relative error-l-50"
-                            >
-                              <label>Zip/Postal Code</label>
-                              <input
-                                type="text"
-                                class="form-control"
-                                name="jQueryName"
-                                required
-                                placeholder="Required"
-                              />
-                        </div>
-                      </div>
                     </form>
                   </div>
 
@@ -1018,14 +1017,13 @@
     </script>
     <script>
         $(function(){
-        $("#customCheckThis").click(function(event) {
+        $(".checkme").click(function(event) {
           var x = $(this).is(':checked');
           if (x == true){
-            $(this).find("#different-address").show();
-            console.log(x.val)
+            $(this).parents(".form-row").find(".container__different--addres").show();
           }
           else{
-            $(this).find("#different-address").hide();
+            $(this).parents(".form-row").find(".container__different--addres").hide();
           }
         })
       })
