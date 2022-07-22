@@ -574,7 +574,7 @@
                         <div class="col-sm-6">
                           <div class="form-row">
                             <div
-                              class="form-group col-12 position-relative error-l-50"
+                              class="form-group col-sm-12 position-relative error-l-50"
                             >
                               <label>Tax Residency Country</label>
                               <select
@@ -595,7 +595,7 @@
                               </select>
                             </div>
 
-                            <div id="div-address" style="display: none">
+                            <div id="div-address" class="form-row p-1" style="display: none">
                               <div
                                 class="form-group col-12 position-relative error-l-50"
                               >
@@ -699,11 +699,7 @@
                       </small>
                     </p>
 
-                    <form
-                      id="form-step-2"
-                      class="tooltip-label-right"
-                      novalidate
-                    >
+                   
                       <div class="form-row">
                         <div class="col-sm-6">
                           <div class="form-row">
@@ -717,7 +713,7 @@
                                   <input
                                     type="radio"
                                     id="jQueryCustomRadio1"
-                                    name="jQueryCustomRadio"
+                                    name="jQueryCustomRadio1"
                                     class="custom-control-input"
                                     required
                                   />
@@ -751,7 +747,7 @@
                                   />
                                   <label
                                     class="custom-control-label"
-                                    for="jQueryCustomRadio1"
+                                    for="jQueryCustomRadio2"
                                   >
                                     I would like my dividends reinvested
                                     according to the investment have selected.
@@ -767,7 +763,7 @@
                                   />
                                   <label
                                     class="custom-control-label"
-                                    for="jQueryCustomRadio1"
+                                    for="jQueryCustomRadio3"
                                   >
                                     I would like my dividends distributed to my
                                     bank account
@@ -778,7 +774,7 @@
                           </div>
                         </div>
                       </div>
-                    </form>
+                    
                   </div>
 
                   <div id="step-4" style="height: auto">
@@ -995,24 +991,6 @@
           $("#div-address").hide();
         }
       });
-
-      // checkbox
-
-    
-
-      $("#customCheckThis").is(":checked", function(){
-        console.log("chamando varivel")
-        let check = $(this);
-        if ($("#customCheckThis").is(":checked")) {
-
-        $("#different-address").show();
-        
-        console.log(check.val());
-      } else {
-        $("#different-address").hide();
-      }
-
-      })
       
     </script>
     <script>
