@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>2bTrust | Investiment</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <link rel="stylesheet" href="font/iconsmind-s/css/iconsminds.css" />
+    <link
+      rel="stylesheet"
+      href="font/simple-line-icons/css/simple-line-icons.css"
+    />
+
+    <link rel="icon" type="image/png" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/vendor/bootstrap.rtl.only.min.css" />
+    <link rel="stylesheet" href="css/vendor/select2.min.css" />
+    <link rel="stylesheet" href="css/vendor/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="css/vendor/bootstrap-stars.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body id="app-container" class="menu-default show-spinner">
+    <nav class="navbar fixed-top" style="opacity: 1">
+      <div class="d-flex align-items-center navbar-left">
+        <a href="#" class="menu-button d-none d-md-block">
+          <svg
+            class="main"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 9 17"
+          >
+            <rect x="0.48" y="0.5" width="7" height="1"></rect>
+            <rect x="0.48" y="7.5" width="7" height="1"></rect>
+            <rect x="0.48" y="15.5" width="7" height="1"></rect>
+          </svg>
+          <svg
+            class="sub"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 18 17"
+          >
+            <rect x="1.56" y="0.5" width="16" height="1"></rect>
+            <rect x="1.56" y="7.5" width="16" height="1"></rect>
+            <rect x="1.56" y="15.5" width="16" height="1"></rect>
+          </svg>
+        </a>
+        <a href="#" class="menu-button-mobile d-xs-block d-sm-block d-md-none">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 17">
+            <rect x="0.5" y="0.5" width="25" height="1"></rect>
+            <rect x="0.5" y="7.5" width="25" height="1"></rect>
+            <rect x="0.5" y="15.5" width="25" height="1"></rect>
+          </svg>
+        </a>
+
+        <div class="topbar-custom">
+          <ul class="navbar-right d-flex list-inline float-right mb-0">
+            <li
+              class="list-inline-item dropdown notification-list flags-dropdown d-none d-sm-inline-block"
+            >
+              <a
+                class="nav-link dropdown-toggle arrow-none waves-effect waves-light"
+                data-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-haspopup="false"
+                aria-expanded="false"
+              >
+                <img
+                  src="logos/icons/us_flag.jpg"
+                  alt=""
+                  class="flag-img"
+                  style="height: 12px"
+                />
+                United States <i class="mdi mdi-chevron-down"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-animated">
+                <a href="#" class="dropdown-item"
+                  ><img
+                    src="logos/icons/br-flag.png"
+                    alt=""
+                    class="flag-img"
+                    style="height: 12px"
+                  />
+                  Portuguese</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <a
+          class="btn btn-sm btn-outline-primary ml-3 d-none d-md-inline-block"
+          href="#"
+          onclick="investNow()"
+          >&nbsp;Invest Now&nbsp;</a
+        >
+      </div>
+
+      <a class="navbar-logo" href="Dashboard.Default.html">
+        <span class="logo d-none d-xl-block"></span>
+        <span class="logo-mobile d-block d-xl-none"></span>
+      </a>
+      <div class="navbar-right">
+        <div class="header-icons d-inline-block align-middle">
+          <button
+            class="header-icon btn btn-empty d-none d-sm-inline-block"
+            type="button"
+            id="fullScreenButton"
+          >
+            <i class="simple-icon-size-fullscreen"></i>
+            <i class="simple-icon-size-actual"></i>
+          </button>
+        </div>
+        <div class="user d-inline-block">
+          <button
+            class="btn btn-empty p-0"
+            type="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <span class="name">2BPLATINUM LP</span>
+            <span>
+              <img alt="Profile Picture" src="/logos/icons/default-user.png" />
+            </span>
+          </button>
+          <div class="dropdown-menu dropdown-menu-right mt-3">
+            <a class="dropdown-item" href="../Profile">Account</a>
+            <a class="dropdown-item" href="../Help">Support</a>
+            <a class="dropdown-item" href="../Login/LogOff">Sign out</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="menu" style="opacity: 1">
+      <div class="main-menu default-transition">
+        <div class="scroll ps">
+          <ul class="list-unstyled">
+            <li class="clMenu" id="clMenu_Overview">
+              <a href="Btrust.Dashboard.Default.html">
+                <i class="glyph-icon iconsminds-digital-drawing"></i>
+                <span>Overview</span>
+              </a>
+            </li>
+            <li class="clMenu active" id="clMenu_Transactions">
+              <a href="Btrust.Page.Transactions.html">
+                <i class="glyph-icon iconsminds-receipt-4"></i> Transactions
+              </a>
+            </li>
+            <li class="clMenu" id="clMenu_Portifolio">
+              <a href="Btrust.Page.Myportfolio.html">
+                <i class="glyph-icon iconsminds-monitor-analytics"></i> My
+                Portfolio
+              </a>
+            </li>
+            <li class="clMenu" id="clMenu_Investiments">
+              <a href="Btrust.Page.Investment.html">
+                <i class="glyph-icon simple-icon-paper-plane"></i> Investments
+              </a>
+            </li>
+            <li class="clMenu" id="clMenu_Transfer">
+              <a href="Btrust.Page.Transfer.html">
+                <i class="glyph-icon iconsminds-dollar"></i> Transfer
+              </a>
+            </li>
+            <li>
+              <a href="Btrust.Page.Documents.html" id="clMenu_Documents">
+                <i class="glyph-icon iconsminds-add-file"></i> Documents
+              </a>
+            </li>
+            <li>
+              <a href="Btrust.Page.Help.html" id="clMenu_Helps">
+                <i class="glyph-icon iconsminds-idea"></i> Help
+              </a>
+            </li>
+          </ul>
+          <div class="ps__rail-x" style="left: 0px; bottom: 0px">
+            <div
+              class="ps__thumb-x"
+              tabindex="0"
+              style="left: 0px; width: 0px"
+            ></div>
+          </div>
+          <div class="ps__rail-y" style="top: 0px; right: 0px">
+            <div
+              class="ps__thumb-y"
+              tabindex="0"
+              style="top: 0px; height: 0px"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="default-transition" style="opacity: 1">
+        <div class="container-fluid">
+            <div class="card p-2">
+                <div class="row m-3">
+                    <h2>Transactions</h2>
+                </div>
+
+               
+
+                    <div class="row">
+                        <div class="col-sm-12 col-xl-4 ">
+                                <div class="card-body">
+
+                                    <div class="form-group mb-3">
+                                        <label>Date Range</label>
+                                        <div class="input-daterange input-group" id="datepicker">
+                                            <input type="text" class="input-sm form-control" name="start"
+                                                placeholder="Start" />
+                                            <span class="input-group-addon"></span>
+                                            <input type="text" class="input-sm form-control" name="end"
+                                                placeholder="End" />
+                                        </div>
+                                    </div>
+
+                                </div>
+                            
+                        </div>
+
+                        <div class="col-sm-12 col-xl-1 ">
+                            <div class="card-body" style="padding: 0px ">
+                                <p>Or</p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-xl-3 mb-4">
+                            <div class="card-body">
+                                    <label>Year</label>
+                                    <select class="form-control select2-single" data-width="100%">
+                                        <option label="&nbsp;">&nbsp;</option>
+
+                                        <optgroup label="Year">
+                                            <option value="2022">2022</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2020">2020</option>
+                                            <option value="2019">2019</option>
+                                            <option value="2018">2018</option>
+                                            <option value="2017">2017</option>
+                                        
+                                            <option value="2016">2016</option>
+                                            <option value="2015">2015</option>
+                                            <option value="2014">2014</option>
+                                            <option value="2013">2013</option>
+                                            <option value="2012">2012</option>
+                                            <option value="2011">2011</option>
+                                            <option value="2010">2010</option>
+                                        </optgroup>
+                                    </select>
+     
+                            </div>
+
+                    </div>
+
+                    <div class="col-sm-2 col-xl-2 ">
+                        <div class="card-body" style="padding: 0px;">
+                            <div class="col-md-1" style="padding-top: 48px; padding-left: 0px; padding-right: 0px;">
+                                <button type="button" id="btnFilter" class="btn btn-outline-info mb-1">Filter</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 col-xl-2 ">
+                        <div class="card-body" style="padding: 0px;">
+                            <div class="col-md-1" style="padding-top: 48px; padding-left: 0px; padding-right: 0px; ">
+                                <button type="button" id="btnFilter" class="btn btn-outline-info mb-1">Clear</button>
+                            </div>
+                        </div>
+                    </div>  
+                    </div>
+
+                    <div class="row">
+                            <div class="card-body">
+                            
+                                <div class="row mb-3 mt-5">
+
+                                    <div class="col-md-3 mb-1">
+                                
+                                        <button type="button" style="width:100%" class="btn btn-outline-primary btn-sm top-right-button mr-1 btnDvsExtract" onclick="openDvExtract('btnYield')" id="btnYield">Yield</button>
+                                    </div>
+                                    <div class="col-md-3 mb-1">
+                                
+                                        <button type="button" style="width:100%" class="btn btn-outline-primary btn-sm top-right-button mr-1 btnDvsExtract active" onclick="openDvExtract('btnComplete')" id="btnComplete">Complete</button>
+                                    </div>
+                                    <div class="col-md-3 mb-1">
+                                
+                                        <button type="button" style="width:100%" class="btn btn-outline-primary btn-sm top-right-button mr-1 btnDvsExtract" onclick="openDvExtract('btnIn')" id="btnIn">Transfer In</button>
+                                    </div>
+                                    <div class="col-md-3 mb-1">
+                                
+                                        <button type="button" style="width:100%" class="btn btn-outline-primary btn-sm top-right-button mr-1 btnDvsExtract" onclick="openDvExtract('btnOut')" id="btnOut">Transfer Out</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="text-muted text-extra-small">
+                                This site is property of 2BTRUST, LLC and its affiliates (collectively, “2BTRUST” or “we,” “us,” or “our”). By accessing or using the Site, you agree that your access to and use of the Site, including any Content (defined below) provided by 2BTRUST, LLC shall be exclusively governed by the Terms and Conditions. The Terms and Conditions may be adjusted by 2BTRUST at any time by its sole discretion and are automatically incorporated into and considered part of this Terms and Condition. If you do not accept the terms and conditions stated here in, do not use the Site. We reserve the right to refuse access to and usage of the Site by anyone at any time. Therefore, 2BTRUST reserves the right to change, modify, update, amend all or any part of the Site or discontinue the Site at any time, without notice. In addition, we reserve the right to change the terms and conditions governing your access to and use of the Site and the Content at any time, without notice.
+                            </p>
+                        </div>
+                    </div>
+
+
+        </div>
+        
+    </main>
+
+    <script src="js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="js/vendor/jquery.barrating.min.js"></script>
+    <script src="js/vendor/chartjs-plugin-datalabels.js"></script>
+    <script src="js/vendor/moment.min.js"></script>
+    <script src="js/vendor/perfect-scrollbar.min.js"></script>
+    <script src="js/vendor/progressbar.min.js"></script>
+    <script src="js/vendor/jquery.barrating.min.js"></script>
+    <script src="js/vendor/select2.full.js"></script>
+    <script src="js/vendor/nouislider.min.js"></script>
+    <script src="js/vendor/mousetrap.min.js"></script>
+    <script src="js/vendor/glide.min.js"></script>
+    <script src="js/dore.script.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/vendor/fullcalendar.min.js"></script>
+    <script src="js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="js/vendor/bootstrap-notify.min.js"></script>
+    <script src="js/vendor/bootstrap-datepicker.js"></script>
+    <script src="js/vendor/bootstrap-tagsinput.min.js"></script>
+    <script src="js/vendor/dropzone.min.js"></script>
+    <script src="js/vendor/cropper.min.js"></script>
+    <script src="js/vendor/typeahead.bundle.js"></script>
+    <script src="js/vendor/mousetrap.min.js"></script>
+    <script src="js/dore-plugins/select.from.library.js"></script>
+
+  </body>
+</html>
