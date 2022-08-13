@@ -15,12 +15,23 @@
     <link rel="stylesheet" href="css/vendor/select2.min.css" />
     <link rel="stylesheet" href="css/vendor/perfect-scrollbar.css" />
     <link rel="stylesheet" href="css/vendor/bootstrap-stars.css" />
-    <link rel="stylesheet" href="css/main.css" />
-<!-- Links inseridos -->
+    <!-- Links inseridos -->
     <link rel="stylesheet" href="css/vendor/bootstrap-float-label.min.css" />
     <link rel="stylesheet" href="css/vendor/select2-bootstrap.min.css" />
     <link rel="stylesheet" href="css/vendor/bootstrap-tagsinput.css" />
     <link rel="stylesheet" href="css/vendor/component-custom-switch.min.css" />
+    
+    <link rel="stylesheet" href="css/vendor/cropper.min.css" />
+    <link rel="stylesheet" href="css/vendor/dropzone.min.css" />
+    <link rel="stylesheet" href="css/vendor/fullcalendar.min.css" />
+    <link rel="stylesheet" href="css/vendor/bootstrap-datepicker3.min.css" />
+    <link rel="stylesheet" href="css/vendor/component-custom-switch.min.css" />
+    <link rel="stylesheet" href="css/vendor/nouislider.min.css" />
+    <link rel="stylesheet" href="css/vendor/jquery.contextMenu.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+
+    
 
     <!-- importando biblioteca de icones do bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
@@ -162,19 +173,23 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="second-tab" data-toggle="tab" href="#second"
-                                    role="tab" aria-controls="second" aria-selected="false">Gastos</a>
+                                    role="tab" aria-controls="second" aria-selected="false">Expenses</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="third-tab" data-toggle="tab" href="#third"
-                                    role="tab" aria-controls="third" aria-selected="false">Base Cálculos</a>
+                                    role="tab" aria-controls="third" aria-selected="false">Calculation Base</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="for-tab" data-toggle="tab" href="#for"
-                                    role="tab" aria-controls="for" aria-selected="false">Lucros</a>
+                                    role="tab" aria-controls="for" aria-selected="false">Profits</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="five-tab" data-toggle="tab" href="#five"
-                                    role="tab" aria-controls="five" aria-selected="false">Fundos</a>
+                                    role="tab" aria-controls="five" aria-selected="false">Images</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="six-tab" data-toggle="tab" href="#six"
+                                    role="tab" aria-controls="six" aria-selected="false">Documents</a>
                             </li>
                            
                         </ul>
@@ -183,94 +198,95 @@
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="first" role="tabpanel"
                                 aria-labelledby="first-tab">
-                                <form class="form-row">
-                                    <h5 class="mb-5 col-12">Informações</h5>
+                                <!-- Formulario 01 -->
+                                <form class="form-row" name="frmAssets" method="post" action="">
+                                    <h5 class="mb-5 col-12">Information</h5>
 
                                         <div class="form-group col-md-6">
                                             <div class="form-group has-float-label">
-                                                <input class="form-control" name="jQueryTopLabelsEmail" required />
-                                                <span>Nome *</span>
+                                                <input class="form-control" id="name" name="name" placeholder="Name" required />
+                                                <span>Name *</span>
                                             </div>
                                         </div>
                                         
                                         <div class="form-group col-md-6">
                                             <div class="form-group has-float-label">
-                                                <input class="form-control" name="jQueryTopLabelsEmail" required />
-                                                <span>Capital Investido *</span>
+                                                <input class="form-control" id="investedCapital" name="investedCapital" placeholder="Invested Capital" required />
+                                                <span>Invested Capital *</span>
                                             </div>
                                         </div>
                                         <div class="form-group col-md-12">
                                             <div class="form-group has-float-label">
-                                                <textarea class="form-control" rows="2" name="jQueryDetail" required></textarea>
-                                                <span>Descrição *</span>
+                                                <textarea class="form-control" rows="2" id="description" name="description" placeholder="Description" required></textarea>
+                                                <span>Description *</span>
                                             </div>
                                         </div>
 
-                                        <h5 class="mb-5 col-12">Localização</h5>
+                                        <h5 class="mb-5 col-12">Location</h5>
 
                                         <div class="form-group col-md-4">
                                             <div class="form-group has-float-label">
-                                                <input class="form-control" name="jQueryTopLabelsEmail" required />
+                                                <input class="form-control" id="zipcode" name="zipcode" placeholder="Zip Code" required />
                                                 <span>Zip Code *</span>
                                             </div>
                                         </div>
                                          <div class="form-group col-md-4">
                                             <div class="form-group has-float-label">
-                                                <input class="form-control" name="jQueryTopLabelsEmail" required />
-                                                <span>Cidade *</span>
+                                                <input class="form-control" id="city" name="city" placeholder="City" required />
+                                                <span>City *</span>
                                             </div>
                                         </div>
                                         <div class="form-group col-md-4">
                                             <div class="form-group has-float-label">
-                                                <input class="form-control" name="jQueryTopLabelsEmail" required />
-                                                <span>Estado *</span>
+                                                <input class="form-control" id="state" name="state" placeholder="State" required />
+                                                <span>State *</span>
                                             </div>
                                         </div>
                                         <div class="form-group col-md-4">
                                             <div class="form-group has-float-label">
-                                                <input class="form-control" name="jQueryTopLabelsEmail" required />
-                                                <span>Endereço *</span>
+                                                <input class="form-control" id="address" name="address" placeholder="Address" required />
+                                                <span>Address *</span>
                                             </div>
                                         </div>
                                         <div class="form-group col-md-4">
                                             <div class="form-group has-float-label">
-                                                <input class="form-control" name="jQueryTopLabelsEmail" required />
-                                                <span>Numero *</span>
+                                                <input class="form-control" id="number" name="number" placeholder="Number" required />
+                                                <span>Number *</span>
                                             </div>
                                         </div>
                                         <div class="form-group col-md-4">
                                             <div class="form-group has-float-label">
-                                                <input class="form-control" name="jQueryTopLabelsEmail" required />
-                                                <span>Complemento</span>
+                                                <input class="form-control" id="complement" name="complement" placeholder="Complement" />
+                                                <span>Complement</span>
                                             </div>
                                         </div>
 
     
-                                    <button type="submit" class="btn btn-primary d-block mt-2">Salvar</button>
+                                    <button type="submit" class="btn btn-primary d-block mt-2">To save</button>
                                 </form> 
                             </div>
 
                             <div class="tab-pane fade" id="second" role="tabpanel"
                                 aria-labelledby="second-tab">
-                                <form class="form-row">
+                                <form class="form-row" name="frmExpenses" id="frmExpenses" method="post" action="">
 
                                         <div class="form-group col-md-3">
                                             <div class="form-group has-float-label">
-                                                <input class="form-control" name="jQueryTopLabelsEmail" required />
-                                                <span>Data Referencia *</span>
+                                                <input class="form-control datepicker" name="date" id="date" placeholder="Date" required >
+                                                <span>Date</span>
                                             </div>
                                         </div>
                                         
                                         <div class="form-group col-md-3">
                                             <div class="form-group has-float-label">
-                                                <input class="form-control" name="jQueryTopLabelsEmail" required />
-                                                <span>Valores *</span>
+                                                <input class="form-control" name="amount" id="amount" placeholder="Amount" required />
+                                                <span>Values *</span>
                                             </div>
                                         </div>
                                         <div class="form-group col-md-3">
                                             <div class="form-group has-float-label">
-                                                <input class="form-control" name="jQueryTopLabelsEmail" required />
-                                                <span>Descrição *</span>
+                                                <input class="form-control" name="description" id="description" placeholder="Description" required />
+                                                <span>Description *</span>
                                             </div>
                                         </div>
                                         <div class="form-group col-md-3">
@@ -278,12 +294,12 @@
                                                 <input type="checkbox" class="custom-control-input" id="jQueryControlValidation"
                                                 name="jQueryControlValidation" required>
                                                 <label class="custom-control-label" for="jQueryControlValidation">
-                                                    Existe comprovante?
+                                                    Is there proof?
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="form-group col-md-12">
-                                            <button type="submit" class="btn btn-primary d-block mt-2">Salvar</button>
+                                            <button type="submit" class="btn btn-primary d-block mt-2">To Save</button>
                                         </div>
                                 </form> 
 
@@ -291,68 +307,71 @@
 
                             <div class="tab-pane fade" id="third" role="tabpanel"
                                 aria-labelledby="third-tab">
-                                <form class="form-row">
+                                <form class="form-row" name="frmCalculationBase" id="frmCalculationBase" method="post" action="">
 
                                     <div class="form-group col-md-3">
                                         <div class="form-group has-float-label">
-                                            <input class="form-control" name="jQueryTopLabelsEmail" required />
-                                            <span>Mês/Ano Ref. *</span>
+                                            <input class="form-control datepicker" name="reference" id="reference" placeholder="Reference" required/>
+                                            <span>Month/Year Ref.</span>
                                         </div>
                                     </div>
                                     
                                     <div class="form-group col-md-3">
                                         <div class="form-group has-float-label">
-                                            <input class="form-control" name="jQueryTopLabelsEmail" required />
-                                            <span>Rent por Mês *</span>
+                                            <input class="form-control" name="rent_value" id="rent_value" placeholder="Rent per Month" required />
+                                            <span>Rent per Month *</span>
                                         </div>
                                     </div>
                                     <div class="form-group col-md-3">
                                         <div class="form-group has-float-label">
-                                            <input class="form-control" name="jQueryTopLabelsEmail" required />
-                                            <span>Hoa por Mês *</span>
+                                            <input class="form-control"  name="hoa" id="hoa" placeholder="Hoa per Month" required/>
+                                            <span>Hoa per Month *</span>
                                         </div>
+
+                                        
                                     </div>
                                     <div class="form-group col-md-3">
                                         <div class="form-group has-float-label">
-                                            <input class="form-control" name="jQueryTopLabelsEmail" required />
-                                            <span>Property tax provision por mês *</span>
+                                            <input class="form-control" name="monthly_property_tax_provision" id="monthly_property_tax_provision" 
+                                            placeholder="Property tax provision per Month" required />
+                                            <span>Property tax provision per Month *</span>
                                         </div>
                                     </div>
 
                                     <div class="form-group col-md-3">
                                         <div class="form-group has-float-label">
-                                            <input class="form-control" name="jQueryTopLabelsEmail" required />
+                                            <input class="form-control" name="property_manager" id="property_manager" placeholder="Property Management" required />
                                             <span>Property Management *</span>
                                         </div>
                                     </div>
                                     
                                     <div class="form-group col-md-3">
                                         <div class="form-group has-float-label">
-                                            <input class="form-control" name="jQueryTopLabelsEmail" required />
+                                            <input class="form-control" name="administration_fee" id="administration_fee" placeholder="Administration free" required />
                                             <span>Administration free *</span>
                                         </div>
                                     </div>
                                     <div class="form-group col-md-3">
                                         <div class="form-group has-float-label">
-                                            <input class="form-control" name="jQueryTopLabelsEmail" required />
-                                            <span>Outras despesas *</span>
+                                            <input class="form-control" name="other_expense" id="other_expense" placeholder="Other expenses" required />
+                                            <span>Other expenses *</span>
                                         </div>
                                     </div>
                                     <div class="form-group col-md-3">
                                         <div class="form-group has-float-label">
-                                            <input class="form-control" name="jQueryTopLabelsEmail" required />
+                                            <input class="form-control" name="dividend_yield" id="dividend_yield" placeholder="Dividend Yeld" required />
                                             <span>Dividend Yeld *</span>
                                         </div>
                                     </div>
                                     <div class="form-group col-md-12">
                                         <div class="form-group has-float-label">
-                                            <input class="form-control" name="jQueryTopLabelsEmail" required />
-                                            <span>Observação despesas</span>
+                                            <input class="form-control" name="notes" id="notes" placeholder="Note expenses" required />
+                                            <span>Note expenses</span>
                                         </div>
                                     </div>
                                   
                                     <div class="form-group col-md-12">
-                                        <button type="submit" class="btn btn-primary d-block mt-2">Salvar</button>
+                                        <button type="submit" class="btn btn-primary d-block mt-2">To Save</button>
                                     </div>
                                     
                             </form> 
@@ -360,36 +379,36 @@
 
                             <div class="tab-pane fade" id="for" role="tabpanel"
                                 aria-labelledby="for-tab">
-                                <form class="form-row">
+                                <form class="form-row" id="frmProfits" name="frmProfits" method="post" action="">
 
                                     <div class="form-group col-md-6">
                                         <div class="form-group has-float-label">
-                                            <input class="form-control" name="jQueryTopLabelsEmail" required />
-                                            <span>Dia da Aquisição *</span>
+                                            <input class="form-control datepicker" name="acquisitionDate" id="acquisitionDate" placeholder="Acquisition Date" required>
+                                            <span>Acquisition Date *</span>
                                         </div>
                                     </div>
                                     
                                     <div class="form-group col-md-6">
                                         <div class="form-group has-float-label">
-                                            <input class="form-control" name="jQueryTopLabelsEmail" required />
-                                            <span>Dia da Venda *</span>
+                                            <input class="form-control datepicker" name="saleDate" id="saleDate" placeholder="Sale Date" required >
+                                            <span>Sale Date *</span>
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <div class="form-group has-float-label">
-                                            <input class="form-control" name="jQueryTopLabelsEmail" required />
-                                            <span>Lucro Liquido *</span>
+                                            <input class="form-control" name="netProfit" id="netProfit" placeholder="Net profit" required />
+                                            <span>Net profit *</span>
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <div class="form-group has-float-label">
-                                            <input class="form-control" name="jQueryTopLabelsEmail" required />
-                                            <span>Valor Venda Liquido *</span>
+                                            <input class="form-control" name="netSalesValue"  id="netSalesValue" placeholder="Net Sales Value" required />
+                                            <span>Net Sales Value *</span>
                                         </div>
                                     </div>
                                     
                                     <div class="form-group col-md-12">
-                                        <button type="submit" class="btn btn-primary d-block mt-2">Salvar</button>
+                                        <button type="submit" class="btn btn-primary d-block mt-2">To save</button>
                                     </div>
                             </form> 
                             </div>
@@ -397,63 +416,66 @@
                             <div class="tab-pane fade" id="five" role="tabpanel"
                                 aria-labelledby="five-tab">
                                 <form class="form-row">
-                                    <h5 class="mb-5 col-12">Dados do fundo</h5>
+                                    <h5 class="mb-5 col-12">Images</h5>
                                         <div class="form-group col-md-12">
-                                            <div class="form-group has-float-label">
-                                                <input class="form-control" name="jQueryTopLabelsEmail" required />
-                                                <span>Nome *</span>
+                                            <label class="btn btn-outline-primary btn-upload" for="inputImage"
+                                            title="Upload image file">
+                                            <input type="file" class="sr-only" id="inputImage" name="file"
+                                            accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff">
+                                            Select File
+                                            </label>
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <div id="cropperContainer">
+                                                    <img id="cropperImage" alt="Cropper Image"
+                                                        src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="cropper-preview"></div>
+                                            </div>
+                                            <div class="col-2">
+                                                <div class="cropper-preview"></div>
+                                            </div>
+                                            <div class="col-1">
+                                                <div class="cropper-preview"></div>
                                             </div>
                                         </div>
-                                        
-                                        
-                                        <div class="form-group col-md-6">
-                                            <div class="form-group has-float-label">
-                                                <input class="form-control" name="jQueryTopLabelsEmail" required />
-                                                <span>Data de inicio *</span>
-                                            </div>
                                         </div>
-                                        <div class="form-group col-md-6">
-                                            <div class="form-group has-float-label">
-                                                <input class="form-control" name="jQueryTopLabelsEmail" required />
-                                                <span>Data Vigência *</span>
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <div class="form-group has-float-label">
-                                                <input class="form-control" name="jQueryTopLabelsEmail" required />
-                                                <span>Cotas *</span>
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <div class="form-group has-float-label">
-                                                <input class="form-control" name="jQueryTopLabelsEmail" required />
-                                                <span>Valor cotas *</span>
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <div class="form-group has-float-label">
-                                                <input class="form-control" name="jQueryTopLabelsEmail" required />
-                                                <span>Equity *</span>
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <div class="form-group has-float-label">
-                                                <input class="form-control" name="jQueryTopLabelsEmail" required />
-                                                <span>Provision *</span>
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <div class="form-group has-float-label">
-                                                <input class="form-control" name="jQueryTopLabelsEmail" required />
-                                                <span>Valor Mínimo *</span>
-                                            </div>
-                                        </div>
+                                
                                         <div class="form-group col-md-12">
-                                            <button type="submit" class="btn btn-primary d-block mt-2">Salvar</button>
+                                            <button type="submit" class="btn btn-primary d-block mt-2">To Save</button>
                                         </div>
                                 </form> 
 
                             </div>
+
+                            <div class="tab-pane fade" id="six" role="tabpanel"
+                                aria-labelledby="six-tab">
+                                <form class="form-row">
+                                    <h5 class="mb-5 col-12">Documents</h5>
+                                        <div class="form-group col-md-12">
+                                            <div class="col-12 col-xl-12 drop-area-container">
+                                                <div class="card drop-area">
+                                                       <form action="/file-upload">
+                                                            <div class="dropzone ">
+                                                            </div>
+                                                        </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="form-group col-md-12">
+                                            <button type="submit" class="btn btn-primary d-block mt-2">To Save</button>
+                                        </div>
+                                </form> 
+
+                            </div>
+
+
+
+
+
                             <div class="card-body text-center p-2 mt-3">
                                 <p class="text-muted text-extra-small">
                                   This site is property of 2BTRUST, LLC and its affiliates
@@ -488,6 +510,9 @@
 
     <script src="js/vendor/jquery-3.3.1.min.js"></script>
     <script src="js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="js/vendor/bootstrap-tagsinput.min.js"></script>
+    <script src="js/vendor/bootstrap-datepicker.js"></script>
+    <script src="js/vendor/bootstrap-notify.min.js"></script>
     <script src="js/vendor/chartjs-plugin-datalabels.js"></script>
     <script src="js/vendor/moment.min.js"></script>
     <script src="js/vendor/perfect-scrollbar.min.js"></script>
@@ -497,8 +522,215 @@
     <script src="js/vendor/nouislider.min.js"></script>
     <script src="js/vendor/mousetrap.min.js"></script>
     <script src="js/vendor/glide.min.js"></script>
+    <script src="js/vendor/cropper.min.js"></script>
+    <script src="js/vendor/dropzone.min.js"></script>
+    <script src="js/vendor/fullcalendar.min.js"></script>
+    <script src="js/vendor/typeahead.bundle.js"></script>
+    <script src="js/dore-plugins/select.from.library.js"></script>
     <script src="js/dore.script.js"></script>
     <script src="js/scripts.js"></script>
+    
+    <script src="js/vendor/jquery.contextMenu.min.js"></script>
+   
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
+
+    <script>
+         
+    $(function() {
+	
+    // Form 1
+    $("#frmAssets")
+            .validate({
+                rules: {
+                    name: {
+                        required: true,
+                    },
+                    investedCapital: {
+                        required: true,
+
+                    },
+                    description: {
+                        required: true,
+
+                    },
+                    zipcode: {
+                        required: true,
+
+                    },
+                    city : {
+                        required: true,
+                    },
+                    state : {
+                        required: true,
+                    },
+                    address : {
+                        required: true,
+                    },
+                    number : {
+                        required: true,
+                    },
+                   
+
+                },
+                submitHandler: form => {
+                    let data = $(form).serializeObject();
+                    $.ajax({
+                        url: $(form).attr("action"),
+                        data: JSON.stringify(data),
+                        type: $(form).attr("method"),
+                        success: function (response) {
+                            showSuccess(response.message, form);
+                            setTimeout(function () {
+                window.location = response.redirect;
+                            }, 2000);
+                        },
+                        error: function (response, status, message) {
+                            showErrors(response, status, message, form);
+                        },
+                    });
+                }
+            });
+
+            $("#frmExpenses")
+            .validate({
+                rules: {
+                    date: {
+                        required: true,
+                    },
+                    amount: {
+                        required: true,
+
+                    },
+                    description: {
+                        required: true,
+
+                    },
+
+                },
+                submitHandler: form => {
+                    let data = $(form).serializeObject();
+                    $.ajax({
+                        url: $(form).attr("action"),
+                        data: JSON.stringify(data),
+                        type: $(form).attr("method"),
+                        success: function (response) {
+                            showSuccess(response.message, form);
+                            setTimeout(function () {
+                window.location = response.redirect;
+                            }, 2000);
+                        },
+                        error: function (response, status, message) {
+                            showErrors(response, status, message, form);
+                        },
+                    });
+                }
+            });
+
+            $("#frmCalculationBase")
+            .validate({
+                rules: {
+                    reference: {
+                        required: true,
+                    },
+                    rent_value: {
+                        required: true,
+
+                    },
+                    hoa: {
+                        required: true,
+
+                    },
+                    monthly_property_tax_provision: {
+                        required: true,
+
+                    },
+                    property_manager: {
+                        required: true,
+
+                    },
+                    administration_fee: {
+                        required: true,
+
+                    },
+                    other_expense: {
+                        required: true,
+
+                    },
+                    dividend_yield: {
+                        required: true,
+
+                    },
+                    notes: {
+                        required: true,
+
+                    },
+
+                },
+                submitHandler: form => {
+                    let data = $(form).serializeObject();
+                    $.ajax({
+                        url: $(form).attr("action"),
+                        data: JSON.stringify(data),
+                        type: $(form).attr("method"),
+                        success: function (response) {
+                            showSuccess(response.message, form);
+                            setTimeout(function () {
+                window.location = response.redirect;
+                            }, 2000);
+                        },
+                        error: function (response, status, message) {
+                            showErrors(response, status, message, form);
+                        },
+                    });
+                }
+            });
+
+            $("#frmProfits")
+            .validate({
+                rules: {
+                    acquisitionDate: {
+                        required: true,
+                    },
+                    saleDate: {
+                        required: true,
+
+                    },
+                    netProfit: {
+                        required: true,
+
+                    },
+                    netSalesValue: {
+                        required: true,
+
+                    },
+                   
+                },
+                submitHandler: form => {
+                    let data = $(form).serializeObject();
+                    $.ajax({
+                        url: $(form).attr("action"),
+                        data: JSON.stringify(data),
+                        type: $(form).attr("method"),
+                        success: function (response) {
+                            showSuccess(response.message, form);
+                            setTimeout(function () {
+                window.location = response.redirect;
+                            }, 2000);
+                        },
+                        error: function (response, status, message) {
+                            showErrors(response, status, message, form);
+                        },
+                    });
+                }
+            });
+
+
+});
+    </script>
 </body>
 
 </html>
