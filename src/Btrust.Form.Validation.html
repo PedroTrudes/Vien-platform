@@ -207,26 +207,7 @@
 
     <main>
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            <h1>Form Wizard</h1>
-            <nav
-              class="breadcrumb-container d-none d-sm-block d-lg-inline-block"
-              aria-label="breadcrumb"
-            >
-              <ol class="breadcrumb pt-0">
-                <li class="breadcrumb-item">
-                  <a href="#">Home</a>
-                </li>
-                <li class="breadcrumb-item">
-                  <a href="#">Library</a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page">Data</li>
-              </ol>
-            </nav>
-            <div class="separator mb-5"></div>
-          </div>
-        </div>
+       
 
         <div class="row">
           <div class="col-12 mb-4">
@@ -273,6 +254,10 @@
                     <form
                       id="form-step-0"
                       class="tooltip-label-right"
+                      name="frmAccountHolder"
+                      id="frmAccountHolder"
+                      method="post"
+                      action=""
                       novalidate
                     >
                       <div class="form-row">
@@ -282,8 +267,9 @@
                               class="form-group col-12 position-relative error-l-50"
                             >
                               <label>COUNTRY OF CITIZENSHIP</label>
-                              <select class="custom-select" required>
-                                <option value=""></option>
+                              <select class="custom-select country_citizenship" name="countryCitizenship" id="countryCitizenship" 
+                              >
+                                <option value="">Country of Citizenship</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
                                 <option value="3">Three</option>
@@ -294,8 +280,8 @@
                               class="form-group col-12 position-relative error-l-50"
                             >
                               <label>COUNTRY OF RESIDENCE</label>
-                              <select class="custom-select" required>
-                                <option value=""></option>
+                              <select class="custom-select country_residency" name="countryResidency" id="countryResidency"  >
+                                <option value="">Country Residency</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
                                 <option value="3">Three</option>
@@ -311,9 +297,11 @@
                                 maxlength="11"
                                 autocomplete="off"
                                 type="text"
-                                class="form-control"
-                                name="jQueryName"
-                                required
+                                class="form-control social_security_tax_id"
+                                name="socialSecurityTaxId"
+                                id="socialSecurityTaxId"
+                                placeholder="Social Security Tax Id"
+                                
                               />
                             </div>
 
@@ -322,8 +310,11 @@
                               <div class="input-group date">
                                 <input
                                   type="text"
-                                  class="form-control"
-                                  required
+                                  class="form-control date_of_birth"
+                                  id="dateOfBirth"
+                                  name="dateOfBirth"
+                                  placeholder="Date Of Birth"
+                                  
                                 />
                                 <span
                                   class="input-group-text input-group-append input-group-addon"
@@ -338,25 +329,27 @@
                               style="display: none"
                             >
                               <label>Tax Residency Country</label>
-                              <select class="custom-select" required>
-                                <option value=""></option>
+                              <select class="custom-select country_tax_residency" name="countryTaxResidency" id="countryTaxResidency" >
+                                <option value="">Country Tax Residency</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
                                 <option value="3">Three</option>
                               </select>
                             </div>
 
+                            <!--Mostrat para o Andre-->
                             <div
                               class="form-group col-6 position-relative error-l-50"
                               style="display: none"
                             >
+
                               <label>Tax Identification Number</label>
                               <input
                                 autocomplete="off"
                                 type="text"
                                 class="form-control"
                                 name="jQueryName"
-                                required
+                                
                               />
                             </div>
                           </div>
@@ -369,6 +362,10 @@
                     <form
                       id="form-step-1"
                       class="tooltip-label-right"
+                      name="frmAddress"
+                      id="frmAddress"
+                      method="post"
+                      action=""
                       novalidate
                     >
                       <div class="form-row">
@@ -380,8 +377,9 @@
                               <label>Address Line One</label>
                               <input
                                 type="text"
-                                class="form-control"
-                                name="jQueryName"
+                                class="form-control address"
+                                name="address"
+                                id="address"
                                 required
                                 placeholder="Required"
                               />
@@ -392,8 +390,9 @@
                               <label>Address Line Two</label>
                               <input
                                 type="text"
-                                class="form-control"
-                                name="jQueryName"
+                                class="form-control complement"
+                                name="complement"
+                                id="complement "
                                 required
                                 placeholder="Apt, Suite, Floor, etc"
                               />
@@ -404,8 +403,9 @@
                               <label>City</label>
                               <input
                                 type="text"
-                                class="form-control"
-                                name="jQueryName"
+                                class="form-control city"
+                                name="city"
+                                id="city"
                                 required
                                 placeholder="Required"
                               />
@@ -415,7 +415,7 @@
                               class="form-group col-4 position-relative error-l-50"
                             >
                               <label>State</label>
-                              <select class="custom-select" required>
+                              <select class="custom-select state_id" name="stateId" id="stateId" required>
                                 <option value=""></option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
@@ -428,8 +428,9 @@
                               <label>Zip/Postal Code</label>
                               <input
                                 type="text"
-                                class="form-control"
-                                name="jQueryName"
+                                class="form-control zipcode"
+                                name="zipCode"
+                                id="zipCode"
                                 required
                                 placeholder="Required"
                               />
@@ -460,8 +461,9 @@
                                 <label>Address Line One</label>
                                 <input
                                   type="text"
-                                  class="form-control"
-                                  name="jQueryName"
+                                  class="form-control address_two"
+                                  name="addressTwo"
+                                  id="addressTwo"
                                   required
                                   placeholder="Required"
                                 />
@@ -472,8 +474,9 @@
                                 <label>Address Line Two</label>
                                 <input
                                   type="text"
-                                  class="form-control"
-                                  name="jQueryName"
+                                  class="form-control complement_two"
+                                  name="complementTwo"
+                                  id="complementTwo"
                                   required
                                   placeholder="Apt, Suite, Floor, etc"
                                 />
@@ -484,8 +487,9 @@
                                 <label>City</label>
                                 <input
                                   type="text"
-                                  class="form-control"
-                                  name="jQueryName"
+                                  class="form-control city_two"
+                                  name="cityTwo"
+                                  id="cityTwo"
                                   required
                                   placeholder="Required"
                                 />
@@ -495,7 +499,7 @@
                                 class="form-group col-4 position-relative error-l-50"
                               >
                                 <label>State</label>
-                                <select class="custom-select" required>
+                                <select class="custom-select state_id_two" id="stateIdTwo" name="stateIdTwo" required>
                                   <option value=""></option>
                                   <option value="1">One</option>
                                   <option value="2">Two</option>
@@ -508,8 +512,9 @@
                                 <label>Zip/Postal Code</label>
                                 <input
                                   type="text"
-                                  class="form-control"
-                                  name="jQueryName"
+                                  class="form-control zipcode-two"
+                                  name="zipcodeTwo"
+                                  id="zipcodeTwo"
                                   required
                                   placeholder="Required"
                                 />
@@ -521,6 +526,7 @@
                     </form>
                   </div>
 
+                  <!--Falar com o Andre não achei as classes dessa campo-->
                   <div id="step-2" style="height: auto">
                     <form
                       id="form-step-2"
@@ -668,6 +674,10 @@
                           <form
                             id="exampleForm"
                             class="tooltip-label-right"
+                            name="frmAccount"
+                            itemid="frmAccount"
+                            method="post"
+                            action=""
                             novalidate
                           >
                             <div class="form-group position-relative">
@@ -676,7 +686,7 @@
                                   type="radio"
                                   id="jQueryCustomRadio1"
                                   name="jQueryCustomRadio1"
-                                  class="custom-control-input"
+                                  class="custom-control-input "
                                   required
                                 />
                                 <label
@@ -749,8 +759,10 @@
                                   <input
                                     autocomplete="off"
                                     type="text"
-                                    class="form-control"
-                                    name="jQueryName"
+                                    class="form-control bank_name"
+                                    name="bankName"
+                                    id="bankName"
+                                    placeholder="Bank Name"
                                     required
                                   />
                                 </div>
@@ -759,7 +771,7 @@
                                   class="form-group col-12 position-relative error-l-50"
                                 >
                                   <label>Bank Account Type</label>
-                                  <select class="custom-select" required>
+                                  <select class="custom-select bank_account_type" name="bankAccountType" required>
                                     <option value=""></option>
                                     <option value="1">Choose Account Type</option>
                                     <option value="2">Checking</option>
@@ -774,8 +786,9 @@
                                   <input
                                     autocomplete="off"
                                     type="number"
-                                    class="form-control"
-                                    name="jQueryName"
+                                    class="form-control bank_aba_routing_number"
+                                    id="bankAbaRoutingNumber"
+                                    name="bankAbaRoutingNumber"
                                     required
                                   />
                                 </div>
@@ -786,8 +799,9 @@
                                   <input
                                     autocomplete="off"
                                     type="number"
-                                    class="form-control"
-                                    name="jQueryName"
+                                    class="form-control bank_account_number"
+                                    id="bankAccountBumber"
+                                    name="bankAccountBumber"
                                     required
                                   />
                                 </div>
@@ -978,6 +992,9 @@
       </div>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
+    
     <script src="js/vendor/jquery-3.3.1.min.js"></script>
     <script src="js/vendor/bootstrap.bundle.min.js"></script>
     <script src="js/vendor/perfect-scrollbar.min.js"></script>
