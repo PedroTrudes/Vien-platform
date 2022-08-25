@@ -207,8 +207,6 @@
 
     <main>
       <div class="container-fluid">
-       
-
         <div class="row">
           <div class="col-sm-12 mb-4">
             <h1 class="mb-1">Welcome "NAME",</h1>
@@ -221,11 +219,11 @@
               <div id="smartWizardValidation">
                 <ul class="card-header">
                   <li class="mr-5">
-                    <a href="#step-0">Basic Info <br/><br /></a>
+                    <a href="#step-0">Start Application<br /><br /></a>
                   </li>
                   <li class="mr-5">
                     <a href="#step-1"
-                      >Account Details<br />
+                      >Basic Info<br />
                       <br
                     /></a>
                   </li>
@@ -243,6 +241,18 @@
                   </li>
                   <li class="mr-5">
                     <a href="#step-4"
+                      >Employed<br />
+                      <br />
+                    </a>
+                  </li>
+                  <li class="mr-5">
+                    <a href="#step-5"
+                      >agreements<br />
+                      <br />
+                    </a>
+                  </li>
+                  <li class="mr-5">
+                    <a href="#step-6"
                       >Review & Finish<br />
                       <br />
                     </a>
@@ -251,586 +261,397 @@
 
                 <div class="card-body">
                   <div id="step-0" style="height: auto">
-
-                    <h5 class="mb-5">What type of account would you like to open?</h5>
-                    <form id="form-step-0" class="frmAccount" name="frmAccount" method="post" action="">
-                      <div>
-                        <div class="custom-control custom-radio mb-2">
-                            <input type="radio" id="jQueryCustomRadio1" name="jQueryCustomRadio"
-                                class="custom-control-input" >
-                            <label class="custom-control-label" for="jQueryCustomRadio1">
-                            Individual Account
-                            </label>
-                        </div>
-                        <div class="custom-control custom-radio">
-                            <input type="radio" id="jQueryCustomRadio2" name="jQueryCustomRadio"
-                                class="custom-control-input" >
-                            <label class="custom-control-label" for="jQueryCustomRadio2">
-                                Business Account</label>
-                        </div>
-                    </div>
-                    </form>
-
-                    <!--
+                    <h5 class="mb-5">
+                      What type of account would you like to open?
+                    </h5>
                     <form
                       id="form-step-0"
-                      class="tooltip-label-right"
-                      name="frmAccountHolder"
-                      id="frmAccountHolder"
+                      class="frmTypeAccount"
+                      name="frmTypeAccount"
                       method="post"
                       action=""
-                      novalidate
                     >
-                      <div class="form-row">
-                        <div class="col-sm-6">
-                          <div class="form-row">
-                            <div
-                              class="form-group col-12 position-relative error-l-50"
-                            >
-                              <label>COUNTRY OF CITIZENSHIP</label>
-                              <select class="select2_single country_citizenship" name="countryCitizenship" id="countryCitizenship" 
-                              >
-                                <option value="">Country of Citizenship</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                              </select>
-                            </div>
-
-                            <div
-                              class="form-group col-12 position-relative error-l-50"
-                            >
-                              <label>COUNTRY OF RESIDENCE</label>
-                              <select class="custom-select country_residency" name="countryResidency" id="countryResidency"  >
-                                <option value="">Country Residency</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                              </select>
-                            </div>
-
-                            <div
-                              class="form-group col-6 position-relative error-l-50"
-                            >
-                              <label>Social Security Number</label>
-                              <input
-                                minlength="11"
-                                maxlength="11"
-                                autocomplete="off"
-                                type="text"
-                                class="form-control social_security_tax_id"
-                                name="socialSecurityTaxId"
-                                id="socialSecurityTaxId"
-                                placeholder="Social Security Tax Id"
-                                
-                              />
-                            </div>
-
-                            <div class="form-group col-6 mb-5">
-                              <label>Date of Birth</label>
-                              <div class="input-group date">
-                                <input
-                                  type="text"
-                                  class="form-control date_of_birth"
-                                  id="dateOfBirth"
-                                  name="dateOfBirth"
-                                  placeholder="Date Of Birth"
-                                  
-                                />
-                                <span
-                                  class="input-group-text input-group-append input-group-addon"
-                                >
-                                  <i class="simple-icon-calendar"></i>
-                                </span>
-                              </div>
-                            </div>
-
-                            <div
-                              class="form-group col-6 position-relative error-l-50"
-                              style="display: none"
-                            >
-                              <label>Tax Residency Country</label>
-                              <select class="custom-select country_tax_residency" name="countryTaxResidency" id="countryTaxResidency" >
-                                <option value="">Country Tax Residency</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                              </select>
-                            </div>
-
-                            
-                            <div
-                              class="form-group col-6 position-relative error-l-50"
-                              style="display: none"
-                            >
-
-                              <label>Tax Identification Number</label>
-                              <input
-                                autocomplete="off"
-                                type="text"
-                                class="form-control"
-                                name="jQueryName"
-                                
-                              />
-                            </div>
-                          </div>
+                      <div>
+                        <div class="custom-control custom-radio mb-2">
+                          <input
+                            type="radio"
+                            id="jQueryCustomRadio1"
+                            name="typeIndividual"
+                            class="custom-control-input"
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="jQueryCustomRadio1"
+                          >
+                            Individual Account
+                          </label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input
+                            type="radio"
+                            id="jQueryCustomRadio2"
+                            name="typeBusiness"
+                            class="custom-control-input"
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="jQueryCustomRadio2"
+                          >
+                            Business Account</label
+                          >
                         </div>
                       </div>
                     </form>
-                  -->
                   </div>
 
                   <div id="step-1" style="height: auto">
-                    <form id="form-step-1" class="frmAccountHolder"
-                    name="frmAccountHolder" method="post" action="">
-                      <div class="form-row">
-                          <div class="form-group col-md-4">
+                    <form
+                      id="form-step-1"
+                      class="frmAccountHolder"
+                      name="frmAccountHolder"
+                      method="post"
+                      action=""
+                    >
+                      <div class="form-row col-12">
+                        <div class="form-row col-md-6">
+                          <div class="form-group col-md-12">
                             <div class="form-group has-top-label">
-                              <input class="form-control" name="jQueryLabelsInInputEmail"  />
+                              <input
+                                class="form-control"
+                                name="firstName"
+                                id="firstName"
+                              />
                               <span>FRIST NAME</span>
+                            </div>
                           </div>
-                          </div>
-                          <div class="form-group col-md-4">
+
+                          <div class="form-group col-md-12">
                             <div class="form-group has-top-label">
-                              <input class="form-control" name="jQueryLabelsInInputEmail"  />
+                              <input
+                                class="form-control"
+                                name="middleName"
+                                id="middleName"
+                              />
                               <span>MIDDLE NAME</span>
+                            </div>
                           </div>
-                          </div>
-                          <div class="form-group col-md-4">
+
+                          <div class="form-group col-md-12">
                             <div class="form-group has-top-label">
-                              <input class="form-control" name="jQueryLabelsInInputEmail"  />
+                              <input
+                                class="form-control"
+                                name="lastName"
+                                id="lastName"
+                              />
                               <span>LAST NAME</span>
                             </div>
                           </div>
+
+                          <div class="form-group col-md-12">
+                            <div class="form-group has-top-label">
+                              <input
+                                class="form-control datepicker"
+                                name="dateOfBirth"
+                                id="dateOfBirth"
+                              />
+                              <span>DATE OF BIRTH</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="form-row col-6">
+                          <div class="form-group col-md-12">
+                            <div class="form-group has-top-label">
+                              <label>COUNTRY OF CITIZENSHIP</label>
+                              <select
+                                class="custom-select form-control state_id"
+                                name="countryCitizenship"
+                                id="countryCitizenship"
+                              >
+                                <option value="1">United States</option>
+                                <option value="2">Brasil</option>
+                              </select>
+                            </div>
+                          </div>
+
+
+                          <div class="form-group col-md-12">
+                            <div class="form-group has-top-label">
+                              <label>COUNTRY OF RESIDENCE</label>
+                              <select
+                                class="custom-select form-control state_id"
+                                name="countryResidency"
+                                id="countryResidency"
+                              >
+                                <option value="1">United States</option>
+                                <option value="2">Brasil</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          
+                            <div class="form-group col-md-12" id="actionEau">
+                              <div class="form-group has-top-label">
+                                <input
+                                  class="form-control"
+                                  id="socialSecurityTaxId"
+                                  name="socialSecurityTaxId"
+                                />
+                                <span>SOCIAL SECURITY NUMBER</span>
+                              </div>
+                            </div>
                           
 
-                        <div class="form-group col-md-6">
-                        <div class="form-group has-top-label">
-                          <label>COUNTRY OF CITIZENSHIP</label>
-                              <select class="custom-select form-control state_id" name="stateId" id="stateId" >
-                                <option value="1">United States</option>
-                                <option value="2">Brazil</option>
-                              </select>
-                          </div>
-                        </div>
-                        <div class="form-group col-md-6">
-                          <div class="form-group has-top-label">
-                            <label>COUNTRY OF RESIDENCE</label>
-                                <select class="custom-select form-control state_id" name="stateId" id="stateId" >
+                            <div class="form-group col-md-12" id="actionBrResidence" style="display: none;">
+                              <div class="form-group has-top-label">
+                                <label>TAX RESIDENCE COUNTRY</label>
+                                <select
+                                  class="custom-select form-control"
+                                  name="countryTaxResidency"
+                                  id="countryTaxResidency"
+                                >
                                   <option value="1">United States</option>
-                                  <option value="2">Brazil</option>
+                                  <option value="2">Brasil</option>
                                 </select>
+                              </div>
                             </div>
-                          </div>
 
-                          <div class="form-group col-md-6">
-                            <div class="form-group has-top-label">
-                              <input class="form-control" name="jQueryLabelsInInputEmail"  />
-                              <span>SOCIAL SECURITY NUMBER</span>
-                          </div>
-                          </div>
+                            <div class="form-group col-md-12" id="actionBrIdentification" style="display: none;">
+                              <div class="form-group has-top-label">
+                                <input
+                                  class="form-control"
+                                  name="taxIdentificationNumber"
+                                  id="taxIdentificationNumber"
+                                />
+                                <span>TAX IDENTIFICATION NUMBER</span>
+                              </div>
+                            </div>
 
-                        <div class="form-group col-md-6">
-                          <div class="form-group has-top-label">
-                            <input class="form-control datepicker" name="jQueryLabelsInInputDate" >
-                            <span>DATE</span>
-                          </div>
+                          
+
                         </div>
 
-                        <div class="form-group col-md-6">
-                          <div class="form-group has-top-label">
-                            <label>TAX RESIDENCE COUNTRY</label>
-                                <select class="custom-select form-control state_id" name="stateId" id="stateId" >
-                                  <option value="1">United States</option>
-                                  <option value="2">Brazil</option>
-                                </select>
-                            </div>
+                        <div class="form-group col-md-12" id="actionBrHaveTax" style="display: none;">
+                          <div class="custom-control custom-checkbox">
+                            <input
+                              type="checkbox"
+                              class="custom-control-input"
+                              id="haveTaxIdentification"
+                              name="haveTaxIdentification"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="haveTaxIdentification"
+                            >
+                              I have a tax identification number
+                            </label>
                           </div>
+                        </div>
 
-                          <div class="form-group col-md-6">
-                            <div class="form-group has-top-label">
-                              <input class="form-control" name="jQueryLabelsInInputEmail"  />
-                              <span>TAX IDENTIFICATION NUMBER</span>
-                          </div>
-                          </div>
-                          <div class="form-group col-md-12">
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="custom-control-input" id="jQueryControlValidation"
-                                  name="jQueryControlValidation" >
-                              <label class="custom-control-label" for="jQueryControlValidation">
-                                I have a tax identification number
-                              </label>
-                          </div>
-                          </div>
+                      <div class="form-group col-md-12" id="requireDocument" style="display: none;">
+                        <div class="form-group col-md-12" >
+                          <h6 class="text-small">
+                            US Internal Revenue Service rules require the
+                            collection of a taxpayer identification number (or
+                            equivalent) (TIN) for <br />
+                            all of your tax residencies. Failure to provide a
+                            TIN may require us to treat your account as
+                            undocumented for US tax <br />
+                            purposes and impose exceptional withholding on
+                            income and proceeds paid to the account. Update your
+                            entry and provide your TIN above. <br />
+                            If you do not have a TIN, provide an appropriate
+                            reason (one selection required):
+                          </h6>
+                        </div>
 
-                          <div class="form-group col-md-12">
-                            
-                              <h6 class="text-small">
-                                US Internal Revenue Service rules require the collection of 
-                                a taxpayer identification number (or equivalent) (TIN) for <br>
-                                all of your tax residencies. Failure to provide a TIN may 
-                                require us to treat your account as undocumented for US tax <br>
-                                purposes and impose exceptional withholding on income and proceeds 
-                                paid to the account. Update your entry and provide your TIN above. <br>
-                                If you do not have a TIN, provide an appropriate reason 
-                                (one selection required):
-                              </h6>
-                          </div>
-
-                          <div class="form-group col-md-12">
-                            <div class="custom-control custom-radio">
-                                <input type="radio" id="jQueryCustomRadio1" name="jQueryCustomRadio"
-                                    class="custom-control-input" >
-                                <label class="custom-control-label" for="jQueryCustomRadio1">
-                                  I have a US taxpayer identification number and I will add it to the W8 tax form.</label>
-                            </div>
-                            <div class="custom-control custom-radio">
-                                <input type="radio" id="jQueryCustomRadio2" name="jQueryCustomRadio"
-                                    class="custom-control-input" >
-                                <label class="custom-control-label" for="jQueryCustomRadio2">
-                                  The specified country does not issue TINs to its residents.</label>
-                            </div>
-                            <div class="custom-control custom-radio">
-                              <input type="radio" id="jQueryCustomRadio2" name="jQueryCustomRadio"
-                                  class="custom-control-input" >
-                              <label class="custom-control-label" for="jQueryCustomRadio2">
-                                I am not legally required to obtain a TIN from the specified country.
-                              </label>
+                        <div class="form-group col-md-12">
+                          <div class="custom-control custom-radio">
+                            <input
+                              type="radio"
+                              id="jQueryCustomRadio1"
+                              name="jQueryCustomRadio"
+                              class="custom-control-input"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="jQueryCustomRadio1"
+                            >
+                              I have a US taxpayer identification number and I
+                              will add it to the W8 tax form.</label
+                            >
                           </div>
                           <div class="custom-control custom-radio">
-                            <input type="radio" id="jQueryCustomRadio2" name="jQueryCustomRadio"
-                                class="custom-control-input" >
-                            <label class="custom-control-label" for="jQueryCustomRadio2">
-                              TINs are issued, however, account holder is exempt from this requirement under the laws of the specified country.
+                            <input
+                              type="radio"
+                              id="jQueryCustomRadio2"
+                              name="jQueryCustomRadio"
+                              class="custom-control-input"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="jQueryCustomRadio2"
+                            >
+                              The specified country does not issue TINs to its
+                              residents.</label
+                            >
+                          </div>
+                          <div class="custom-control custom-radio">
+                            <input
+                              type="radio"
+                              id="jQueryCustomRadio2"
+                              name="jQueryCustomRadio"
+                              class="custom-control-input"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="jQueryCustomRadio2"
+                            >
+                              I am not legally required to obtain a TIN from the
+                              specified country.
                             </label>
-                        </div>
-                        <div class="custom-control custom-radio">
-                          <input type="radio" id="jQueryCustomRadio2" name="jQueryCustomRadio"
-                              class="custom-control-input" >
-                          <label class="custom-control-label" for="jQueryCustomRadio2">
-                            Other
-                          </label>
-                      </div>
-                        </div>
-
-                      </div>
-                    </form>
-                    <!--
-                    <form
-                      id="form-step-1"
-                      class="tooltip-label-right"
-                      name="frmAddress"
-                      id="frmAddress"
-                      method="post"
-                      action=""
-                      novalidate
-                    >
-                      <div class="form-row">
-                        <div class="col-sm-6">
-                          <div class="form-row">
-                            <div
-                              class="form-group col-sm-12 position-relative error-l-50"
+                          </div>
+                          <div class="custom-control custom-radio">
+                            <input
+                              type="radio"
+                              id="jQueryCustomRadio2"
+                              name="jQueryCustomRadio"
+                              class="custom-control-input"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="jQueryCustomRadio2"
                             >
-                              <label>Address Line One</label>
-                              <input
-                                type="text"
-                                class="form-control address"
-                                name="address"
-                                id="address"
-                                
-                                placeholder="Required"
-                              />
-                            </div>
-                            <div
-                              class="form-group col-sm-12 position-relative error-l-50"
+                              TINs are issued, however, account holder is exempt
+                              from this requirement under the laws of the
+                              specified country.
+                            </label>
+                          </div>
+                          <div class="custom-control custom-radio">
+                            <input
+                              type="radio"
+                              id="jQueryCustomRadio2"
+                              name="jQueryCustomRadio"
+                              class="custom-control-input"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="jQueryCustomRadio2"
                             >
-                              <label>Address Line Two</label>
-                              <input
-                                type="text"
-                                class="form-control complement"
-                                name="complement"
-                                id="complement "
-                                
-                                placeholder="Apt, Suite, Floor, etc"
-                              />
-                            </div>
-                            <div
-                              class="form-group col-4 position-relative error-l-50"
-                            >
-                              <label>City</label>
-                              <input
-                                type="text"
-                                class="form-control city"
-                                name="city"
-                                id="city"
-                                
-                                placeholder="Required"
-                              />
-                            </div>
-
-                            <div
-                              class="form-group col-4 position-relative error-l-50"
-                            >
-                              <label>State</label>
-                              <select class="custom-select state_id" name="stateId" id="stateId" >
-                                <option value=""></option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                              </select>
-                            </div>
-                            <div
-                              class="form-group col-4 position-relative error-l-50"
-                            >
-                              <label>Zip/Postal Code</label>
-                              <input
-                                type="text"
-                                class="form-control zipcode"
-                                name="zipCode"
-                                id="zipCode"
-                                
-                                placeholder="Required"
-                              />
-                            </div>
-
-                            <div class="mb-4">
-                              <div class="custom-control custom-checkbox mb-4">
-                                <input
-                                  type="checkbox"
-                                  class="custom-control-input checkme"
-                                  id="customCheckThis"
-                                />
-                                <label
-                                  class="custom-control-label"
-                                  for="customCheckThis"
-                                  >I have a Different mailing addres.</label
-                                >
-                              </div>
-                            </div>
-
-                            <div
-                              class="container__different--addres form-row col-sm-12"
-                              style="display: none"
-                            >
-                              <div
-                                class="form-group col-sm-12 position-relative error-l-50"
-                              >
-                                <label>Address Line One</label>
-                                <input
-                                  type="text"
-                                  class="form-control address_two"
-                                  name="addressTwo"
-                                  id="addressTwo"
-                                  
-                                  placeholder="Required"
-                                />
-                              </div>
-                              <div
-                                class="form-group col-sm-12 position-relative error-l-50"
-                              >
-                                <label>Address Line Two</label>
-                                <input
-                                  type="text"
-                                  class="form-control complement_two"
-                                  name="complementTwo"
-                                  id="complementTwo"
-                                  
-                                  placeholder="Apt, Suite, Floor, etc"
-                                />
-                              </div>
-                              <div
-                                class="form-group col-4 position-relative error-l-50"
-                              >
-                                <label>City</label>
-                                <input
-                                  type="text"
-                                  class="form-control city_two"
-                                  name="cityTwo"
-                                  id="cityTwo"
-                                  
-                                  placeholder="Required"
-                                />
-                              </div>
-
-                              <div
-                                class="form-group col-4 position-relative error-l-50"
-                              >
-                                <label>State</label>
-                                <select class="custom-select state_id_two" id="stateIdTwo" name="stateIdTwo" >
-                                  <option value=""></option>
-                                  <option value="1">One</option>
-                                  <option value="2">Two</option>
-                                  <option value="3">Three</option>
-                                </select>
-                              </div>
-                              <div
-                                class="form-group col-4 position-relative error-l-50"
-                              >
-                                <label>Zip/Postal Code</label>
-                                <input
-                                  type="text"
-                                  class="form-control zipcode-two"
-                                  name="zipcodeTwo"
-                                  id="zipcodeTwo"
-                                  
-                                  placeholder="Required"
-                                />
-                              </div>
-                            </div>
+                              Other
+                            </label>
                           </div>
                         </div>
                       </div>
+                      </div>
                     </form>
-                    -->
                   </div>
 
-                  <!--Falar com o Andre não achei as classes dessa campo-->
                   <div id="step-2" style="height: auto">
                     <h5 class="mb-2">Identification</h5>
                     <p class="text-small mb-5">
-                      The name on the proof of Identification entered below must exactly match the name you entered above.
+                      The name on the proof of Identification entered below must
+                      exactly match the name you entered above.
                     </p>
-                    <form id="form-step-2" class="frmIdentification"
-                    name="frmIdentification" method="post" action="">
+                    <form
+                      id="form-step-2"
+                      class="frmIdentification"
+                      name="frmIdentification"
+                      method="post"
+                      action=""
+                    >
                       <div class="form-row">
                         <div class="form-group col-md-12">
                           <div class="form-group has-top-label">
                             <label>COUNTRY OF ISSUENCE</label>
-                                <select class="custom-select form-control state_id" name="stateId" id="stateId" >
-                                  <option value="1">United States</option>
-                                  <option value="2">Brazil</option>
-                                </select>
+                            <select
+                              class="custom-select form-control state_id"
+                              name=""
+                              id=""
+                            >
+                            <!--Ver com andre qual id dar para esse select-->
+                              <option value="1">United States</option>
+                              <option value="2">Brazil</option>
+                            </select>
                           </div>
                         </div>
 
                         <div class="form-group col-md-12">
                           <div class="form-group has-top-label">
                             <label>DOCUMENT TYPE</label>
-                                <select class="custom-select form-control state_id" name="stateId" id="stateId" >
-                                  <option value="1">Choose One</option>
-                                  <option value="2">Cadastro de Pessoas Fisicas Number(CPF)</option>
-                                  <option value="3">Alien Identification Card</option>
-                                  <option value="4">Driver`s License</option>
-                                  <option value="5">National Identity Card</option>
-                                  <option value="6">Passport</option>
-                                </select>
+                            <!--Ver com andre qual id dar para esse select-->
+                            <select
+                              class="custom-select form-control state_id"
+                              name=""
+                              id=""
+                            >
+                              <option value="1">Choose One</option>
+                              <option value="2">
+                                Cadastro de Pessoas Fisicas Number(CPF)
+                              </option>
+                              <option value="3">
+                                Alien Identification Card
+                              </option>
+                              <option value="4">Driver`s License</option>
+                              <option value="5">National Identity Card</option>
+                              <option value="6">Passport</option>
+                            </select>
                           </div>
                         </div>
 
                         <div class="form-group col-md-12">
                           <div class="form-group has-top-label">
-                            <input class="form-control" name="jQueryLabelsInInputEmail"  />
+                            <input
+                              class="form-control"
+                              name="jQueryLabelsInInputEmail"
+                            />
                             <span>DOCUMENT NUMBER</span>
-                        </div>
+                          </div>
                         </div>
                       </div>
                     </form>
-                    
-                    <!--
-                    <form
-                      id="form-step-2"
-                      class="tooltip-label-right"
-                      novalidate
-                    >
-                      <div class="form-row">
-                        <div class="col-sm-6">
-                          <div class="form-row">
-                            <div
-                              class="form-group col-sm-12 position-relative error-l-50"
-                            >
-                              <label>Tax Residency Country</label>
-                              <select
-                                class="custom-select"
-                                id="valor-check"
-                                required
-                              >
-                                <option value="">Choose One</option>
-                                <option value="1">Employed</option>
-                                <option value="2">Retired</option>
-                                <option value="3">Self Employed</option>
-                                <option value="4">
-                                  At-Home Trader (No Other Occupation)
-                                </option>
-                                <option value="5">Student/Intern</option>
-                                <option value="6">Homemaker</option>
-                                <option value="7">Unemployed</option>
-                              </select>
-                            </div>
 
-                            <div
-                              id="div-address"
-                              class="form-row p-1"
-                              style="display: none"
-                            >
-                              <div
-                                class="form-group col-12 position-relative error-l-50"
-                              >
-                                <label>Full Employer Name</label>
-                                <input
-                                  autocomplete="off"
-                                  type="text"
-                                  class="form-control"
-                                  name="jQueryName"
-                                  required
-                                />
-                              </div>
 
-                              <div
-                                class="form-group col-6 position-relative error-l-50"
-                              >
-                                <label>Phone Number</label>
-                                <input
-                                  minlength="8"
-                                  maxlength="12"
-                                  autocomplete="off"
-                                  type="text"
-                                  class="form-control"
-                                  name="jQueryName"
-                                  required
-                                />
-                              </div>
-
-                              <div
-                                class="form-group col-6 position-relative error-l-50"
-                              >
-                                <label>Annual Income</label>
-                                <input
-                                  autocomplete="off"
-                                  type="text"
-                                  placeholder="$"
-                                  class="form-control"
-                                  name="jQueryName"
-                                  required
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </form>-->
                   </div>
 
                   <div id="step-3" style="height: auto" class="mb-4">
-                    <form id="form-step-3" class="frmIdentification"
-                    name="frmIdentification" method="post" action="">
+                    <form
+                      id="form-step-3"
+                      class="frmAddress"
+                      name="frmAddress"
+                      method="post"
+                      action=""
+                    >
                       <div class="form-row">
                         <div class="form-group col-md-12">
                           <div class="form-group has-top-label">
-                            <input class="form-control" name="jQueryLabelsInInputEmail" />
+                            <input
+                              class="form-control"
+                              name="address"
+                              id="address"
+                            />
                             <span>ADDRESS LINE ONE</span>
                           </div>
                         </div>
 
                         <div class="form-group col-md-12">
                           <div class="form-group has-top-label">
-                            <input class="form-control" name="jQueryLabelsInInputEmail" />
+                            <input
+                              class="form-control"
+                              name="complement"
+                              id="complement"
+                            />
                             <span>ADDRESS LINE TWO</span>
                           </div>
                         </div>
 
                         <div class="form-group col-md-4">
                           <div class="form-group has-top-label">
-                            <input class="form-control" name="jQueryLabelsInInputEmail" />
+                            <input
+                              class="form-control"
+                              name="city"
+                              id="city"
+                            />
                             <span>CITY</span>
                           </div>
                         </div>
@@ -838,343 +659,201 @@
                         <div class="form-group col-md-4">
                           <div class="form-group has-top-label">
                             <label>STATE/PROVINCE</label>
-                                <select class="custom-select form-control state_id" name="stateId" id="stateId" >
-                                  <option value="1">Choose One</option>
-                                  <option value="2">Cadastro de Pessoas Fisicas Number(CPF)</option>
-                                  <option value="3">Alien Identification Card</option>
-                                  <option value="4">Driver`s License</option>
-                                  <option value="5">National Identity Card</option>
-                                  <option value="6">Passport</option>
-                                </select>
+                            <select
+                              class="custom-select form-control state_id"
+                              name="stateId"
+                              id="stateId"
+                            >
+                              <option value="1">Choose One</option>
+                              <option value="2">
+                                Cadastro de Pessoas Fisicas Number(CPF)
+                              </option>
+                              <option value="3">
+                                Alien Identification Card
+                              </option>
+                              <option value="4">Driver`s License</option>
+                              <option value="5">National Identity Card</option>
+                              <option value="6">Passport</option>
+                            </select>
                           </div>
                         </div>
 
                         <div class="form-group col-md-4">
                           <div class="form-group has-top-label">
-                            <input class="form-control" name="jQueryLabelsInInputEmail" />
+                            <input
+                              class="form-control"
+                              name="zipcode"
+                              id="zipcode"
+                            />
                             <span>ZIP/POSTAL CODE</span>
                           </div>
                         </div>
 
                         <div class="form-group col-md-12">
                           <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input checkme" id="jQueryControlValidation1"
-                                name="jQueryControlValidation1" >
-                            <label class="custom-control-label" for="jQueryControlValidation1">
+
+                            <!--ver com andre sobre os id desse campo-->
+                            <input
+                              type="checkbox"
+                              class="custom-control-input checkme"
+                              id="jQueryControlValidation1"
+                              name="jQueryControlValidation1"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="jQueryControlValidation1"
+                            >
                               I have a Different mailling address
                             </label>
                           </div>
                         </div>
 
                         <div
-                        class="container__different--addres form-row col-sm-12"
-                        style="display: none"
-                      >
-                      <div class="form-group col-md-12">
-                        <div class="form-group has-top-label">
-                          <input class="form-control" name="jQueryLabelsInInputEmail" />
-                          <span>ADDRESS LINE ONE</span>
-                        </div>
-                      </div>
-                      <div class="form-group col-md-12">
-                        <div class="form-group has-top-label">
-                          <input class="form-control" name="jQueryLabelsInInputEmail" />
-                          <span>ADDRESS LINE TWO</span>
-                        </div>
-                      </div>
+                          class="container__different--addres form-row col-sm-12"
+                          style="display: none"
+                        >
+                          <div class="form-group col-md-12">
+                            <div class="form-group has-top-label">
+                              <input
+                                class="form-control"
+                                name="jQueryLabelsInInputEmail"
+                              />
+                              <span>ADDRESS LINE ONE</span>
+                            </div>
+                          </div>
+                          <div class="form-group col-md-12">
+                            <div class="form-group has-top-label">
+                              <input
+                                class="form-control"
+                                name="jQueryLabelsInInputEmail"
+                              />
+                              <span>ADDRESS LINE TWO</span>
+                            </div>
+                          </div>
 
-                      <div class="form-group col-md-4">
-                        <div class="form-group has-top-label">
-                          <input class="form-control" name="jQueryLabelsInInputEmail" />
-                          <span>CITY</span>
-                        </div>
-                      </div>
+                          <div class="form-group col-md-4">
+                            <div class="form-group has-top-label">
+                              <input
+                                class="form-control"
+                                name="jQueryLabelsInInputEmail"
+                              />
+                              <span>CITY</span>
+                            </div>
+                          </div>
 
-                      <div class="form-group col-md-4">
-                        <div class="form-group has-top-label">
-                          <label>STATE/PROVINCE</label>
-                              <select class="custom-select form-control state_id" name="stateId" id="stateId" >
+                          <div class="form-group col-md-4">
+                            <div class="form-group has-top-label">
+                              <label>STATE/PROVINCE</label>
+                              <select
+                                class="custom-select form-control state_id"
+                                name="stateId"
+                                id="stateId"
+                              >
                                 <option value="1">Choose One</option>
-                                <option value="2">Cadastro de Pessoas Fisicas Number(CPF)</option>
-                                <option value="3">Alien Identification Card</option>
+                                <option value="2">
+                                  Cadastro de Pessoas Fisicas Number(CPF)
+                                </option>
+                                <option value="3">
+                                  Alien Identification Card
+                                </option>
                                 <option value="4">Driver`s License</option>
-                                <option value="5">National Identity Card</option>
+                                <option value="5">
+                                  National Identity Card
+                                </option>
                                 <option value="6">Passport</option>
                               </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group col-md-4">
+                            <div class="form-group has-top-label">
+                              <input
+                                class="form-control"
+                                name="jQueryLabelsInInputEmail"
+                              />
+                              <span>ZIP/POSTAL CODE</spa>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
+                  <div id="step-4" style="height: auto;">
+                    <h2>Employed</h2>
+                    <form
+                      id="form-step-4"
+                      class="frmEmployed"
+                      name="frmEmployed"
+                      method="post"
+                      action=""
+                    >
+                    <div class="form-row">
+                      <div class="form-group col-md-12 mt-3">
+                        
+                        <div class="form-group has-top-label">
+                          <label>EMPLOYEMENT STATUS</label>
+                          <select
+                            class="custom-select form-control state_id"
+                            name="stateId"
+                            id="valor-check"
+                          >
+                            <option value="">Choose One</option>
+                            <option value="1">Employed</option>
+                            <option value="2">Retired</option>
+                            <option value="3">Self Employed</option>
+                            <option value="4">
+                              At-Home Trader (No Other Occupation)
+                            </option>
+                            <option value="5">Student/Intern</option>
+                            <option value="6">Homemaker</option>
+                            <option value="7">Unemployed</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div
+                      id="div-address"
+                      class="form-row p-1 col-12"
+                      style="display: none"
+                    >
+                      <div class="form-group col-md-4">
+                        <div class="form-group has-top-label">
+                          <input
+                            class="form-control"
+                            name="jQueryLabelsInInputEmail"
+                          />
+                          <span>Full Employer Name</span>
                         </div>
                       </div>
 
                       <div class="form-group col-md-4">
                         <div class="form-group has-top-label">
-                          <input class="form-control" name="jQueryLabelsInInputEmail" />
-                          <span>ZIP/POSTAL CODE</span>
+                          <input
+                            class="form-control"
+                            name="jQueryLabelsInInputEmail"
+                          />
+                          <span>Phone Number</span>
                         </div>
                       </div>
-
-                      </div>
-
-                      
-                      <div class="form-group col-md-12 mt-3">
-                        <h5>Employed</h5>
+                      <div class="form-group col-md-4">
                         <div class="form-group has-top-label">
-                          <label>TAX RESIDENCY COUNTRY</label>
-                              <select class="custom-select form-control state_id" name="stateId" id="valor-check" >
-                                <option value="">Choose One</option>
-                                <option value="1">Employed</option>
-                                <option value="2">Retired</option>
-                                <option value="3">Self Employed</option>
-                                <option value="4">
-                                  At-Home Trader (No Other Occupation)
-                                </option>
-                                <option value="5">Student/Intern</option>
-                                <option value="6">Homemaker</option>
-                                <option value="7">Unemployed</option>
-                              </select>
-                          </div>
+                          <input
+                            class="form-control"
+                            name="jQueryLabelsInInputEmail"
+                          />
+                          <span>Annual Income</span>
                         </div>
-                        
-
-                        
-                      </div>
-
-                      <div
-                      id="div-address"
-                      class="form-row p-1"
-                      style="display: none"
-                    >
-
-                    <div class="form-group col-md-4">
-                      <div class="form-group has-top-label">
-                        <input class="form-control" name="jQueryLabelsInInputEmail" />
-                        <span>Full Employer Name</span>
                       </div>
                     </div>
-                      
-                    <div class="form-group col-md-4">
-                      <div class="form-group has-top-label">
-                        <input class="form-control" name="jQueryLabelsInInputEmail" />
-                        <span>Phone Number</span>
-                      </div>
                     </div>
-                    <div class="form-group col-md-4">
-                      <div class="form-group has-top-label">
-                        <input class="form-control" name="jQueryLabelsInInputEmail" />
-                        <span>Annual Income</span>
-                      </div>
-                    </div>
-
-                    </div>
-                     
                     </form>
-                    <!--
-                    <h2 class="mb-4">
-                      <strong> Agreements </strong>
-                    </h2>
-                    <h4 class="mb4">Documents</h4>
-                    <p>
-                      <small
-                        >The following documents are provided for your
-                        reference:</small
-                      >
-                    </p>
-                    <div class="form-row">
-                      <div class="col-sm-6">
-                        <div class="form-row">
-                          <div class="d-flex flex-row mb-3">
-                            <div class="p-2">
-                              <i class="iconsminds-letter-open"></i>
-                            </div>
-                            <div class="p-2">
-                              <a href="" download>Download Document</a>
-                            </div>
-                            <div class="p-2">
-                              <i class="iconsminds-letter-open"></i>
-                            </div>
-                            <div class="p-2">
-                              <a href="" download>Download Document</a>
-                            </div>
-                          </div>
-                          <div class="d-flex flex-row mb-3">
-                            <div class="p-2">
-                              <i class="iconsminds-letter-open"></i>
-                            </div>
-                            <div class="p-2">
-                              <a href="" download>Download Document</a>
-                            </div>
-                            <div class="p-2">
-                              <i class="iconsminds-letter-open"></i>
-                            </div>
-                            <div class="p-2">
-                              <a href="" download>Download Document</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                   
-                    <h2>
-                      <strong> Acknowledgments </strong>
-                    </h2>
-
-                    <p>
-                      <small>
-                        Please indicate agreement with the following:
-                      </small>
-                    </p>
-
-                    <div class="form-row">
-                      <div class="col-sm-6">
-                        <div class="form-row">
-                          <form
-                            id="exampleForm"
-                            class="tooltip-label-right"
-                            name="frmAccount"
-                            itemid="frmAccount"
-                            method="post"
-                            action=""
-                            novalidate
-                          >
-                            <div class="form-group position-relative">
-                              <div class="custom-control custom-radio">
-                                <input
-                                  type="radio"
-                                  id="jQueryCustomRadio1"
-                                  name="jQueryCustomRadio1"
-                                  class="custom-control-input "
-                                  required
-                                />
-                                <label
-                                  class="custom-control-label"
-                                  for="jQueryCustomRadio1"
-                                >
-                                  By clickin Finish, I hereby acknowledge that I
-                                  have read and understand the Terms and
-                                  Conditions and the Privacy Policy. I further
-                                  acknowledge that the information I have
-                                  provided herein wil be used for purposes of
-                                  qualification and acceptance in use of the
-                                  systems provided by 2btrustm LLC
-                                </label>
-                              </div>
-                            </div>
-
-                            <h2>
-                              <strong> Dividend Reinvestment </strong>
-                            </h2>
-
-                            <div class="form-group position-relative">
-                              <div class="custom-control custom-radio m-2">
-                                <input
-                                  type="radio"
-                                  id="jQueryCustomRadio2"
-                                  name="jQueryCustomRadio"
-                                  class="custom-control-input check--step3"
-                                  value="1"
-                                  required
-                                />
-                                <label
-                                  class="custom-control-label"
-                                  for="jQueryCustomRadio2"
-                                >
-                                  I would like my dividends reinvested according
-                                  to the investment have selected.
-                                </label>
-                              </div>
-                              <div class="custom-control custom-radio m-2">
-                                <input
-                                  type="radio"
-                                  id="jQueryCustomRadio3"
-                                  name="jQueryCustomRadio"
-                                  class="custom-control-input check--step3"
-                                  value="2"
-                                  required
-                                />
-                                <label
-                                  class="custom-control-label"
-                                  for="jQueryCustomRadio3"
-                                >
-                                  I would like my dividends distributed to my
-                                  bank account
-                                </label>
-                              </div>
-
-                              <div
-                                class="form-row col-6 active--form mt-3"
-                                style="display: none"
-                              >
-                                <h2 class="col-12">
-                                  <strong>Account info</strong>
-                                </h2>
-
-                                <div
-                                  class="form-group col-12 position-relative error-l-50"
-                                >
-                                  <label>Bank Name</label>
-                                  <input
-                                    autocomplete="off"
-                                    type="text"
-                                    class="form-control bank_name"
-                                    name="bankName"
-                                    id="bankName"
-                                    placeholder="Bank Name"
-                                    required
-                                  />
-                                </div>
-
-                                <div
-                                  class="form-group col-12 position-relative error-l-50"
-                                >
-                                  <label>Bank Account Type</label>
-                                  <select class="custom-select bank_account_type" name="bankAccountType" required>
-                                    <option value=""></option>
-                                    <option value="1">Choose Account Type</option>
-                                    <option value="2">Checking</option>
-                                    <option value="3">Savings</option>
-                                  </select>
-                                </div>
-
-                                <div
-                                  class="form-group col-6 position-relative error-l-50"
-                                >
-                                  <label>ABA Routing Number</label>
-                                  <input
-                                    autocomplete="off"
-                                    type="number"
-                                    class="form-control bank_aba_routing_number"
-                                    id="bankAbaRoutingNumber"
-                                    name="bankAbaRoutingNumber"
-                                    required
-                                  />
-                                </div>
-                                <div
-                                  class="form-group col-6 position-relative error-l-50"
-                                >
-                                  <label>Account Number</label>
-                                  <input
-                                    autocomplete="off"
-                                    type="number"
-                                    class="form-control bank_account_number"
-                                    id="bankAccountBumber"
-                                    name="bankAccountBumber"
-                                    required
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div>
-                    </div> 
-                  -->
                   </div>
 
-                  <div id="step-4" style="height: auto">
-
+                  <div id="step-5" style="height: auto">
                     <h2 class="mb-4">
                       <strong> Agreements </strong>
                     </h2>
-                    <h4 class="mb4">Documents</h4>
+                    <h4 class="mb-4">Documents</h4>
                     <p>
                       <small
                         >The following documents are provided for your
@@ -1216,7 +895,6 @@
                       </div>
                     </div>
 
-                   
                     <h2>
                       <strong> Acknowledgments </strong>
                     </h2>
@@ -1231,26 +909,26 @@
                       <div class="col-sm-6">
                         <div class="form-row">
                           <form
-                            id="exampleForm"
+                            id="form-step-4"
                             class="tooltip-label-right"
-                            name="frmAccount"
-                            itemid="frmAccount"
+                            name="fmrAgreements"
+                            itemid="fmrAgreements"
                             method="post"
                             action=""
-                            novalidate
+                           
                           >
                             <div class="form-group position-relative">
                               <div class="custom-control custom-radio">
                                 <input
                                   type="radio"
-                                  id="jQueryCustomRadio1"
-                                  name="jQueryCustomRadio1"
-                                  class="custom-control-input "
+                                  id="jQueryCustomRadio3"
+                                  name="jQueryCustomRadio"
+                                  class="custom-control-input"
                                   required
                                 />
                                 <label
                                   class="custom-control-label"
-                                  for="jQueryCustomRadio1"
+                                  for="jQueryCustomRadio3"
                                 >
                                   By clickin Finish, I hereby acknowledge that I
                                   have read and understand the Terms and
@@ -1271,15 +949,15 @@
                               <div class="custom-control custom-radio m-2">
                                 <input
                                   type="radio"
-                                  id="jQueryCustomRadio2"
+                                  id="jQueryCustomRadio4"
                                   name="jQueryCustomRadio"
                                   class="custom-control-input check--step3"
                                   value="1"
-                                  required
+                                  
                                 />
                                 <label
                                   class="custom-control-label"
-                                  for="jQueryCustomRadio2"
+                                  for="jQueryCustomRadio4"
                                 >
                                   I would like my dividends reinvested according
                                   to the investment have selected.
@@ -1288,15 +966,15 @@
                               <div class="custom-control custom-radio m-2">
                                 <input
                                   type="radio"
-                                  id="jQueryCustomRadio3"
+                                  id="jQueryCustomRadio5"
                                   name="jQueryCustomRadio"
                                   class="custom-control-input check--step3"
                                   value="2"
-                                  required
+                                  
                                 />
                                 <label
                                   class="custom-control-label"
-                                  for="jQueryCustomRadio3"
+                                  for="jQueryCustomRadio5"
                                 >
                                   I would like my dividends distributed to my
                                   bank account
@@ -1304,7 +982,7 @@
                               </div>
 
                               <div
-                                class="form-row col-6 active--form mt-3"
+                                class="form-row col-12 active--form mt-3"
                                 style="display: none"
                               >
                                 <h2 class="col-12">
@@ -1322,7 +1000,7 @@
                                     name="bankName"
                                     id="bankName"
                                     placeholder="Bank Name"
-                                    required
+                                    
                                   />
                                 </div>
 
@@ -1330,9 +1008,15 @@
                                   class="form-group col-12 position-relative error-l-50"
                                 >
                                   <label>Bank Account Type</label>
-                                  <select class="custom-select bank_account_type" name="bankAccountType" required>
+                                  <select
+                                    class="custom-select bank_account_type"
+                                    name="bankAccountType"
+                                    
+                                  >
                                     <option value=""></option>
-                                    <option value="1">Choose Account Type</option>
+                                    <option value="1">
+                                      Choose Account Type
+                                    </option>
                                     <option value="2">Checking</option>
                                     <option value="3">Savings</option>
                                   </select>
@@ -1348,7 +1032,7 @@
                                     class="form-control bank_aba_routing_number"
                                     id="bankAbaRoutingNumber"
                                     name="bankAbaRoutingNumber"
-                                    required
+                                    
                                   />
                                 </div>
                                 <div
@@ -1361,7 +1045,7 @@
                                     class="form-control bank_account_number"
                                     id="bankAccountBumber"
                                     name="bankAccountBumber"
-                                    required
+                                    
                                   />
                                 </div>
                               </div>
@@ -1369,10 +1053,7 @@
                           </form>
                         </div>
                       </div>
-                    </div> 
-                  
-                    
-                     
+                    </div>
                   </div>
                 </div>
 
@@ -1390,27 +1071,7 @@
                   </button>
                 </div>
               </div>
-              <div class="card-body text-center p-2 m-0">
-                <p class="text-muted text-extra-small">
-                  This site is property of 2BTRUST, LLC and its affiliates
-                  (collectively, “2BTRUST” or “we,” “us,” or “our”). By
-                  accessing or using the Site, you agree that your access to and
-                  use of the Site, including any Content (defined below)
-                  provided by 2BTRUST, LLC shall be exclusively governed by the
-                  Terms and Conditions. The Terms and Conditions may be adjusted
-                  by 2BTRUST at any time by its sole discretion and are
-                  automatically incorporated into and considered part of this
-                  Terms and Condition. If you do not accept the terms and
-                  conditions stated here in, do not use the Site. We reserve the
-                  right to refuse access to and usage of the Site by anyone at
-                  any time. Therefore, 2BTRUST reserves the right to change,
-                  modify, update, amend all or any part of the Site or
-                  discontinue the Site at any time, without notice. In addition,
-                  we reserve the right to change the terms and conditions
-                  governing your access to and use of the Site and the Content
-                  at any time, without notice.
-                </p>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -1419,7 +1080,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
-    
+
     <script src="js/vendor/jquery-3.3.1.min.js"></script>
     <script src="js/vendor/bootstrap.bundle.min.js"></script>
     <script src="js/vendor/perfect-scrollbar.min.js"></script>
@@ -1445,26 +1106,60 @@
     <script src="js/dore-plugins/select.from.library.js"></script>
 
     <script>
-      // check step 3
       $(".check--step3").on("change", function () {
         let radioVal = $(this);
 
         if (radioVal.val() == 2) {
           $(".active--form").show();
-          console.log(radioVal.val());
+        
         } else {
           $(".active--form").hide();
         }
       });
     </script>
+
     <script>
-      // check step 2
+      //check Residency
+
+      $("#countryCitizenship").on("change", function (){
+        let me = $(this);
+
+        if (me.val() == 1){
+          $('#actionEau').show();
+          
+        }else{
+          $("#actionEau").hide();
+          $("#actionBrResidence").show();
+          $("#actionBrIdentification").show();
+          $("#actionBrHaveTax").show();
+          $("#requireDocument").show();
+
+          $(function () {
+            $("#haveTaxIdentification").click(function (event) {
+              var x = $(this).is(":checked");
+            if (x == true) {
+              
+              $(this).parents(".form-row").find("#requireDocument").hide();
+            }else{
+              $(this).parents(".form-row").find("#requireDocument").show();
+            }
+            });
+           
+          });
+        };
+      });
+
+    </script>
+
+    
+    <script>
+      // check os campos de EMPLOYEMENT STATUS
       $("#valor-check").on("change", function () {
         let me = $(this);
 
         if (me.val() == 1 || me.val() == 3) {
           $("#div-address").show();
-          console.log(me.val());
+       
         } else {
           $("#div-address").hide();
         }
@@ -1472,7 +1167,7 @@
     </script>
 
     <script>
-      // Check step 1
+      // Check frmAddress caso tenha mais endereco ele mostra novos campos
       $(function () {
         $(".checkme").click(function (event) {
           var x = $(this).is(":checked");
