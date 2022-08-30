@@ -38,34 +38,31 @@ $(".classeDoFormulario")
 .validate({
     rules:{
     
-    account_id: {
+        user_id: {
         require: true,
     },
-    fristname: {
+    acknowledgment_signed: {
         require: true,
     },
-    middle_name:{
+    type:{
         require: true,
     },
-    lastname: {
+    status: {
         require: true,
     },
-    date_of_birth: {
+    reinvest_yield: {
         require: true,
     },
-    social_security_tax_id: {
+    bank_name: {
         require: true,
     },
-    country_citizenship: {
+    bank_aba_routing_number: {
         require: true,
     },
-    country_residency: {
+    bank_account_number: {
         require: true,
     },
-    country_tax_residency: {
-        require: true,
-    },
-    is_primary: {
+    accountHolder: {
         require: true,
     }
 }
@@ -155,7 +152,7 @@ $(".classeDoFormulario")
 }),
 ({
     submitHandler: form => {
-        let account = new Account();
+        let accountHolder = new AccountHolder();
         accountHolder.account_id = document.getElementById("#");
         accountHolder.fristname = document.getElementById("#");
         accountHolder.middle_name = document.getElementById("#");
@@ -170,5 +167,99 @@ $(".classeDoFormulario")
         let jsonAccountHolder = accountHolder.toJson();
         
         console.log(jsonAccountHolder);
+    }
+})
+
+class Address {
+
+    constructor(address, complement, city, state_id, zipcode, type){
+        this.address = address;
+        this.complement = complement;
+        this.city = city;
+        this.state_id = state_id;
+        this.zipcode = zipcode;
+        this.type = type;
+    }
+    toJson(){
+        return JSON.stringify(this);
+    }
+    
+}
+let address = new Address(address, complement, city, state_id, zipcode, type);
+let jsonAddress = accountHolder.toJson();
+
+$(".classeDoFormulario")
+.validate({
+    rules:{
+        address: {
+            require: true,
+        },
+        complement: {
+            require: true,
+        },
+        city:{
+            require: true,
+        },
+        state_id: {
+            require: true,
+        },
+        zipcode: {
+            require: true,
+        },
+        type: {
+            require: true,
+        }
+
+    }
+}),
+({
+    submitHandler: form => {
+        let address = new Address();
+        address.address = document.getElementById("#");
+        address.complement = document.getElementById("#");
+        address.city = document.getElementById("#");
+        address.state_id = document.getElementById("#");
+        address.zipcode = document.getElementById("#");
+        address.type = document.getElementById("#");
+        
+        let jsonAddress = address.toJson();
+        
+        console.log(jsonAddress);
+    }
+})
+
+class Document {
+    constructor(name, file){
+        this.name = name;
+        this.file = file;
+    }
+    toJson(){
+        return JSON.stringify(this);
+    }
+}
+
+let documentUpload = new Document(name, file);
+let jsonDocument = documentUpload.toJson();
+
+$(".classeDoFormulario")
+.validate({
+    rules:{
+        name: {
+            require: true,
+        },
+        file: {
+            require: true,
+        }
+    }
+}),
+({
+    submitHandler: form => {
+        let documentUpload = new Document();
+        documentUpload.name = document.getElementById("#");
+        documentUpload.file = document.getElementById("#");
+        
+        let jsonDocumentUpload = documentUpload.toJson();
+        
+        console.log(jsonDocumentUpload);
     }
 })
