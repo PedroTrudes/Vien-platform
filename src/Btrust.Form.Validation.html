@@ -247,12 +247,18 @@
                   </li>
                   <li class="mr-5">
                     <a href="#step-5"
-                      >agreements<br />
+                      >More account holder?<br />
                       <br />
                     </a>
                   </li>
                   <li class="mr-5">
                     <a href="#step-6"
+                      >agreements<br />
+                      <br />
+                    </a>
+                  </li>
+                  <li class="mr-5">
+                    <a href="#step-7"
                       >Review & Finish<br />
                       <br />
                     </a>
@@ -276,9 +282,11 @@
                           <input
                             type="radio"
                             id="jQueryCustomRadio1"
-                            name="typeIndividual"
-                            class="custom-control-input typeIndividual "
-                          />
+                            name="typeAccount"
+                            class="custom-control-input typeAccount "
+                            value="Individual"
+                            checked
+                            />
                           <label
                             class="custom-control-label"
                             for="jQueryCustomRadio1"
@@ -288,10 +296,11 @@
                         </div>
                         <div class="custom-control custom-radio">
                           <input
-                            type="radio"
                             id="jQueryCustomRadio2"
-                            name="typeBusiness"
-                            class="custom-control-input"
+                            type="radio"
+                            name="typeAccount"
+                            class="custom-control-input "
+                            value="Business"
                           />
                           <label
                             class="custom-control-label"
@@ -427,7 +436,7 @@
                               </div>
                             </div>
 
-                          
+                          <button type="submit">Enviar</button>
 
                         </div>
 
@@ -561,6 +570,7 @@
                       method="post"
                       action=""
                     >
+                  
                       <div class="form-row">
                         <div class="form-group col-md-12">
                           <div class="form-group has-top-label">
@@ -851,7 +861,77 @@
                     </form>
                   </div>
 
-                  <div id="step-5" style="height: auto">
+                  <div id="step-5" style="height: auto;">
+                    <h2>More account holder?</h2>
+                    <form
+                      id="form-step-5"
+                      class="frmEmployed"
+                      name="frmEmployed"
+                      method="post"
+                      action=""
+                    >
+                    <div class="form-row">
+                      <div class="form-group col-md-12 mt-3">
+                        
+                        <div class="form-group has-top-label">
+                          <label>EMPLOYEMENT STATUS</label>
+                          <select
+                            class="custom-select form-control state_id"
+                            name="stateId"
+                            id="valor-check"
+                          >
+                            <option value="">Choose One</option>
+                            <option value="1">Employed</option>
+                            <option value="2">Retired</option>
+                            <option value="3">Self Employed</option>
+                            <option value="4">
+                              At-Home Trader (No Other Occupation)
+                            </option>
+                            <option value="5">Student/Intern</option>
+                            <option value="6">Homemaker</option>
+                            <option value="7">Unemployed</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div
+                      id="div-address"
+                      class="form-row p-1 col-12"
+                      style="display: none"
+                    >
+                      <div class="form-group col-md-4">
+                        <div class="form-group has-top-label">
+                          <input
+                            class="form-control"
+                            name="jQueryLabelsInInputEmail"
+                          />
+                          <span>Full Employer Name</span>
+                        </div>
+                      </div>
+
+                      <div class="form-group col-md-4">
+                        <div class="form-group has-top-label">
+                          <input
+                            class="form-control"
+                            name="jQueryLabelsInInputEmail"
+                          />
+                          <span>Phone Number</span>
+                        </div>
+                      </div>
+                      <div class="form-group col-md-4">
+                        <div class="form-group has-top-label">
+                          <input
+                            class="form-control"
+                            name="jQueryLabelsInInputEmail"
+                          />
+                          <span>Annual Income</span>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    </form>
+                  </div>
+
+                  <div id="step-6" style="height: auto">
                     <h2 class="mb-4">
                       <strong> Agreements </strong>
                     </h2>
@@ -911,7 +991,7 @@
                       <div class="col-sm-6">
                         <div class="form-row">
                           <form
-                            id="form-step-4"
+                            id="form-step-6"
                             class="tooltip-label-right"
                             name="fmrAgreements"
                             itemid="fmrAgreements"

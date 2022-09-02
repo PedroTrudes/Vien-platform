@@ -3,10 +3,10 @@ class Account {
 
   holders = [];
   acknowledgment_signed ;
-    constructor(){
+    constructor(type){
         
-            this.user_id ="";
-            this.type ="" ;
+            this.user_id;
+            this.type = type ;
             this.status ="";
             this.reinvest_yield="" ;
             this.bank_name = "a";
@@ -24,17 +24,6 @@ class Account {
             this.holders.push(holders);
         }
 }
-
-let account = new Account();
-//let holder = new Account();
-let jsonAccount = account.toJson();
-
-console.log(account);
-
-
-
-
-
 
 $(".classeDoFormulario")
 .validate({
@@ -93,16 +82,18 @@ class AccountHolder {
   account_id = 0;
   is_primary = true;
   address =[];
-    constructor(fristname){
+    constructor(fristname, middle_name, lastname,
+        date_of_birth,social_security_tax_id,
+        country_citizenship,country_residency,country_tax_residency){
           
-            this.fristname;
-            this.middle_name = "middle_name";
-            this.lastname = "lastname";
-            this.date_of_birth = "date_of_birth";
-            this.social_security_tax_id = "social_security_tax_id";
-            this.country_citizenship = "country_citizenship";
-            this.country_residency = "country_residency";
-            this.country_tax_residency = "country_tax_residency";
+            this.fristname = fristname;
+            this.middle_name = middle_name;
+            this.lastname = lastname;
+            this.date_of_birth = date_of_birth;
+            this.social_security_tax_id = social_security_tax_id;
+            this.country_citizenship = country_citizenship;
+            this.country_residency = country_residency;
+            this.country_tax_residency = country_tax_residency;
         }
 
         toJson() {
@@ -113,19 +104,6 @@ class AccountHolder {
             this.address.push(address);
         }
     }
-
-    
-    // teste de inserção de algum dado
-    let accountHolder = new AccountHolder();
-    accountHolder.fristname = "Pedro";
-    accountHolder.middle_name = "trudes";
-    //let addressHolder = new AccountHolder();
-
-    account.addAccountHolder(accountHolder);
-    
-    let jsonAccountHolder = accountHolder.toJson();
-    console.log(accountHolder);
-   
 
 $(".frmAccountHolder")
 .validate({
@@ -197,12 +175,6 @@ class Address {
     }
     
 }
-let address = new Address();
-accountHolder.addAccountAddrress(address);
-let jsonAddress = accountHolder.toJson();
-
-console.log(address);
-
 $(".frmAddress")
 .validate({
     rules:{
@@ -255,10 +227,6 @@ class Document {
     }
 }
 
-let documentUpload = new Document();
-console.log(documentUpload);
-let jsonDocument = documentUpload.toJson();
-
 $(".classeDoFormulario")
 .validate({
     rules:{
@@ -280,4 +248,133 @@ $(".classeDoFormulario")
         
         //console.log(jsonDocumentUpload);
     }
+})
+
+let account = new Account();
+let jsonAccount = account.toJson();
+console.log(account);
+
+let accountHolder = new AccountHolder();
+account.addAccountHolder(accountHolder);
+  
+let jsonAccountHolder = accountHolder.toJson();
+console.log(accountHolder);
+
+let address = new Address();
+accountHolder.addAccountAddrress(address);
+let jsonAddress = accountHolder.toJson();
+console.log(address);
+
+let documentUpload = new Document();
+console.log(documentUpload);
+let jsonDocument = documentUpload.toJson();
+
+
+
+
+
+
+class NewAccount {
+    holders = [];
+    _inputType ;
+    constructor(){
+        this._inputType;
+    }
+
+    adiciona(event){
+        event.preventDefault();
+        this._criaAccount();
+        this.addAccountHolder();
+        console.log(this._criaAccount(event));
+
+        
+    }
+
+    _criaAccount(){
+        return new Account(this._inputType = document.querySelector("input[name='typeAccount']:checked").value)
+    }
+   
+    toJson() {
+        return JSON.stringify(this);
+    }
+
+    addAccountHolder(holders){
+        this.holders.push(holders);
+    }
+}
+
+class NewAccountHolder{
+    _inputName
+    _inputMidleName
+    _inputLastName
+    _inputDateOfBirth
+    _inputCountryCitizenship
+    _inputCountryResidency
+    _inputSocialSecurityTaxId
+    _inputCountryTaxResidency
+    _inputTaxIdentificationNumber
+    addres = []
+    constructor(){
+        this._inputName = document.querySelector('#firstName');
+        this._inputMidleName = document.querySelector('#middleName');
+        this._inputLastName = document.querySelector('#lastName');
+        this._inputDateOfBirth = document.querySelector('#dateOfBirth');
+        this._inputCountryCitizenship = document.querySelector('#countryCitizenship');
+        this._inputCountryResidency = document.querySelector('#countryResidency');
+        this._inputSocialSecurityTaxId = document.querySelector('#socialSecurityTaxId');
+        this._inputCountryTaxResidency = document.querySelector('#countryTaxResidency');
+        this._inputTaxIdentificationNumber = document.querySelector('#taxIdentificationNumber');
+    
+    }
+    adiciona(event){
+        event.preventDefault();
+        this._criaAccountHolder().toJson();
+        console.log(this._criaAccountHolder());
+    }
+
+    _criaAccountHolder(){
+        return new AccountHolder(this._inputName.value, 
+            this._inputMidleName.value,
+            this._inputLastName.value,
+            this._inputDateOfBirth.value,
+            this._inputCountryCitizenship.value,
+            this._inputCountryResidency.value,
+            this._inputSocialSecurityTaxId.value,
+            this._inputCountryTaxResidency.value,
+            this._inputTaxIdentificationNumber.value);
+    }
+
+    _limparCampo(){
+        this._inputName.value = "";
+        this._inputMidleName.value = "";
+        this._inputLastName.value = "";
+        this._inputDateOfBirth.value = "";
+        this._inputCountryCitizenship.value = "";
+        this._inputCountryResidency.value = "";
+        this._inputSocialSecurityTaxId.value = "";
+        this._inputCountryTaxResidency.value = "";
+        this._inputTaxIdentificationNumber.value = "";
+
+    }
+
+    toJson() {
+        return JSON.stringify(this);
+    }
+
+    addAccountHolder(address){
+        this.addres.push(address);
+    }
+}
+
+let newAccount = new NewAccount();
+let newAccountHolder = new NewAccountHolder();
+let formularioAccountHolder = document.querySelector('.frmAccountHolder');
+
+
+formularioAccountHolder.addEventListener('submit', (event) =>{
+
+    newAccount.adiciona(event);
+    newAccountHolder.adiciona(event);
+    newAccountHolder._limparCampo(event);
+    
 })
