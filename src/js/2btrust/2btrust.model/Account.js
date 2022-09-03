@@ -2,10 +2,10 @@ class Account {
 
     holders = [];
     acknowledgment_signed ;
-      constructor(){
+      constructor(type){
           
-              this.user_id = "";
-              this.type ="" ;
+              this.user_id;
+              this.type = type ;
               this.status ="";
               this.reinvest_yield="" ;
               this.bank_name = "a";

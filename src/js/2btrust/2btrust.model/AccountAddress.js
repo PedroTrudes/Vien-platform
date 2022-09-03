@@ -1,4 +1,5 @@
-export class Address {
+
+class Address {
 
     constructor(){
         this.address = "address";
@@ -11,5 +12,12 @@ export class Address {
     toJson(){
         return JSON.stringify(this);
     }
+
+    adiciona(event){
+        event.preventDefault();
+        this._criaAccount();
+        console.log(this._criaAccount(event));
+    }
+    
     
 }

@@ -1,17 +1,21 @@
-export class AccountHolder {
+class AccountHolder {
     account_id = 0;
     is_primary = true;
     address =[];
-      constructor(fristname){
+      constructor(firstname, middle_name, lastname,
+          date_of_birth,social_security_tax_id,
+          country_citizenship,country_residency,country_tax_residency){
             
-              this.fristname;
-              this.middle_name = "middle_name";
-              this.lastname = "lastname";
-              this.date_of_birth = "date_of_birth";
-              this.social_security_tax_id = "social_security_tax_id";
-              this.country_citizenship = "country_citizenship";
-              this.country_residency = "country_residency";
-              this.country_tax_residency = "country_tax_residency";
+              this.firstname = firstname;
+              this.middle_name = middle_name;
+              this.lastname = lastname;
+              
+              this.date_of_birth = date_of_birth;
+              this.social_security_tax_id = social_security_tax_id;
+              this.country_citizenship = country_citizenship;
+              this.country_residency = country_residency;
+              this.country_tax_residency = country_tax_residency;
+              
           }
   
           toJson() {
