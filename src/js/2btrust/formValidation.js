@@ -10,16 +10,14 @@ $(".frmAccountHolder .next-btn").on('click', function(){
     holder.middle_name = $("#middleName").val();
     holder.lastname = $("#lastName").val();
     holder.date_of_birth = $("#date_of_birth").val();
-    console.log(holder);
-});
-
-/*
-
     holder.country_citizenship = $("#country_citizenship").val();
     holder.country_residency = $("#country_residency").val();
     holder.social_security_tax_id = $("#social_security_tax_id").val();
-   
-*/
+
+    console.log(holder);
+});    
+
+
 
 $(".frmIdentification .next-btn").on('click', function(){
     holder.country_citizenship = $("#country_citizenship").val();
@@ -28,7 +26,11 @@ $(".frmIdentification .next-btn").on('click', function(){
 
 $(".frmAddress .next-btn").on('click', function(){
     let address = new Address();
-    address.country_citizenship = $("#country_citizenship").val();
+    address.country_citizenship = $("#address").val();
+    address.complement = $("#complement").val();
+    address.city = $("#city").val();
+    address.state_id = $("#state_id").val();
+    address.zipcode = $("#zipcode").val();
     
     holder.addAccountAddrress(address);
 

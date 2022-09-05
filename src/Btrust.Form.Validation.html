@@ -366,13 +366,10 @@
                                 <span>DATE OF BIRTH</span>
                               </div>
                             </div>
-
-                          
                         </div>
 
-                        <div class="form-row col-6">
-                          <!--
-
+                        <div class="form-row col-sm-12 col-md-6" >
+                          
                             <div class="form-group col-md-12">
                               <div class="form-group has-top-label">
                                 <label>COUNTRY OF CITIZENSHIP</label>
@@ -386,7 +383,7 @@
                                 </select>
                               </div>
                             </div>
-
+                          
                             <div class="form-group col-md-12">
                               <div class="form-group has-top-label">
                                 <label>COUNTRY OF RESIDENCE</label>
@@ -400,10 +397,6 @@
                                 </select>
                               </div>
                             </div>
-                          -->
-
-
-
                           
                             <div class="form-group col-md-12" id="actionEau">
                               <div class="form-group has-top-label">
@@ -563,7 +556,7 @@
                       <div
                       class="btn-toolbar custom-toolbar text-center card-body pt-0 mt-5"
                     >
-                      <button class="btn btn-secondary prev-btn" type="button">
+                      <button class="btn btn-secondary prev-btn mr-2" type="button">
                         Previous
                       </button>
                       <button class="btn btn-secondary next-btn" type="button"  >
@@ -643,12 +636,12 @@
                       <div
                       class="btn-toolbar custom-toolbar text-center card-body pt-0 mt-5"
                     >
-                      <button class="btn btn-secondary prev-btn" type="button">
-                        Previous
-                      </button>
-                      <button class="btn btn-secondary next-btn" type="button"  >
-                        Next
-                      </button>
+                    <button class="btn btn-secondary prev-btn mr-2" type="button">
+                      Previous
+                    </button>
+                    <button class="btn btn-secondary next-btn" type="button"  >
+                      Next
+                    </button>
                      
                     </div>
                     </form>
@@ -703,8 +696,8 @@
                             <label>STATE/PROVINCE</label>
                             <select
                               class="custom-select form-control state_id"
-                              name="stateId"
-                              id="stateId"
+                              name="state_id"
+                              id="state_id"
                             >
                               <option value="1">Choose One</option>
                               <option value="2">
@@ -819,6 +812,18 @@
                           </div>
                         </div>
                       </div>
+
+                      <div
+                      class="btn-toolbar custom-toolbar text-center card-body pt-0 mt-5"
+                    >
+                    <button class="btn btn-secondary prev-btn mr-2" type="button">
+                      Previous
+                    </button>
+                    <button class="btn btn-secondary next-btn" type="button"  >
+                      Next
+                    </button>
+                     
+                    </div>
                     </form>
                   </div>
 
@@ -889,6 +894,19 @@
                       </div>
                     </div>
                     </div>
+
+                    <div
+                      class="btn-toolbar custom-toolbar text-center card-body pt-0 mt-5"
+                    >
+                    <button class="btn btn-secondary prev-btn mr-2" type="button">
+                      Previous
+                    </button>
+                    <button class="btn btn-secondary next-btn" type="button"  >
+                      Next
+                    </button>
+                     
+                    </div>
+
                     </form>
                   </div>
 
@@ -1093,6 +1111,18 @@
                                 </div>
                               </div>
                             </div>
+
+                            <div
+                      class="btn-toolbar custom-toolbar text-center card-body pt-0 mt-5"
+                    >
+                      <button class="btn btn-secondary prev-btn mr-2" type="button">
+                        Previous
+                      </button>
+                      <button class="btn btn-secondary next-btn" type="button"  >
+                        Next
+                      </button>
+                     
+                    </div>
                           </form>
                         </div>
                       </div>
@@ -1100,14 +1130,15 @@
                   </div>
                 </div>
                 
+                <!--
 
                   <div
                     class="btn-toolbar custom-toolbar text-center card-body pt-0 mt-5"
                   >
-                    <button class="btn btn-secondary prev-btn" type="button">
+                    <button class="btn btn-secondary prev-btn " type="button">
                       Previous
                     </button>
-                    <button class="btn btn-secondary next-btn" type="button"  >
+                    <button class="btn btn-secondary next-btn " type="button"  >
                       Next
                     </button>
                     <button class="btn btn-secondary finish-btn" type="submit">
@@ -1115,6 +1146,7 @@
                     </button>
                   </div>
                 
+                -->
 
               </div>
               
@@ -1161,6 +1193,8 @@
     <script src="js/2btrust/2btrust.model/AccountDocument.js"></script>
     
     <script src="js/2btrust/formValidation.js"></script>
+
+
     <script>
       $(".check--step3").on("change", function () {
         let radioVal = $(this);
@@ -1177,11 +1211,16 @@
     <script>
       //check Residency
 
-      $("#countryCitizenship").on("change", function (){
+      $("#country_citizenship").on("change", function (){
         let me = $(this);
 
         if (me.val() == 1){
           $('#actionEau').show();
+          $("#actionBrResidence").hide();
+          $("#actionBrIdentification").hide();
+          $("#actionBrHaveTax").hide();
+          $("#requireDocument").hide();
+
           
         }else{
           $("#actionEau").hide();
