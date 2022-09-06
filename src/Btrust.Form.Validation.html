@@ -732,7 +732,7 @@
                               type="checkbox"
                               class="custom-control-input checkme"
                               id="jQueryControlValidation1"
-                              name="jQueryControlValidation1"
+                              name="differentAddress"
                             />
                             <label
                               class="custom-control-label"
@@ -753,6 +753,7 @@
                               <input
                                 class="form-control"
                                 name="jQueryLabelsInInputEmail"
+                                id="addressDifferent"
                               />
                               <span>ADDRESS LINE ONE</span>
                             </div>
@@ -762,6 +763,7 @@
                               <input
                                 class="form-control"
                                 name="jQueryLabelsInInputEmail"
+                                id="complementDifferent"
                               />
                               <span>ADDRESS LINE TWO</span>
                             </div>
@@ -772,6 +774,7 @@
                               <input
                                 class="form-control"
                                 name="jQueryLabelsInInputEmail"
+                                id="cityDifferent"
                               />
                               <span>CITY</span>
                             </div>
@@ -783,7 +786,7 @@
                               <select
                                 class="custom-select form-control state_id"
                                 name="stateId"
-                                id="stateId"
+                                id="stateIdDifferent"
                               >
                                 <option value="1">Choose One</option>
                                 <option value="2">
@@ -806,6 +809,7 @@
                               <input
                                 class="form-control"
                                 name="jQueryLabelsInInputEmail"
+                                id="zipcodeDifferent"
                               />
                               <span>ZIP/POSTAL CODE</spa>
                             </div>
@@ -901,10 +905,33 @@
                     <button class="btn btn-secondary prev-btn mr-2" type="button">
                       Previous
                     </button>
-                    <button class="btn btn-secondary next-btn" type="button"  >
+                    <button type="button" 
+                    class="btn btn-secondary" 
+                    data-toggle="modal"
+                    data-target="#exampleMo">
                       Next
-                    </button>
-                     
+                     </button>
+                            <!-- Modal -->
+                        <div class="modal fade" id="exampleMo" tabindex="-1" role="dialog" aria-hidden="true"
+                        style="height: auto;">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                Do you want to close or register any more holders?
+                              </div>
+                              <div class="modal-footer myModal">
+                                <button type="button" class="btn btn-secondary btnSim" data-dismiss="modal">New account Holder</button>  
+                                <button type="button" class="btn btn-primary next-btn btnNao" data-dismiss="modal">Save changes</button>                                          
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                     </div>
 
                     </form>

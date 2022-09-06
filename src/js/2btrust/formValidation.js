@@ -26,31 +26,64 @@ $(".frmIdentification .next-btn").on('click', function(){
 
 $(".frmAddress .next-btn").on('click', function(){
     let address = new Address();
-    address.country_citizenship = $("#address").val();
+    address.address = $("#address").val();
     address.complement = $("#complement").val();
     address.city = $("#city").val();
     address.state_id = $("#state_id").val();
     address.zipcode = $("#zipcode").val();
-    
+    console.log(address)
     holder.addAccountAddrress(address);
 
-    if($("input[name='typeAccount']").is('checked')){
+    if($("input[name='differentAddress']").is(':checked')){
         let address = new Address();
-
+        address.address = $("#addressDifferent").val();
+        address.complement = $("#complementDifferent").val();
+        address.city = $("#cityDifferent").val();
+        address.state_id = $("#stateIdDifferent").val();
+        address.zipcode = $("#zipcodeDifferent").val();
         holder.addAccountAddrress(address);
+        console.log(address)
     }
 });
 
-$('#myModal .btnSim').on('click', function(){
+$('.myModal .btnSim').on('click', function(){
     account.addAccountHolder(holder);
     holder = new AccountHolder();
+    console.log(holder);
+    
+    $("#firstName").val("");
+    $("#middleName").val("");
+    $("#lastName").val("");
+    $("#date_of_birth").val("");
+    $("#country_citizenship").val("");
+    $("#country_residency").val("");
+    $("#social_security_tax_id").val("");
+    $("#country_citizenship").val("");
+    $("#address").val("");
+    $("#complement").val("");
+    $("#city").val("");
+    $("#state_id").val("");
+    $("#zipcode").val("");
+    $("#addressDifferent").val("");
+    $("#addressDifferent").val("");
+    $("#complementDifferent").val("");
+    $("#cityDifferent").val("");
+    $("#stateIdDifferent").val("");
+    $("#zipcodeDifferent").val("");
+    
+
+    //addres depois do checkbox
+
+    
+
+
     //mandar para  a primeira step-1
 });
 
-$('#myModal .btnNao').on('click', function(){
+$('.myModal .btnNao').on('click', function(){
     account.addAccountHolder(holder);
+    console.log(account);
     //Avança para a proxima step
-    //mandar para  a primeira step-1
 });
 
 /*

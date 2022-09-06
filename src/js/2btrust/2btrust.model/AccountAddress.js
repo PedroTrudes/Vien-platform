@@ -2,12 +2,12 @@
 class Address {
 
     constructor(){
-        this.address = "address";
-        this.complement = "complement";
-        this.city = "city";
-        this.state_id = "state_id";
-        this.zipcode = "zipcode";
-        this.type = "type";
+        this.address;
+        this.complement;
+        this.city;
+        this.state_id;
+        this.zipcode;
+        this.type;
     }
     toJson(){
         return JSON.stringify(this);
