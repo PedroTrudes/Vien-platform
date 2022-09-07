@@ -17,6 +17,12 @@ $(".frmAccountHolder .next-btn").on('click', function(){
     console.log(holder);
 });    
 
+$(".fmrAgreements .next-btn").on('click', function(){
+    holder.bank_name = $("#bank_name").val();
+    holder.bank_aba_routing_number = $("#bank_aba_routing_number").val();
+    holder.bank_account_number = $("#bank_account_number").val();
+    console.log(account);
+})
 
 
 $(".frmIdentification .next-btn").on('click', function(){

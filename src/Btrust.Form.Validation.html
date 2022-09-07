@@ -278,7 +278,7 @@
                             type="radio"
                             id="jQueryCustomRadio1"
                             name="typeAccount"
-                            class="custom-control-input typeAccount "
+                            class="custom-control-inputg"
                             value="Individual"
                             checked
                             />
@@ -330,7 +330,7 @@
                                 name="firstName"
                                 id="firstName"
                               />
-                              <span>FRIST NAME</span>
+                              <span>FRIST NAME (Required Field)</span>
                             </div>
                           </div>
 
@@ -341,7 +341,7 @@
                                 name="middleName"
                                 id="middleName"
                               />
-                              <span>MIDDLE NAME</span>
+                              <span>MIDDLE NAME (Required Field)</span>
                             </div>
                           </div>
 
@@ -352,7 +352,7 @@
                                 name="lastName"
                                 id="lastName"
                               />
-                              <span>LAST NAME</span>
+                              <span>LAST NAME (Required Field)</span>
                             </div>
                           </div>
                           
@@ -363,7 +363,7 @@
                                   name="date_of_birth"
                                   id="date_of_birth"
                                 />
-                                <span>DATE OF BIRTH</span>
+                                <span>DATE OF BIRTH (Required Field)</span>
                               </div>
                             </div>
                         </div>
@@ -372,7 +372,7 @@
                           
                             <div class="form-group col-md-12">
                               <div class="form-group has-top-label">
-                                <label>COUNTRY OF CITIZENSHIP</label>
+                                <label>COUNTRY OF CITIZENSHIP (Required Field)</label>
                                 <select
                                   class="custom-select form-control state_id"
                                   name="country_citizenship"
@@ -386,7 +386,7 @@
                           
                             <div class="form-group col-md-12">
                               <div class="form-group has-top-label">
-                                <label>COUNTRY OF RESIDENCE</label>
+                                <label>COUNTRY OF RESIDENCE (Required Field)</label>
                                 <select
                                   class="custom-select form-control state_id"
                                   name="country_residency"
@@ -405,14 +405,14 @@
                                   id="socialSecurityTaxId"
                                   name="socialSecurityTaxId"
                                 />
-                                <span>SOCIAL SECURITY NUMBER</span>
+                                <span>SOCIAL SECURITY NUMBER (Required Field)</span>
                               </div>
                             </div>
                           
 
                             <div class="form-group col-md-12" id="actionBrResidence" style="display: none;">
                               <div class="form-group has-top-label">
-                                <label>TAX RESIDENCE COUNTRY</label>
+                                <label>TAX RESIDENCE COUNTRY (Required Field)</label>
                                 <select
                                   class="custom-select form-control"
                                   name="countryTaxResidency"
@@ -431,7 +431,7 @@
                                   name="taxIdentificationNumber"
                                   id="taxIdentificationNumber"
                                 />
-                                <span>TAX IDENTIFICATION NUMBER</span>
+                                <span>TAX IDENTIFICATION NUMBER (Required Field)</span>
                               </div>
                             </div>
 
@@ -664,6 +664,7 @@
                               class="form-control"
                               name="address"
                               id="address"
+                              placeholder="Required"
                             />
                             <span>ADDRESS LINE ONE</span>
                           </div>
@@ -675,6 +676,7 @@
                               class="form-control"
                               name="complement"
                               id="complement"
+                              placeholder="Apt, Suite, Floor, etc."
                             />
                             <span>ADDRESS LINE TWO</span>
                           </div>
@@ -686,6 +688,7 @@
                               class="form-control"
                               name="city"
                               id="city"
+                              placeholder="Required"
                             />
                             <span>CITY</span>
                           </div>
@@ -719,6 +722,7 @@
                               class="form-control"
                               name="zipcode"
                               id="zipcode"
+                              placeholder="Required"
                             />
                             <span>ZIP/POSTAL CODE</span>
                           </div>
@@ -873,6 +877,7 @@
                           <input
                             class="form-control"
                             name="jQueryLabelsInInputEmail"
+                            placeholder="Required"
                           />
                           <span>Full Employer Name</span>
                         </div>
@@ -883,6 +888,7 @@
                           <input
                             class="form-control"
                             name="jQueryLabelsInInputEmail"
+                            placeholder="Required"
                           />
                           <span>Phone Number</span>
                         </div>
@@ -892,6 +898,7 @@
                           <input
                             class="form-control"
                             name="jQueryLabelsInInputEmail"
+                            placeholder="Required"
                           />
                           <span>Annual Income</span>
                         </div>
@@ -998,7 +1005,7 @@
                         <div class="form-row">
                           <form
                             id="form-step-5"
-                            class="tooltip-label-right"
+                            class="tooltip-label-right fmrAgreements"
                             name="fmrAgreements"
                             itemid="fmrAgreements"
                             method="post"
@@ -1085,8 +1092,8 @@
                                     autocomplete="off"
                                     type="text"
                                     class="form-control bank_name"
-                                    name="bankName"
-                                    id="bankName"
+                                    name="bank_name"
+                                    id="bank_name"
                                     placeholder="Bank Name"
                                     
                                   />
@@ -1098,7 +1105,8 @@
                                   <label>Bank Account Type</label>
                                   <select
                                     class="custom-select bank_account_type"
-                                    name="bankAccountType"
+                                    name="bank_account_type"
+                                    id="bank_account_type"
                                     
                                   >
                                     <option value=""></option>
@@ -1118,8 +1126,8 @@
                                     autocomplete="off"
                                     type="number"
                                     class="form-control bank_aba_routing_number"
-                                    id="bankAbaRoutingNumber"
-                                    name="bankAbaRoutingNumber"
+                                    id="bank_aba_routing_number"
+                                    name="bank_aba_routing_number"
                                     
                                   />
                                 </div>
@@ -1131,8 +1139,8 @@
                                     autocomplete="off"
                                     type="number"
                                     class="form-control bank_account_number"
-                                    id="bankAccountBumber"
-                                    name="bankAccountBumber"
+                                    id="bank_account_number"
+                                    name="bank_account_number"
                                     
                                   />
                                 </div>

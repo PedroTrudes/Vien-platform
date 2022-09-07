@@ -6,12 +6,12 @@ class Account {
           
               this.user_id;
               this.type = type ;
-              this.status ="";
+              this.status = 0;
               this.reinvest_yield="" ;
-              this.bank_name = "a";
-              this.bank_aba_routing_number = "a";
-              this.bank_account_number = "bank_account_number";
-              this.accountHolder = "accountHolder";
+              this.bank_name;
+              this.bank_aba_routing_number;
+              this.bank_account_number;
+              //this.accountHolder = "accountHolder";
           }
           //transformando dados em json
           toJson() {
