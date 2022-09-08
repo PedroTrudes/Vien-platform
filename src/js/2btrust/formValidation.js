@@ -1,33 +1,65 @@
+$(".fileupload :file").on("change", function () {
+    let input = $(this).parents(".input-group").find(":text");
+    if (input.length) {
+        input.val($(this).val());
+    }
+});
+
 let account = new Account();    
+$("input[name='typeAccount']").on("change", function(){
+    const type = $("input[name='typeAccount']:checked").val();
+    if(type === "business"){
+        //mostrar campos adicionais 
+        account.company = new Company();
+    
+    }else {
+        account.company = null;
+        //ocultar campos
+    }
+    console.log(account);
+});
+
 $(".frmTypeAccount .next-btn").on('click', function(){
-    account.type = $("input[name='typeAccount']:checked").val();
+    const type = $("input[name='typeAccount']:checked").val();
+    account.type = type;
+    if(type === "business"){
+        account.company.name = $("#").val();
+
+    }
     console.log(account);
 });
 
 let holder = new AccountHolder();
 $(".frmAccountHolder .next-btn").on('click', function(){
-    holder.firstname = $("#firstName").val();
-    holder.middle_name = $("#middleName").val();
-    holder.lastname = $("#lastName").val();
-    holder.date_of_birth = $("#date_of_birth").val();
-    holder.country_citizenship = $("#country_citizenship").val();
-    holder.country_residency = $("#country_residency").val();
-    holder.social_security_tax_id = $("#social_security_tax_id").val();
-
-    console.log(holder);
+    if($(".frmAccountHolder").valid()){
+        holder.firstname = $("#firstName").val();
+        holder.middle_name = $("#middleName").val();
+        holder.lastname = $("#lastName").val();
+        holder.date_of_birth = $("#date_of_birth").val();
+        holder.country_citizenship = $("#country_citizenship").val();
+        holder.country_residency = $("#country_residency").val();
+        holder.social_security_tax_id = $("#social_security_tax_id").val();
+        holder.country_tax_residency = $("#country_tax_residency").val();
+    
+        console.log(holder);
+    }
 });    
-
-$(".fmrAgreements .next-btn").on('click', function(){
-    holder.bank_name = $("#bank_name").val();
-    holder.bank_aba_routing_number = $("#bank_aba_routing_number").val();
-    holder.bank_account_number = $("#bank_account_number").val();
-    console.log(account);
-})
 
 
 $(".frmIdentification .next-btn").on('click', function(){
-    holder.country_citizenship = $("#country_citizenship").val();
+    const documentFile = $("#documentFile")[0];
+    holder.documents.filename = documentFile.files[0];
+    holder.documents.document_type_id = $("#document_type_id").val();
     
+    console.log(holder.documents);
+});
+
+$(".frmEmployed .btn-secondary").on('click', function(){
+    holder.employmentStatus.name = $("#employment_name").val();
+    holder.employmentStatus.phone = $("#employment_phone").val();
+    holder.employmentStatus.annual_income = $("#employment_annual_income").val();
+    
+    console.log(holder.employmentStatus);
 });
 
 $(".frmAddress .next-btn").on('click', function(){
@@ -56,33 +88,10 @@ $('.myModal .btnSim').on('click', function(){
     account.addAccountHolder(holder);
     holder = new AccountHolder();
     console.log(holder);
-    
-    $("#firstName").val("");
-    $("#middleName").val("");
-    $("#lastName").val("");
-    $("#date_of_birth").val("");
-    $("#country_citizenship").val("");
-    $("#country_residency").val("");
-    $("#social_security_tax_id").val("");
-    $("#country_citizenship").val("");
-    $("#address").val("");
-    $("#complement").val("");
-    $("#city").val("");
-    $("#state_id").val("");
-    $("#zipcode").val("");
-    $("#addressDifferent").val("");
-    $("#addressDifferent").val("");
-    $("#complementDifferent").val("");
-    $("#cityDifferent").val("");
-    $("#stateIdDifferent").val("");
-    $("#zipcodeDifferent").val("");
-    
-
+    $('.frmAccountHolder').get(0).reset();
+    $('.frmAddress').get(0).reset();
+    $('#smartWizardValidation').smartWizard("goToStep", 1, true);
     //addres depois do checkbox
-
-    
-
-
     //mandar para  a primeira step-1
 });
 
@@ -90,6 +99,46 @@ $('.myModal .btnNao').on('click', function(){
     account.addAccountHolder(holder);
     console.log(account);
     //Avança para a proxima step
+});
+
+$(".fmrAgreements .next-btn").on('click', function(){
+    account.bank_name = $("#bank_name").val();
+    account.bank_aba_routing_number = $("#bank_aba_routing_number").val();
+    account.bank_account_number = $("#bank_account_number").val();
+    console.log(account);
+});
+
+$(function(){
+    
+$(".frmAccountHolder")
+.validate({
+    rules:{
+        fristname: {
+            required: true,
+        },
+        middle_name:{
+            required: true,
+        },
+        lastname: {
+            required: true,
+        },
+        date_of_birth: {
+            required: true,
+        },
+        social_security_tax_id: {
+            required: true,
+        },
+        country_citizenship: {
+            required: true,
+        },
+        country_residency: {
+            required: true,
+        },
+        country_tax_residency: {
+            required: true,
+        },
+    }
+});
 });
 
 /*
@@ -127,23 +176,6 @@ $(".frmAccountHolder")
             require: true,
         }
 
-    }
-}),
-({
-    submitHandler: form => {
-       
-       
-        accountHolder.account_id =  $("#namecampo").val();
-        accountHolder.fristname =  $("#firstName").val();
-        accountHolder.middle_name =  $("#middleName").val();
-        accountHolder.lastname =  $("#lastName").val();
-        accountHolder.date_of_birth =  $("#dateOfBirth").val();
-        accountHolder.social_security_tax_id =  $("#socialSecurityTaxId").val();
-        accountHolder.country_citizenship =  $("#countryCitizenship").val();
-        accountHolder.country_residency =  $("#countryResidency").val();
-        accountHolder.country_tax_residency =  $("#countryTaxResidency").val();
-        accountHolder.is_primary =  $("#nomecampo").val();
-        
     }
 })
 

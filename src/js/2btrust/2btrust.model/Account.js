@@ -2,17 +2,17 @@ class Account {
 
     holders = [];
     acknowledgment_signed ;
+    bank_name;
+    bank_aba_routing_number;
+    bank_account_number;
+    user_id;
+    status = 0;
+    reinvest_yield= false;
       constructor(type){
           
-              this.user_id;
               this.type = type ;
-              this.status = 0;
-              this.reinvest_yield="" ;
-              this.bank_name;
-              this.bank_aba_routing_number;
-              this.bank_account_number;
-              //this.accountHolder = "accountHolder";
           }
+          
           //transformando dados em json
           toJson() {
               return JSON.stringify(this);
