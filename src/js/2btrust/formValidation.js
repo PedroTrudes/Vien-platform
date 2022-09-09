@@ -11,8 +11,9 @@ $("input[name='typeAccount']").on("change", function(){
     if(type === "business"){
         //mostrar campos adicionais 
         account.company = new Company();
-    
+        $("#frmAccountBusiness").show();
     }else {
+        $("#frmAccountBusiness").hide();
         account.company = null;
         //ocultar campos
     }
@@ -23,7 +24,10 @@ $(".frmTypeAccount .next-btn").on('click', function(){
     const type = $("input[name='typeAccount']:checked").val();
     account.type = type;
     if(type === "business"){
-        account.company.name = $("#").val();
+        account.company.name = $("#name").val();
+        account.company.person_title = $("#person_title").val();
+        account.company.state = $("#state").val();
+        account.company.ein = $("#ein").val();
 
     }
     console.log(account);
@@ -84,13 +88,13 @@ $(".frmAddress .next-btn").on('click', function(){
     }
 });
 
-$('.myModal .btnSim').on('click', function(){
+$('.myModal .btnSim').on('click', function(){ 
     account.addAccountHolder(holder);
     holder = new AccountHolder();
     console.log(holder);
     $('.frmAccountHolder').get(0).reset();
     $('.frmAddress').get(0).reset();
-    $('#smartWizardValidation').smartWizard("goToStep", 1, true);
+    $('#smartWizardValidation').smartWizard();
     //addres depois do checkbox
     //mandar para  a primeira step-1
 });
