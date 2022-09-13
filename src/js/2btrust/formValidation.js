@@ -95,13 +95,17 @@ $('.myModal .btnSim').on('click', function(){
     $('.frmAccountHolder').get(0).reset();
     $('.frmAddress').get(0).reset();
     $('#smartWizardValidation').smartWizard();
+    
     //addres depois do checkbox
     //mandar para  a primeira step-1
 });
 
 $('.myModal .btnNao').on('click', function(){
     account.addAccountHolder(holder);
-    console.log(account);
+    console.log(account.toJson());
+    $("#nameHolder").html(holder.firstname + " " + holder.middle_name + " " + holder.lastname);
+    $("#addressHolder").html(holder.address.address + " " );
+    
     //Avança para a proxima step
 });
 
@@ -110,8 +114,31 @@ $(".fmrAgreements .next-btn").on('click', function(){
     account.bank_aba_routing_number = $("#bank_aba_routing_number").val();
     account.bank_account_number = $("#bank_account_number").val();
     console.log(account);
+/*
+    $(document).ready(function(){
+        carregar_json('holders');
+        function carregar_json(id){
+            var html = '';
+  */  
+ var accountjson = account.toJson();
+            $.getJSON("js/2btrust/2btrust.model/Account.js", function(data){
+                html += '<span>Account: ' + id + ' teste';
+                console.log(data);
+            
+            $('#' + id).html(html);
+            }).fail(function(jqxhr, textStatus, error){
+                var err = textStatus + ", " + error;
+                console.log("request faill: " + err);
+            });
+        });
+
+        /*
+    });
 });
 
+*/
+
+/*
 $(function(){
     
 $(".frmAccountHolder")
@@ -144,6 +171,10 @@ $(".frmAccountHolder")
     }
 });
 });
+
+
+    */
+
 
 /*
 $(".frmAccountHolder")

@@ -277,721 +277,358 @@
                 </ul>
 
                 <div class="card-body">
+                 
                   <div id="step-0" style="height: auto">
-                    <h5 class="mb-5">
-                      What type of account would you like to open?
-                    </h5>
-                    <form
-                      id="form-step-0"
-                      class="frmTypeAccount"
-                      name="frmTypeAccount"
-                      method="post"
-                      action=""
-                    >
+                    <h5 class="mb-5">What type of account would you like to open?</h5>
+                    <form id="form-step-0" name="frmTypeAccount" method="post" action="" class="frmTypeAccount">
                       <div>
-                       
-
                         <div class="custom-control custom-radio">
-                          <input
-                            id="personal_account"
-                            type="radio"
-                            name="typeAccount"
-                            class="custom-control-input "
-                            value="personal"
-                          />
-                          <label
-                            class="custom-control-label"
-                            for="personal_account"
-                          >
-                          Personal Account</label
-                          >
+                          <input type="radio" value="personal" id="personal_account" name="typeAccount"  class="custom-control-input"/>
+                          <label for="personal_account" class="custom-control-label">Personal Account</label>
                         </div>
                         <div class="custom-control custom-radio">
-                          <input
-                            id="business_account"
-                            type="radio"
-                            name="typeAccount"
-                            class="custom-control-input "
-                            value="business"
-                          />
-                          <label
-                            class="custom-control-label"
-                            for="business_account"
-                          >
-                            Business Account</label
-                          >
+                          <input type="radio" value="business" id="business_account" name="typeAccount" class="custom-control-input"/>
+                          <label for="business_account" class="custom-control-label">Business Account</label>
                         </div>
-
-                        <div class="form-row col-md-6 mt-4" id="frmAccountBusiness" style="display: none;">
+                        <div id="frmAccountBusiness" class="form-row col-md-6 mt-4" style="display: none;">
                           <div class="form-group col-md-12">
                             <div class="form-group has-top-label">
-                              <input
-                                class="form-control"
-                                name="name"
-                                id="name"
-                              />
-                              <span>NAME *</span>
+                              <input type="text" id="name" name="name" class="form-control"/>
+                              <span>NAME <strong class="text-danger">*</strong></span>
                             </div>
                           </div>
-
                           <div class="form-group col-md-12">
                             <div class="form-group has-top-label">
-                              <input
-                                class="form-control"
-                                name="person_title"
-                                id="person_title"
-                              />
-                              <span>PERSON TITLE *</span>
+                              <input type="text" id="person_title" name="person_title" class="form-control"/>
+                              <span>PERSON TITLE <strong class="text-danger">*</strong></span>
                             </div>
                           </div>
-
                           <div class="form-group col-md-12">
                             <div class="form-group has-top-label">
-                              <input
-                                class="form-control"
-                                name="state"
-                                id="state"
-                              />
-                              <span>STATE *</span>
+                              <input type="text" id="state" name="state" class="form-control"/>
+                              <span>STATE <strong class="text-danger">*</strong></span>
                             </div>
                           </div>
-                          
                           <div class="form-group col-md-12">
                             <div class="form-group has-top-label">
-                              <input
-                                class="form-control"
-                                name="ein"
-                                id="ein"
-                              />
-                              <span>EIN *</span>
+                              <input type="text" id="ein" name="ein" class="form-control"/>
+                              <span>EIN <strong class="text-danger">*</strong></span>
                             </div>
                           </div>
                         </div>
                       </div>
                       <div class="btn-toolbar custom-toolbar text-center card-body pt-0 mt-5">
-                        <button class="btn btn-secondary next-btn" type="button"  >
-                        Next
-                        </button>
+                        <button type="button" class="btn btn-secondary next-btn">Next</button>
                       </div>
                     </form>
                   </div>
-
-                  <div id="step-1" style="height: auto">
-                    <form
-                      id="form-step-1"
-                      class="frmAccountHolder "
-                      name="frmAccountHolder"
-                      method="post"
-                      action=""
-                    >
+                  <div id="step-1" style="height: auto"> 
+                    <form id="form-step-1" name="frmAccountHolder" method="post" action="" class="frmAccountHolder">
                       <div class="form-row col-12">
                         <div class="form-row col-md-6">
                           <div class="form-group col-md-12">
                             <div class="form-group has-top-label">
-                              <input
-                                class="form-control"
-                                name="firstName"
-                                id="firstName"
-                              />
-                              <span>FRIST NAME (Required Field)</span>
+                              <input type="text" id="firstName" name="firstName" class="form-control"/>
+                              <span>FRIST NAME <strong class="text-danger">*</strong></span>
                             </div>
                           </div>
-
                           <div class="form-group col-md-12">
                             <div class="form-group has-top-label">
-                              <input
-                                class="form-control"
-                                name="middleName"
-                                id="middleName"
-                              />
-                              <span>MIDDLE NAME (Required Field)</span>
+                              <input type="text" id="middleName" name="middleName" class="form-control"/>
+                              <span>MIDDLE NAME <strong class="text-danger">*</strong></span>
                             </div>
                           </div>
-
                           <div class="form-group col-md-12">
                             <div class="form-group has-top-label">
-                              <input
-                                class="form-control"
-                                name="lastName"
-                                id="lastName"
-                              />
-                              <span>LAST NAME (Required Field)</span>
+                              <input type="text" id="lastName" name="lastName" class="form-control"/>
+                              <span>LAST NAME <strong class="text-danger">*</strong></span>
                             </div>
                           </div>
-                          
                             <div class="form-group col-md-12">
                               <div class="form-group has-top-label">
-                                <input
-                                  class="form-control datepicker"
-                                  name="date_of_birth"
-                                  id="date_of_birth"
-                                />
-                                <span>DATE OF BIRTH (Required Field)</span>
+                                <input id="date_of_birth" name="date_of_birth" class="form-control datepicker"/>
+                                <span>DATE OF BIRTH <strong class="text-danger">*</strong></span>
                               </div>
                             </div>
                         </div>
-
                         <div class="form-row col-sm-12 col-md-6" >
-                          
                             <div class="form-group col-md-12">
                               <div class="form-group has-top-label">
-                                <label>COUNTRY OF CITIZENSHIP (Required Field)</label>
-                                <select
-                                  class="custom-select form-control state_id"
-                                  name="country_citizenship"
-                                  id="country_citizenship"
-                                >
+                                <label>COUNTRY OF CITIZENSHIP <strong class="text-danger">*</strong></label>
+                                <select id="country_citizenship" name="country_citizenship" class="custom-select form-control state_id">
                                   <option value="1">United States</option>
                                   <option value="2">Brasil</option>
                                 </select>
                               </div>
-                            </div>
-                          
+                            </div>                          
                             <div class="form-group col-md-12">
                               <div class="form-group has-top-label">
-                                <label>COUNTRY OF RESIDENCE (Required Field)</label>
-                                <select
-                                  class="custom-select form-control state_id"
-                                  name="country_residency"
-                                  id="country_residency"
-                                >
+                                <label>COUNTRY OF RESIDENCE <strong class="text-danger">*</strong></label>
+                                <select id="country_residency" name="country_residency" class="custom-select form-control state_id">
                                   <option value="1">United States</option>
                                   <option value="2">Brasil</option>
                                 </select>
                               </div>
                             </div>
-                          
-                            <div class="form-group col-md-12" id="actionEau">
+                            <div id="actionEau" class="form-group col-md-12">
                               <div class="form-group has-top-label">
-                                <input
-                                  class="form-control"
-                                  id="social_security_tax_id"
-                                  name="social_security_tax_id"
-                                />
-                                <span>SOCIAL SECURITY NUMBER (Required Field)</span>
+                                <input type="number" id="social_security_tax_id" name="social_security_tax_id" class="form-control"/>
+                                <span>SOCIAL SECURITY NUMBER <strong class="text-danger">*</strong></span>
                               </div>
                             </div>
-                          
-
-                            <div class="form-group col-md-12" id="actionBrResidence" style="display: none;">
+                            <div id="actionBrResidence" class="form-group col-md-12" style="display: none;">
                               <div class="form-group has-top-label">
-                                <label>TAX RESIDENCE COUNTRY (Required Field)</label>
-                                <select
-                                  class="custom-select form-control"
-                                  name="country_tax_residency"
-                                  id="country_tax_residency"
-                                >
+                                <label>TAX RESIDENCE COUNTRY <strong class="text-danger">*</strong></label>
+                                <select id="country_tax_residency" name="country_tax_residency" class="custom-select form-control">
                                   <option value="1">United States</option>
                                   <option value="2">Brasil</option>
                                 </select>
                               </div>
                             </div>
-
-                            <div class="form-group col-md-12" id="actionBrIdentification" style="display: none;">
+                            <div id="actionBrIdentification" class="form-group col-md-12" style="display: none;">
                               <div class="form-group has-top-label">
-                                <input
-                                  class="form-control"
-                                  name="taxIdentificationNumber"
-                                  id="taxIdentificationNumber"
-                                />
-                                <span>TAX IDENTIFICATION NUMBER (Required Field)</span>
+                                <input type="number" id="taxIdentificationNumber" name="taxIdentificationNumber" class="form-control"/>
+                                <span>TAX IDENTIFICATION NUMBER <strong class="text-danger">*</strong></span>
                               </div>
                             </div>
-
-                          
-
                         </div>
-
-                        <div class="form-group col-md-12" id="actionBrHaveTax" style="display: none;">
+                        <div id="actionBrHaveTax" class="form-group col-md-12" style="display: none;">
                           <div class="custom-control custom-checkbox">
-                            <input
-                              type="checkbox"
-                              class="custom-control-input"
-                              id="haveTaxIdentification"
-                              name="haveTaxIdentification"
-                            />
-                            <label
-                              class="custom-control-label"
-                              for="haveTaxIdentification"
-                            >
-                              I have a tax identification number
-                            </label>
+                            <input type="checkbox" id="haveTaxIdentification" name="haveTaxIdentification" class="custom-control-input"/>
+                            <label for="haveTaxIdentification" class="custom-control-label">I have a tax identification number</label>
                           </div>
                         </div>
-
-                      <div class="form-group col-md-12" id="requireDocument" style="display: none;">
-                        <div class="form-group col-md-12" >
-                          <h6 class="text-small">
-                            US Internal Revenue Service rules require the
-                            collection of a taxpayer identification number (or
-                            equivalent) (TIN) for <br />
-                            all of your tax residencies. Failure to provide a
-                            TIN may require us to treat your account as
-                            undocumented for US tax <br />
-                            purposes and impose exceptional withholding on
-                            income and proceeds paid to the account. Update your
-                            entry and provide your TIN above. <br />
-                            If you do not have a TIN, provide an appropriate
-                            reason (one selection required):
-                          </h6>
-                        </div>
-
-                        <div class="form-group col-md-12">
-                          <div class="custom-control custom-radio">
-                            <input
-                              type="radio"
-                              id="jQueryCustomRadio1"
-                              name="jQueryCustomRadio"
-                              class="custom-control-input"
-                            />
-                            <label
-                              class="custom-control-label"
-                              for="jQueryCustomRadio1"
-                            >
-                              I have a US taxpayer identification number and I
-                              will add it to the W8 tax form.</label
-                            >
+                        <div class="form-group col-md-12" id="requireDocument" style="display: none;">
+                          <div class="form-group col-md-12" >
+                            <h6 class="text-small">
+                              US Internal Revenue Service rules require the
+                              collection of a taxpayer identification number (or
+                              equivalent) (TIN) for <br />
+                              all of your tax residencies. Failure to provide a
+                              TIN may require us to treat your account as
+                              undocumented for US tax <br />
+                              purposes and impose exceptional withholding on
+                              income and proceeds paid to the account. Update your
+                              entry and provide your TIN above. <br />
+                              If you do not have a TIN, provide an appropriate
+                              reason (one selection required):
+                            </h6>
                           </div>
-                          <div class="custom-control custom-radio">
-                            <input
-                              type="radio"
-                              id="jQueryCustomRadio2"
-                              name="jQueryCustomRadio"
-                              class="custom-control-input"
-                            />
-                            <label
-                              class="custom-control-label"
-                              for="jQueryCustomRadio2"
-                            >
-                              The specified country does not issue TINs to its
-                              residents.</label
-                            >
-                          </div>
-                          <div class="custom-control custom-radio">
-                            <input
-                              type="radio"
-                              id="jQueryCustomRadio2"
-                              name="jQueryCustomRadio"
-                              class="custom-control-input"
-                            />
-                            <label
-                              class="custom-control-label"
-                              for="jQueryCustomRadio2"
-                            >
-                              I am not legally required to obtain a TIN from the
-                              specified country.
-                            </label>
-                          </div>
-                          <div class="custom-control custom-radio">
-                            <input
-                              type="radio"
-                              id="jQueryCustomRadio2"
-                              name="jQueryCustomRadio"
-                              class="custom-control-input"
-                            />
-                            <label
-                              class="custom-control-label"
-                              for="jQueryCustomRadio2"
-                            >
-                              TINs are issued, however, account holder is exempt
-                              from this requirement under the laws of the
-                              specified country.
-                            </label>
-                          </div>
-                          <div class="custom-control custom-radio">
-                            <input
-                              type="radio"
-                              id="jQueryCustomRadio2"
-                              name="jQueryCustomRadio"
-                              class="custom-control-input"
-                            />
-                            <label
-                              class="custom-control-label"
-                              for="jQueryCustomRadio2"
-                            >
-                              Other
-                            </label>
+                          <div class="form-group col-md-12">
+                            <div class="custom-control custom-radio">
+                              <input type="radio" id="jQueryCustomRadio1" name="jQueryCustomRadio" class="custom-control-input"/>
+                              <label for="jQueryCustomRadio1" class="custom-control-label">I have a US taxpayer identification number and I will add it to the W8 tax form.</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" id="jQueryCustomRadio2" name="jQueryCustomRadio" class="custom-control-input"/>
+                              <label for="jQueryCustomRadio2" class="custom-control-label">The specified country does not issue TINs to its residents.</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" id="jQueryCustomRadio3" name="jQueryCustomRadio" class="custom-control-input"/>
+                              <label for="jQueryCustomRadio3" class="custom-control-label">I am not legally required to obtain a TIN from the specified country.</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" id="jQueryCustomRadio4" name="jQueryCustomRadio" class="custom-control-input"/>
+                              <label for="jQueryCustomRadio4" class="custom-control-label">TINs are issued, however, account holder is exempt from this requirement under the laws of the specified country.</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" id="jQueryCustomRadio5" name="jQueryCustomRadio" class="custom-control-input"/>
+                              <label for="jQueryCustomRadio5" class="custom-control-label">Other</label>
+                            </div>
                           </div>
                         </div>
                       </div>
+                      <div class="btn-toolbar custom-toolbar text-center card-body pt-0 mt-5">
+                        <button type="button" class="btn btn-secondary prev-btn mr-2">Previous</button>
+                        <button  type="button" class="btn btn-secondary next-btn">Next</button>
                       </div>
-
-                      <div
-                      class="btn-toolbar custom-toolbar text-center card-body pt-0 mt-5"
-                    >
-                      <button class="btn btn-secondary prev-btn mr-2" type="button">
-                        Previous
-                      </button>
-                      <button class="btn btn-secondary next-btn" type="button"  >
-                        Next
-                      </button>
-                    </div>
-    
-                
-                      
                     </form>
                   </div>
-
                   <div id="step-2" style="height: auto">
                     <h5 class="mb-2">Identification</h5>
-                    <p class="text-small mb-5">
-                      The name on the proof of Identification entered below must
-                      exactly match the name you entered above.
-                    </p>
-                    <form
-                      id="form-step-2"
-                      class="frmIdentification"
-                      name="frmIdentification"
-                      method="post"
-                      action=""
-                    >
-                  
+                    <p class="text-small mb-5">The name on the proof of Identification entered below must exactly match the name you entered above.</p>
+                    <form id="form-step-2" name="frmIdentification" method="post" action="" class="frmIdentification">
                       <div class="form-row">
                         <div class="form-group col-md-12">
                           <div class="form-group has-top-label">
-                            <label>COUNTRY OF ISSUENCE</label>
-                            <select
-                              class="custom-select form-control state_id"
-                              name="country_citizenship"
-                              id="country_citizenship"
-                            >
-                            <!--Ver com andre qual id dar para esse select-->
+                            <label>COUNTRY OF ISSUENCE <strong class="text-danger">*</strong></label>
+                            <select id="country_citizenship" name="country_citizenship" class="custom-select form-control state_id">
                               <option value="1">United States</option>
                               <option value="2">Brazil</option>
                             </select>
                           </div>
                         </div>
-
                         <div class="form-group col-md-12">
                           <div class="form-group has-top-label">
-                            <label>DOCUMENT TYPE</label>
-                            <!--Ver com andre qual id dar para esse select-->
-                            <select
-                              class="custom-select form-control state_id"
-                              name="document_type_id"
-                              id="document_type_id"
-                            >
+                            <label>DOCUMENT TYPE <strong class="text-danger">*</strong></label>
+                            <select id="document_type_id" name="document_type_id" class="custom-select form-control state_id">
                               <option value="1">Choose One</option>
-                              <option value="2">
-                                Cadastro de Pessoas Fisicas Number(CPF)
-                              </option>
-                              <option value="3">
-                                Alien Identification Card
-                              </option>
+                              <option value="2">Cadastro de Pessoas Fisicas Number(CPF)</option>
+                              <option value="3">Alien Identification Card</option>
                               <option value="4">Driver`s License</option>
                               <option value="5">National Identity Card</option>
                               <option value="6">Passport</option>
                             </select>
                           </div>
                         </div>
-
-
                         <div class="col-sm-12 mt-2">
                           <div class="form-group">
-                              <label class="col-form-label">File</label>
+                              <label class="col-form-label">File <strong class="text-danger">*</strong></label>
                               <div class="input-group">
                                   <div class="fileupload btn btn-secondary default" >
                                       <span><i class="simple-icon-cloud-upload mr-2"></i>Search</span>
-                                      <input type="file" class="upload" id="documentFile" name="documentFile"
-                                             accept="image/*">
+                                      <input type="file" class="upload" id="documentFile" name="documentFile" accept="image/*">
                                   </div>
                                   <input type="text" class="form-control" readonly>
                               </div>
                           </div>
                         </div>
                       </div>
-
-                      <div
-                      class="btn-toolbar custom-toolbar text-center card-body pt-0 mt-5"
-                    >
-                    <button class="btn btn-secondary prev-btn mr-2" type="button">
-                      Previous
-                    </button>
-                    <button class="btn btn-secondary next-btn" type="button"  >
-                      Next
-                    </button>
-                     
-                    </div>
+                      <div class="btn-toolbar custom-toolbar text-center card-body pt-0 mt-5">
+                        <button type="button" class="btn btn-secondary prev-btn mr-2">Previous</button>
+                        <button type="button" class="btn btn-secondary next-btn">Next</button>
+                      </div>
                     </form>
-
-
                   </div>
-
                   <div id="step-3" style="height: auto" class="mb-4">
-                    <form
-                      id="form-step-3"
-                      class="frmAddress"
-                      name="frmAddress"
-                      method="post"
-                      action=""
-                    >
+                    <form id="form-step-3" name="frmAddress" method="post" action="" class="frmAddress">
                       <div class="form-row">
                         <div class="form-group col-md-12">
                           <div class="form-group has-top-label">
-                            <input
-                              class="form-control"
-                              name="address"
-                              id="address"
-                              placeholder="Required"
-                            />
-                            <span>ADDRESS LINE ONE</span>
+                            <input type="text" id="address" name="address" class="form-control"/>
+                            <span>ADDRESS LINE ONE <strong class="text-danger">*</strong></span>
                           </div>
                         </div>
-
                         <div class="form-group col-md-12">
                           <div class="form-group has-top-label">
-                            <input
-                              class="form-control"
-                              name="complement"
-                              id="complement"
-                              placeholder="Apt, Suite, Floor, etc."
-                            />
-                            <span>ADDRESS LINE TWO</span>
+                            <input type="text" id="complement" name="complement" class="form-control"/>
+                            <span>ADDRESS LINE TWO <strong class="text-danger">*</strong></span>
                           </div>
                         </div>
-
                         <div class="form-group col-md-4">
                           <div class="form-group has-top-label">
-                            <input
-                              class="form-control"
-                              name="city"
-                              id="city"
-                              placeholder="Required"
-                            />
-                            <span>CITY</span>
+                            <input type="text" id="city" name="city" class="form-control"/>
+                            <span>CITY <strong class="text-danger">*</strong></span>
                           </div>
                         </div>
-
                         <div class="form-group col-md-4">
                           <div class="form-group has-top-label">
-                            <label>STATE/PROVINCE</label>
-                            <select
-                              class="custom-select form-control state_id"
-                              name="state_id"
-                              id="state_id"
-                            >
+                            <label>STATE/PROVINCE <strong class="text-danger">*</strong></label>
+                            <select id="state_id" name="state_id" class="custom-select form-control state_id">
                               <option value="1">Choose One</option>
-                              <option value="2">
-                                Cadastro de Pessoas Fisicas Number(CPF)
-                              </option>
-                              <option value="3">
-                                Alien Identification Card
-                              </option>
+                              <option value="2">Cadastro de Pessoas Fisicas Number(CPF)</option>
+                              <option value="3">Alien Identification Card</option>
                               <option value="4">Driver`s License</option>
                               <option value="5">National Identity Card</option>
                               <option value="6">Passport</option>
                             </select>
                           </div>
                         </div>
-
                         <div class="form-group col-md-4">
                           <div class="form-group has-top-label">
-                            <input
-                              class="form-control"
-                              name="zipcode"
-                              id="zipcode"
-                              placeholder="Required"
-                            />
-                            <span>ZIP/POSTAL CODE</span>
+                            <input type="text" id="zipcode" name="zipcode" class="form-control"/>
+                            <span>ZIP/POSTAL CODE <strong class="text-danger">*</strong></span>
                           </div>
                         </div>
-
                         <div class="form-group col-md-12">
                           <div class="custom-control custom-checkbox">
-
-                            <!--ver com andre sobre os id desse campo-->
-                            <input
-                              type="checkbox"
-                              class="custom-control-input checkme"
-                              id="jQueryControlValidation1"
-                              name="differentAddress"
-                            />
-                            <label
-                              class="custom-control-label"
-                              for="jQueryControlValidation1"
-                            >
-                              I have a Different mailling address
-                            </label>
+                            <input type="checkbox" id="jQueryControlValidation1" name="differentAddress" class="custom-control-input checkme"/>
+                            <label for="jQueryControlValidation1" class="custom-control-label">I have a Different mailling address</label>
                           </div>
                         </div>
-
-
-                        <div
-                          class="container__different--addres form-row col-sm-12"
-                          style="display: none"
-                        >
+                        <div class="container__different--addres form-row col-sm-12" style="display: none">
                           <div class="form-group col-md-12">
                             <div class="form-group has-top-label">
-                              <input
-                                class="form-control"
-                                name="jQueryLabelsInInputEmail"
-                                id="addressDifferent"
-                              />
-                              <span>ADDRESS LINE ONE</span>
+                              <input type="text" id="addressDifferent" name="jQueryLabelsInInputEmail" class="form-control"/>
+                              <span>ADDRESS LINE ONE <strong class="text-danger">*</strong></span>
                             </div>
                           </div>
                           <div class="form-group col-md-12">
                             <div class="form-group has-top-label">
-                              <input
-                                class="form-control"
-                                name="jQueryLabelsInInputEmail"
-                                id="complementDifferent"
-                              />
-                              <span>ADDRESS LINE TWO</span>
+                              <input type="text" id="complementDifferent" name="jQueryLabelsInInputEmail" class="form-control"/>
+                              <span>ADDRESS LINE TWO <strong class="text-danger">*</strong></span>
                             </div>
                           </div>
-
                           <div class="form-group col-md-4">
                             <div class="form-group has-top-label">
-                              <input
-                                class="form-control"
-                                name="jQueryLabelsInInputEmail"
-                                id="cityDifferent"
-                              />
-                              <span>CITY</span>
+                              <input type="text" id="cityDifferent" name="jQueryLabelsInInputEmail" class="form-control"/>
+                              <span>CITY <strong class="text-danger">*</strong></span>
                             </div>
                           </div>
-
                           <div class="form-group col-md-4">
                             <div class="form-group has-top-label">
-                              <label>STATE/PROVINCE</label>
-                              <select
-                                class="custom-select form-control state_id"
-                                name="stateId"
-                                id="stateIdDifferent"
-                              >
+                              <label>STATE/PROVINCE <strong class="text-danger">*</strong></label>
+                              <select id="stateIdDifferent" name="stateId" class="custom-select form-control state_id">
                                 <option value="1">Choose One</option>
-                                <option value="2">
-                                  Cadastro de Pessoas Fisicas Number(CPF)
-                                </option>
-                                <option value="3">
-                                  Alien Identification Card
-                                </option>
+                                <option value="2">Cadastro de Pessoas Fisicas Number(CPF)</option>
+                                <option value="3">Alien Identification Card</option>
                                 <option value="4">Driver`s License</option>
-                                <option value="5">
-                                  National Identity Card
-                                </option>
+                                <option value="5">National Identity Card</option>
                                 <option value="6">Passport</option>
                               </select>
                             </div>
                           </div>
-
                           <div class="form-group col-md-4">
                             <div class="form-group has-top-label">
-                              <input
-                                class="form-control"
-                                name="jQueryLabelsInInputEmail"
-                                id="zipcodeDifferent"
-                              />
-                              <span>ZIP/POSTAL CODE</spa>
+                              <input type="text" id="zipcodeDifferent" name="jQueryLabelsInInputEmail" class="form-control"/>
+                              <span>ZIP/POSTAL CODE <strong class="text-danger">*</strong></spa>
                             </div>
                           </div>
                         </div>
                       </div>
 
-                      <div
-                      class="btn-toolbar custom-toolbar text-center card-body pt-0 mt-5"
-                    >
-                    <button class="btn btn-secondary prev-btn mr-2" type="button">
-                      Previous
-                    </button>
-                    <button class="btn btn-secondary next-btn" type="button"  >
-                      Next
-                    </button>
-                     
-                    </div>
+                      <div class="btn-toolbar custom-toolbar text-center card-body pt-0 mt-5">
+                        <button type="button" class="btn btn-secondary prev-btn mr-2">Previous</button>
+                        <button type="button" class="btn btn-secondary next-btn" >Next</button>
+                      </div>
                     </form>
                   </div>
-
                   <div id="step-4" style="height: auto;">
-                    <h2>Employed</h2>
-                    <form
-                      id="form-step-4"
-                      class="frmEmployed"
-                      name="frmEmployed"
-                      method="post"
-                      action=""
-                    >
+                    <h2>Employed</h2> 
+                    <form id="form-step-4" name="frmEmployed" method="post" action="" class="frmEmployed">
                     <div class="form-row">
                       <div class="form-group col-md-12 mt-3">
-                        
                         <div class="form-group has-top-label">
                           <label>EMPLOYEMENT STATUS</label>
-                          <select
-                            class="custom-select form-control state_id"
-                            name="stateId"
-                            id="valor-check"
-                          >
+                          <select id="valor-check" name="stateId"  class="custom-select form-control state_id">
                             <option value="">Choose One</option>
                             <option value="1">Employed</option>
                             <option value="2">Retired</option>
                             <option value="3">Self Employed</option>
-                            <option value="4">
-                              At-Home Trader (No Other Occupation)
-                            </option>
+                            <option value="4">At-Home Trader (No Other Occupation)</option>
                             <option value="5">Student/Intern</option>
                             <option value="6">Homemaker</option>
                             <option value="7">Unemployed</option>
                           </select>
                         </div>
                       </div>
-                      <div
-                      id="div-address"
-                      class="form-row p-1 col-12"
-                      style="display: none"
-                    >
+                      <div id="div-address" class="form-row p-1 col-12" style="display: none">
                       <div class="form-group col-md-4">
                         <div class="form-group has-top-label">
-                          <input
-                            class="form-control"
-                            name="jQueryLabelsInInputEmail"
-                            id="employment_name"
-                            placeholder="Required"
-                          />
-                          <span>Full Employer Name</span>
+                          <input type="text" id="employment_name" name="jQueryLabelsInInputEmail"class="form-control"/>
+                          <span>Full Employer Name <strong class="text-danger">*</strong></span>
                         </div>
                       </div>
 
                       <div class="form-group col-md-4">
                         <div class="form-group has-top-label">
-                          <input
-                            class="form-control"
-                            name="jQueryLabelsInInputEmail"
-                            id="employment_phone"
-                            placeholder="Required"
-                          />
-                          <span>Phone Number</span>
+                          <input type="tel" id="employment_phone" name="jQueryLabelsInInputEmail" class="form-control"/>
+                          <span>Phone Number <strong class="text-danger">*</strong></span>
                         </div>
                       </div>
                       <div class="form-group col-md-4">
                         <div class="form-group has-top-label">
-                          <input
-                            class="form-control"
-                            name="jQueryLabelsInInputEmail"
-                            id="employment_annual_income"
-                            placeholder="Required"
-                          />
-                          <span>Annual Income</span>
+                          <input type="number" id="employment_annual_income" name="jQueryLabelsInInputEmail" class="form-control"/>
+                          <span>Annual Income <strong class="text-danger">*</strong></span>
                         </div>
                       </div>
                     </div>
                     </div>
-
-                    <div
-                      class="btn-toolbar custom-toolbar text-center card-body pt-0 mt-5"
-                    >
-                    <button class="btn btn-secondary prev-btn mr-2" type="button">
-                      Previous
-                    </button>
-                    <button type="button" 
-                    class="btn btn-secondary" 
-                    data-toggle="modal"
-                    data-target="#exampleMo">
-                      Next
-                     </button>
+                    <div class="btn-toolbar custom-toolbar text-center card-body pt-0 mt-5">
+                      <button class="btn btn-secondary prev-btn mr-2" type="button">Previous</button>
+                      <button type="button" data-toggle="modal" data-target="#exampleMo" class="btn btn-secondary">Next</button>
                             <!-- Modal -->
-                        <div class="modal fade" id="exampleMo" tabindex="-1" role="dialog" aria-hidden="true"
-                        style="height: auto;">
+                        <div id="exampleMo" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade" style="height: auto;">
                           <div class="modal-dialog" role="document">
                             <div class="modal-content">
                               <div class="modal-header">
@@ -1000,9 +637,7 @@
                                 <span aria-hidden="true">&times;</span>
                                 </button>
                               </div>
-                              <div class="modal-body">
-                                Do you want to close or register any more holders?
-                              </div>
+                              <div class="modal-body">Do you want to close or register any more holders?</div>
                               <div class="modal-footer myModal">
                                 <button type="button" class="btn btn-secondary btnSim" data-dismiss="modal">New account Holder</button>  
                                 <button type="button" class="btn btn-primary next-btn btnNao" data-dismiss="modal">Save changes</button>                                          
@@ -1011,21 +646,12 @@
                           </div>
                         </div>
                     </div>
-
                     </form>
                   </div>
-
                   <div id="step-5" style="height: auto">
-                    <h2 class="mb-4">
-                      <strong> Agreements </strong>
-                    </h2>
+                    <h2 class="mb-4"><strong> Agreements </strong></h2>
                     <h4 class="mb-4">Documents</h4>
-                    <p>
-                      <small
-                        >The following documents are provided for your
-                        reference:</small
-                      >
-                    </p>
+                    <p><small>The following documents are provided for your reference:</small></p>
                     <div class="form-row">
                       <div class="col-sm-6">
                         <div class="form-row">
@@ -1060,42 +686,16 @@
                         </div>
                       </div>
                     </div>
-
-                    <h2>
-                      <strong> Acknowledgments </strong>
-                    </h2>
-
-                    <p>
-                      <small>
-                        Please indicate agreement with the following:
-                      </small>
-                    </p>
-
+                    <h2><strong> Acknowledgments </strong></h2>
+                    <p><small> Please indicate agreement with the following:</small></p>
                     <div class="form-row">
                       <div class="col-sm-6">
                         <div class="form-row">
-                          <form
-                            id="form-step-5"
-                            class="tooltip-label-right fmrAgreements"
-                            name="fmrAgreements"
-                            itemid="fmrAgreements"
-                            method="post"
-                            action=""
-                           
-                          >
+                          <form id="form-step-5" name="fmrAgreements" itemid="fmrAgreements" method="post" action="" class="tooltip-label-right fmrAgreements">
                             <div class="form-group position-relative">
                               <div class="custom-control custom-radio">
-                                <input
-                                  type="radio"
-                                  id="jQueryCustomRadio3"
-                                  name="jQueryCustomRadio"
-                                  class="custom-control-input"
-                                  required
-                                />
-                                <label
-                                  class="custom-control-label"
-                                  for="jQueryCustomRadio3"
-                                >
+                                <input type="radio" id="jQueryCustomRadio3" name="jQueryCustomRadio" name="jQueryCustomRadio"/>
+                                <label for="jQueryCustomRadio3" class="custom-control-label">
                                   By clickin Finish, I hereby acknowledge that I
                                   have read and understand the Terms and
                                   Conditions and the Privacy Policy. I further
@@ -1106,137 +706,76 @@
                                 </label>
                               </div>
                             </div>
-
-                            <h2>
-                              <strong> Dividend Reinvestment </strong>
-                            </h2>
-
+                            <h2><strong> Dividend Reinvestment </strong></h2>
                             <div class="form-group position-relative">
                               <div class="custom-control custom-radio m-2">
-                                <input
-                                  type="radio"
-                                  id="jQueryCustomRadio4"
-                                  name="jQueryCustomRadio"
-                                  class="custom-control-input check--step3"
-                                  value="1"
-                                  
-                                />
-                                <label
-                                  class="custom-control-label"
-                                  for="jQueryCustomRadio4"
-                                >
-                                  I would like my dividends reinvested according
-                                  to the investment have selected.
-                                </label>
+                                <input type="radio"  value="1" id="jQueryCustomRadio4" name="jQueryCustomRadio" class="custom-control-input check--step3" />
+                                <label for="jQueryCustomRadio4" class="custom-control-label">I would like my dividends reinvested according to the investment have selected.</label>
                               </div>
                               <div class="custom-control custom-radio m-2">
-                                <input
-                                  type="radio"
-                                  id="jQueryCustomRadio5"
-                                  name="jQueryCustomRadio"
-                                  class="custom-control-input check--step3"
-                                  value="2"
-                                  
-                                />
-                                <label
-                                  class="custom-control-label"
-                                  for="jQueryCustomRadio5"
-                                >
-                                  I would like my dividends distributed to my
-                                  bank account
-                                </label>
+                                <input type="radio" value="2" id="jQueryCustomRadio5" name="jQueryCustomRadio" class="custom-control-input check--step3"/>
+                                <label for="jQueryCustomRadio5" class="custom-control-label">I would like my dividends distributed to my bank account</label>
                               </div>
-
-                              <div
-                                class="form-row col-12 active--form mt-3"
-                                style="display: none"
-                              >
-                                <h2 class="col-12">
-                                  <strong>Account info</strong>
-                                </h2>
-
-                                <div
-                                  class="form-group col-12 position-relative error-l-50"
-                                >
+                              <div class="form-row col-12 active--form mt-3" style="display: none">
+                                <h2 class="col-12"><strong>Account info</strong></h2>
+                                <div class="form-group col-12 position-relative error-l-50">
                                   <label>Bank Name</label>
-                                  <input
-                                    autocomplete="off"
-                                    type="text"
-                                    class="form-control bank_name"
-                                    name="bank_name"
-                                    id="bank_name"
-                                    placeholder="Bank Name"
-                                    
-                                  />
+                                  <input type="text" id="bank_name" name="bank_name" autocomplete="off"  class="form-control bank_name"/>
                                 </div>
-
-                                <div
-                                  class="form-group col-12 position-relative error-l-50"
-                                >
+                                <div class="form-group col-12 position-relative error-l-50">
                                   <label>Bank Account Type</label>
-                                  <select
-                                    class="custom-select bank_account_type"
-                                    name="bank_account_type"
-                                    id="bank_account_type"
-                                    
-                                  >
+                                  <select id="bank_account_type" name="bank_account_type" class="custom-select bank_account_type">
                                     <option value=""></option>
-                                    <option value="1">
-                                      Choose Account Type
-                                    </option>
+                                    <option value="1">Choose Account Type</option>
                                     <option value="2">Checking</option>
                                     <option value="3">Savings</option>
                                   </select>
                                 </div>
-
-                                <div
-                                  class="form-group col-6 position-relative error-l-50"
-                                >
+                                <div class="form-group col-6 position-relative error-l-50">
                                   <label>ABA Routing Number</label>
-                                  <input
-                                    autocomplete="off"
-                                    type="number"
-                                    class="form-control bank_aba_routing_number"
-                                    id="bank_aba_routing_number"
-                                    name="bank_aba_routing_number"
-                                    
-                                  />
+                                  <input type="number" id="bank_aba_routing_number" name="bank_aba_routing_number" autocomplete="off" class="form-control bank_aba_routing_number"/>
                                 </div>
-                                <div
-                                  class="form-group col-6 position-relative error-l-50"
-                                >
+                                <div class="form-group col-6 position-relative error-l-50" >
                                   <label>Account Number</label>
-                                  <input
-                                    autocomplete="off"
-                                    type="number"
-                                    class="form-control bank_account_number"
-                                    id="bank_account_number"
-                                    name="bank_account_number"
-                                    
-                                  />
+                                  <input type="number" id="bank_account_number" name="bank_account_number" autocomplete="off" class="form-control bank_account_number"/>
                                 </div>
                               </div>
                             </div>
-
-                            <div
-                      class="btn-toolbar custom-toolbar text-center card-body pt-0 mt-5"
-                    >
-                    <!--
-                      <button class="btn btn-secondary prev-btn mr-2" type="button">
-                        Previous
-                      </button>
-
-                    -->
-                      <button class="btn btn-secondary next-btn" type="button"  >
-                        Next
-                      </button>
-                     
-                    </div>
+                            <div class="btn-toolbar custom-toolbar text-center card-body pt-0 mt-5">
+                              <button type="button" class="btn btn-secondary next-btn">Next</button>
+                            </div>
                           </form>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <div id="step-6" style="height: auto">
+                    <h2 class="mb-4">
+                      <strong> Review & Finish </strong>
+                    </h2>
+                    <div class="form-row">
+                      <div class="col-sm-12" style="border: 1px solid rgb(39, 129, 232);">
+                        <div class="form-row col-12" style="border: 1px solid rgb(36, 155, 86);">
+                          <form id="form-step-6" name="frmReview" method="post" action="" class="tooltip-label-right frmReview col-12">
+                            <div class="form-group col-sm-12 position-relative" style="border: 1px solid black;">
+                              <Span><strong>Basic Info</strong></Span>
+                              <div class="form-row col-12">
+                                <div class="col-sm-6" style="border: 1px solid red;">
+                                  <span id="nameHolder"></span>
+                                </div>
+                                <div class="col-sm-6" style="border: 1px solid red;">
+                                  <span id="addressHolder"></span>
+                                </div>
+                              </div>
+                              
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
                 </div>
               </div>
               
