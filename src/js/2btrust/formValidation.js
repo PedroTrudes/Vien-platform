@@ -103,7 +103,7 @@ $('.myModal .btnSim').on('click', function(){
 $('.myModal .btnNao').on('click', function(){
     account.addAccountHolder(holder);
     console.log(account.toJson());
-    $("#nameHolder").html(holder.firstname + " " + holder.middle_name + " " + holder.lastname);
+    //$("#nameHolder").html(holder.firstname + " " + holder.middle_name + " " + holder.lastname);
     $("#addressHolder").html(holder.address.address + " " );
     
     //Avança para a proxima step
@@ -114,13 +114,66 @@ $(".fmrAgreements .next-btn").on('click', function(){
     account.bank_aba_routing_number = $("#bank_aba_routing_number").val();
     account.bank_account_number = $("#bank_account_number").val();
     console.log(account);
+   
+    let listContainer = $('#listHolders')
+    //inserrir uma div
+    let html = `<div class="col-12">`;
+ 
+    for(let i = 0; i < account.holders.length; i++){
+        let holder = account.holders[i];
+        html += `<p>${holder.firstname}</p>`  
+
+        let addresList = holder.address
+        for(let a = 0; a < addresList.length; a++){
+            let address = addresList[a];
+            html +=`<p>${address.address} </p>`;
+            html += `<p>${address.complement} </p>`;
+            html += `<p>${address.city}</p>`;
+            html += `<p>${address.zipcode}</p>`;
+        }
+    }
+    html += `</div>`
+    $(listContainer).html(html);
+    
+
+});
+
+
+
+
+
 /*
+
+{"holders":[
+    {"account_id":0,
+    "is_primary":true,
+    "address":[
+        {"address":"640 Estrada São Marcos",
+        "complement":"",
+        "city":"Embu das Artes",
+        "state_id":"6",
+        "zipcode":"06.814-010"}],
+    "documents":{"document_type_id":"1"},
+    "employmentStatus":{"name":"",
+    "phone":"",
+    "annual_income":""},
+    "firstname":"Pedro",
+    "middle_name":
+    "Joaquim Trudes",
+    "lastname":"Martins",
+    "date_of_birth":"",
+    "social_security_tax_id":"",
+    "country_citizenship":"1",
+    "country_residency":"1",
+    "country_tax_residency":"1"}],
+    "status":0,
+    "reinvest_yield":false}
+
     $(document).ready(function(){
         carregar_json('holders');
         function carregar_json(id){
             var html = '';
-  */  
- var accountjson = account.toJson();
+             var accountjson = account.toJson();
             $.getJSON("js/2btrust/2btrust.model/Account.js", function(data){
                 html += '<span>Account: ' + id + ' teste';
                 console.log(data);
@@ -131,6 +184,8 @@ $(".fmrAgreements .next-btn").on('click', function(){
                 console.log("request faill: " + err);
             });
         });
+  */  
+
 
         /*
     });
