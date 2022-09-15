@@ -5,6 +5,7 @@ class Account {
     bank_name;
     bank_aba_routing_number;
     bank_account_number;
+    bank_account_type;
     user_id;
     status = 0;
     reinvest_yield= false;

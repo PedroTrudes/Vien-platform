@@ -103,39 +103,57 @@ $('.myModal .btnSim').on('click', function(){
 $('.myModal .btnNao').on('click', function(){
     account.addAccountHolder(holder);
     console.log(account.toJson());
-    //$("#nameHolder").html(holder.firstname + " " + holder.middle_name + " " + holder.lastname);
-    $("#addressHolder").html(holder.address.address + " " );
-    
-    //Avança para a proxima step
 });
 
 $(".fmrAgreements .next-btn").on('click', function(){
     account.bank_name = $("#bank_name").val();
+    account.bank_account_type = $("#bank_account_type").val();
     account.bank_aba_routing_number = $("#bank_aba_routing_number").val();
     account.bank_account_number = $("#bank_account_number").val();
     console.log(account);
    
-    let listContainer = $('#listHolders')
+    let listContainerHolder = $('#listHolders');
+    let listContainerInvestment = $('#listInvestment');
+    let listType = $('#typeAccount');
     //inserrir uma div
-    let html = `<div class="col-12">`;
- 
-    for(let i = 0; i < account.holders.length; i++){
-        let holder = account.holders[i];
-        html += `<p>${holder.firstname}</p>`  
 
+    let type = `<p>Type Account: <strong>${account.type}</strong></p>`;
+    $(listType).html(type);
+
+    let htmlHolder = `<div class="col-12 form-row">`;
+    for(let i = 0; i < account.holders.length; i++){
+        htmlHolder += `<div class="col-6 border-bottom mt-2">`;
+        let holder = account.holders[i];
+        htmlHolder += `<p>${holder.firstname} ${holder.middle_name} ${holder.lastname}</p>`  ;
+        htmlHolder += `</div>`;
+        htmlHolder += `<div class="col-6 border-bottom mt-2">`;
         let addresList = holder.address
         for(let a = 0; a < addresList.length; a++){
             let address = addresList[a];
-            html +=`<p>${address.address} </p>`;
-            html += `<p>${address.complement} </p>`;
-            html += `<p>${address.city}</p>`;
-            html += `<p>${address.zipcode}</p>`;
+            htmlHolder +=`<p>${address.address} - ${address.complement}</p>`;
+            htmlHolder += `<p>${address.city} / ${address.zipcode}</p>`;
         }
+        htmlHolder += `</div>`;
     }
-    html += `</div>`
-    $(listContainer).html(html);
-    
+    htmlHolder += `</div>`;
 
+    $(listContainerHolder).html(htmlHolder);
+    
+    let htmlInvestment = `<div class="col-6">`;
+    htmlInvestment += `<p>Investment Plan</p>`;
+    htmlInvestment += `<p>Initial Amount</p>`;
+    htmlInvestment += `<p>Dividend Reinvestment</p>`;
+    htmlInvestment += `<p>Payment Method</p>`;
+    htmlInvestment += `</div>`;
+
+    htmlInvestment += `<div class="col-6">`;
+    htmlInvestment += `<p>Start Portfolio</p>`;
+    htmlInvestment += `<p>$500.00</p>`;
+    htmlInvestment += `<p><strong>ON</strong></p>`;
+    htmlInvestment += `<p>${account.bank_name} - (${account.bank_account_type})</p>`;
+    htmlInvestment += `</div>`;
+
+    $(listContainerInvestment).html(htmlInvestment);
 });
 
 

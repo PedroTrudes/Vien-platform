@@ -694,8 +694,8 @@
                           <form id="form-step-5" name="fmrAgreements" itemid="fmrAgreements" method="post" action="" class="tooltip-label-right fmrAgreements">
                             <div class="form-group position-relative">
                               <div class="custom-control custom-radio">
-                                <input type="radio" id="jQueryCustomRadio3" name="jQueryCustomRadio" name="jQueryCustomRadio"/>
-                                <label for="jQueryCustomRadio3" class="custom-control-label">
+                                <input type="radio" id="jQueryCustomRadio8" name="jQueryCustomRadio" name="jQueryCustomRadio"/>
+                                <label for="jQueryCustomRadio8" class="custom-control-label">
                                   By clickin Finish, I hereby acknowledge that I
                                   have read and understand the Terms and
                                   Conditions and the Privacy Policy. I further
@@ -709,12 +709,12 @@
                             <h2><strong> Dividend Reinvestment </strong></h2>
                             <div class="form-group position-relative">
                               <div class="custom-control custom-radio m-2">
-                                <input type="radio"  value="1" id="jQueryCustomRadio4" name="jQueryCustomRadio" class="custom-control-input check--step3" />
-                                <label for="jQueryCustomRadio4" class="custom-control-label">I would like my dividends reinvested according to the investment have selected.</label>
+                                <input type="radio"  value="1" id="jQueryCustomRadio9" name="jQueryCustomRadio" class="custom-control-input check--step3" />
+                                <label for="jQueryCustomRadio9" class="custom-control-label">I would like my dividends reinvested according to the investment have selected.</label>
                               </div>
                               <div class="custom-control custom-radio m-2">
-                                <input type="radio" value="2" id="jQueryCustomRadio5" name="jQueryCustomRadio" class="custom-control-input check--step3"/>
-                                <label for="jQueryCustomRadio5" class="custom-control-label">I would like my dividends distributed to my bank account</label>
+                                <input type="radio" value="2" id="jQueryCustomRadio10" name="jQueryCustomRadio" class="custom-control-input check--step3"/>
+                                <label for="jQueryCustomRadio10" class="custom-control-label">I would like my dividends distributed to my bank account</label>
                               </div>
                               <div class="form-row col-12 active--form mt-3" style="display: none">
                                 <h2 class="col-12"><strong>Account info</strong></h2>
@@ -726,9 +726,9 @@
                                   <label>Bank Account Type</label>
                                   <select id="bank_account_type" name="bank_account_type" class="custom-select bank_account_type">
                                     <option value=""></option>
-                                    <option value="1">Choose Account Type</option>
-                                    <option value="2">Checking</option>
-                                    <option value="3">Savings</option>
+                                    <option value="Choose Account Type">Choose Account Type</option>
+                                    <option value="Checking">Checking</option>
+                                    <option value="Savings">Savings</option>
                                   </select>
                                 </div>
                                 <div class="form-group col-6 position-relative error-l-50">
@@ -750,17 +750,21 @@
                     </div>
                   </div>
                   <div id="step-6" style="height: auto">
-                    <h2 class="mb-4">
-                      <strong> Review & Finish </strong>
-                    </h2>
                     <div class="form-row">
                       <div class="col-sm-12" style="border: 1px solid rgb(39, 129, 232);">
                         <div class="form-row col-12" style="border: 1px solid rgb(36, 155, 86);">
                           <form id="form-step-6" name="frmReview" method="post" action="" class="tooltip-label-right frmReview col-12">
                             <div class="form-group col-sm-12 position-relative" style="border: 1px solid black;">
-                              <Span><strong>Basic Info</strong></Span>
+                              <p><strong>Basic Info</strong></p>
+                              <div class="form-row" id="typeAccount">
+
+                              </div>
                               <div class="form-row" id="listHolders">
                                 
+                              </div>
+                              <p><strong>Investment Information</strong></p>
+                              <div class="form-row" id="listInvestment">
+
                               </div>
                            </div>
                           </form>
