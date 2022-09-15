@@ -113,11 +113,12 @@ $(".fmrAgreements .next-btn").on('click', function(){
 
     let htmlHolder = `<div class="col-12 form-row">`;
     for(let i = 0; i < account.holders.length; i++){
-        htmlHolder += `<div class="col-6 border-bottom mt-2">`;
+        htmlHolder += `<div class="col-6 mt-2">`;
         let holder = account.holders[i];
         htmlHolder += `<p>${holder.firstname} ${holder.middle_name} ${holder.lastname}</p>`  ;
         htmlHolder += `</div>`;
-        htmlHolder += `<div class="col-6 border-bottom mt-2">`;
+        htmlHolder += `<div class="separator"></div>`;
+        htmlHolder += `<div class="col-6 mt-2">`;
         let addresList = holder.address
         for(let a = 0; a < addresList.length; a++){
             let address = addresList[a];
@@ -125,6 +126,7 @@ $(".fmrAgreements .next-btn").on('click', function(){
             htmlHolder += `<p>${address.city} / ${address.zipcode}</p>`;
         }
         htmlHolder += `</div>`;
+        htmlHolder += `<div class="separator"></div>`;
     }
     htmlHolder += `</div>`;
     $(listContainerHolder).html(htmlHolder);
