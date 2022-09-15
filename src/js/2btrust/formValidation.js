@@ -44,18 +44,15 @@ $(".frmAccountHolder .next-btn").on('click', function(){
         holder.country_residency = $("#country_residency").val();
         holder.social_security_tax_id = $("#social_security_tax_id").val();
         holder.country_tax_residency = $("#country_tax_residency").val();
-    
-        console.log(holder);
+        
     }
 });    
-
 
 $(".frmIdentification .next-btn").on('click', function(){
     const documentFile = $("#documentFile")[0];
     holder.documents.filename = documentFile.files[0];
     holder.documents.document_type_id = $("#document_type_id").val();
     
-    console.log(holder.documents);
 });
 
 $(".frmEmployed .btn-secondary").on('click', function(){
@@ -73,7 +70,6 @@ $(".frmAddress .next-btn").on('click', function(){
     address.city = $("#city").val();
     address.state_id = $("#state_id").val();
     address.zipcode = $("#zipcode").val();
-    console.log(address)
     holder.addAccountAddrress(address);
 
     if($("input[name='differentAddress']").is(':checked')){
@@ -84,7 +80,6 @@ $(".frmAddress .next-btn").on('click', function(){
         address.state_id = $("#stateIdDifferent").val();
         address.zipcode = $("#zipcodeDifferent").val();
         holder.addAccountAddrress(address);
-        console.log(address)
     }
 });
 
@@ -95,9 +90,6 @@ $('.myModal .btnSim').on('click', function(){
     $('.frmAccountHolder').get(0).reset();
     $('.frmAddress').get(0).reset();
     $('#smartWizardValidation').smartWizard();
-    
-    //addres depois do checkbox
-    //mandar para  a primeira step-1
 });
 
 $('.myModal .btnNao').on('click', function(){
@@ -111,12 +103,11 @@ $(".fmrAgreements .next-btn").on('click', function(){
     account.bank_aba_routing_number = $("#bank_aba_routing_number").val();
     account.bank_account_number = $("#bank_account_number").val();
     console.log(account);
-   
+   //Inserindo dados no HTML apos clicar no next da step-5
     let listContainerHolder = $('#listHolders');
     let listContainerInvestment = $('#listInvestment');
     let listType = $('#typeAccount');
-    //inserrir uma div
-
+    
     let type = `<p>Type Account: <strong>${account.type}</strong></p>`;
     $(listType).html(type);
 
@@ -136,7 +127,6 @@ $(".fmrAgreements .next-btn").on('click', function(){
         htmlHolder += `</div>`;
     }
     htmlHolder += `</div>`;
-
     $(listContainerHolder).html(htmlHolder);
     
     let htmlInvestment = `<div class="col-6">`;
@@ -145,14 +135,12 @@ $(".fmrAgreements .next-btn").on('click', function(){
     htmlInvestment += `<p>Dividend Reinvestment</p>`;
     htmlInvestment += `<p>Payment Method</p>`;
     htmlInvestment += `</div>`;
-
     htmlInvestment += `<div class="col-6">`;
     htmlInvestment += `<p>Start Portfolio</p>`;
     htmlInvestment += `<p>$500.00</p>`;
     htmlInvestment += `<p><strong>ON</strong></p>`;
     htmlInvestment += `<p>${account.bank_name} - (${account.bank_account_type})</p>`;
     htmlInvestment += `</div>`;
-
     $(listContainerInvestment).html(htmlInvestment);
 });
 
